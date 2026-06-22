@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "name": "Hyperface Docs",
+  "name": "Hyperface Documentation",
   "theme": "mint",
   "colors": {
-  "primary": "#7C3AED",
-  "light": "#A78BFA",
-  "dark": "#5B21B6"
+    "primary": "#00D4D4",
+    "light": "#38E8E8",
+    "dark": "#008B8B"
   },
   "navigation": {
     "groups": [
@@ -13,7 +13,12 @@
         "group": "Getting Started",
         "pages": [
           "introduction",
-          "getting-started",
+          "getting-started"
+        ]
+      },
+      {
+        "group": "Offer Management",
+        "pages": [
           "document-transaction",
           "milestone-offer"
         ]
