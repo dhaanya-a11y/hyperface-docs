@@ -1,0 +1,9 @@
+{
+  "name": "Hyperface Docs",
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": ["introduction"]
+    }
+  ]
+}
