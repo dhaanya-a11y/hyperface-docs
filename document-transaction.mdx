@@ -1,476 +1,279 @@
-# Eligibility Check
+---
+title: Transactional Offers
+description: User Manual for Transactional Offers
+---
 
+# Transactional Offers
 
+## Introduction
 
-(
-Transactional Offers
-User Manual
+This guide explains how to create and configure Transactional Offers in the Hyperface Dashboard.
 
-Index
-
-Index	2
-Introduction	3
-What are Transactional Offers?	3
-Navigating to the Offer Listing Page	4
-Create a Transactional Offer	5
-Step 1: Configure Offer Details	7
-Step 2: Configure Offer User Base	10
-Step 3: Configure Transaction Eligibility	12
-Step 4: Configure Offer Calculation	16
-Step 5: Configure Usage Limits	18
-Step 6: Configure Posting	20
-Step 7: Configure Display Elements	23
-Step 8: Review and Publish	25
-Managing Existing Offers	26
-
-
-Introduction
-This guide explains how to create and configure Transactional Offers in the Hyperface Dashboard. Transactional Offers enable issuers to reward customers for performing qualifying individual transactions. Eligibility is configured using transaction-level conditions such as MCC, MID, Transaction Amount, POS Entry Mode, and other transaction attributes.
-
-This document is intended for teams responsible for creating and managing offers within the Hyperface platform. It covers the complete offer creation journey, offer listing management, and key field-level guidance.
-
-What are Transactional Offers?
-Transactional Offers are reward campaigns triggered by a customer completing a single qualifying transaction. Unlike milestone offers, no spend accumulation is required - reward eligibility is evaluated per transaction.
-
-A Transactional Offer consists of the following components:
-
-Offer Details - Basic identity, type, duration, and scope of the offer.
-User Base Configuration Defines which customers are eligible to opt in.
-Transaction Eligibility Rules - Defines qualifying transaction conditions using AND logic.
-Offer Calculation Rules - Defines how the reward is calculated.
-Usage Limits - Defines per-customer earning frequency limits.
-Posting Configuration - Defines when rewards are posted to customers.
-Display Elements - Defines the visual elements of a benefit on the PWA
-
-Once all configurations are completed and reviewed, the offer is published and becomes available to eligible customers from the configured start datetime.
-
-Navigating to the Offer Listing Page
-The Offer Listing page is the central hub for viewing and managing all offers configured in the system.
-
-Navigate to the Offers section from the left navigation menu.
-Select Manage Offers.
-The Offer Listing page will appear.
-
-Offer Category Tabs
-Offers are grouped into categories displayed as tabs at the top of the listing page. Select the appropriate tab based on the offer type being configured. Navigate to the correct category tab before creating a new offer.
-
-Summary Counters
-Key metrics are displayed at the top of the listing page for a quick overview:
-
-Active Now - Number of currently live and active offers.
-Approval Pending - Offers awaiting checker approval.
-Revision Required - Offers returned to the maker for corrections.
-Expiring This Week - Offers whose end date falls within the current week.
-
-Filter and Search
-Use the Filter Bar to narrow down offers by Status, Scope, Outcome Type, Offer Type, Program, Created By, Start Date, or End Date. Use the Search Bar to find a specific offer by name or offer ID - the search uses partial match logic.
-
-
-Create a Transactional Offer
-Follow the steps below to create a new Transactional Offer. The creation journey is a sequential multi-step flow. Each step must be saved before proceeding to the next. You can navigate back to a completed step at any time using the left navigation panel.
-
-On the Offer Listing page, navigate to the correct offer category tab.
-Click the Create New Offer button at the top right of the listing page.
-The offer creation journey will open with the left navigation panel showing all steps.
-On the Offer Type selection screen, select Transactional Offer.
-Click Continue to proceed to the Outcome Type screen.
-Select the outcome type that the customer should receive on completing the offer (e.g. Cashback, Voucher, Reward Points).
-Click Continue to proceed to the Offer Scope screen where you will enter the basic details.
-
-Note:
-The Offer Type and Outcome Type selections are made at the start of the journey and determine the configuration options available in subsequent steps.
-Only offer types and outcome types that are relevant to your program scope will be applicable. 
-
-
-
-Step 1: Configure Offer Details
-This section captures the basic identity and scope of the offer. It includes the offer name, description, active duration, eligibility level, and the program(s) this offer applies to.
-
-Enter the Offer Name.
-Enter the Offer Description (for internal reference).
-Configure the Offer Duration - set a Start Date and End Date with time.
-Select the Issuer - Bank from the dropdown.
-If the offer should apply to all current and future programs under the selected type, enable the 'Apply to all current and future programs' toggle. When enabled, the individual Program selection field will be disabled.
-If the toggle is not enabled, select the specific Program(s) from the dropdown.
-Verify all details and click Save & Continue.
-
-Field
-Required
-Description
-Notes
-Offer Name
-Yes
-Display name of the offer.
-Does not need to be unique across offers.
-Offer Description
-Yes
-Internal description of the offer.
-Not shown to customers.
-Start Date / End Date
-Yes
-The active period of the offer.
-Start time must be at least 5 minutes in the future. End date must be later than start date. Offer status will show as Scheduled after saving, and auto-changes to Active when start time is reached.
-Eligibility Level
-Yes
-Whether eligibility is evaluated per account or per customer.
-Select account level for Credit card
-Issuer
-Yes
-The bank or financial institution offering this product.
-Select from available issuers in the dropdown.
-Apply to all programs toggle
-No
-When enabled, offer applies to all existing and future programs.
-Enabling this disables individual program selection. Confirm the popup when enabling.
-Program
-Yes
-Specific program(s) this offer applies to.
-Required if the 'Apply to all programs' toggle is disabled.
-
-
-Note:
-The status of the offer will be Scheduled immediately after creation. It will automatically transition to Active when the configured start date and time is reached.
-If the 'Apply to all programs' toggle is enabled, a confirmation popup will appear - click Confirm to proceed.
-
-
-
-Step 2: Configure Offer User Base
-This step determines which customers can participate in the offer and how they are enrolled.
-
-Select the User Base type:
-Static Base - User list is locked at the time the offer goes live.
-Dynamic Config - Allows new eligible users to enrol throughout the offer period. Select this for Opt-In based offers.
-For Static Base:
-Select Smart Tag option if offer is for a segmented customer cohort
-Select the desired smart tag name and choose Allowed or Denied to include or exclude customers from the offer
-Profile attributes such as birthdate and account creation date are also available for filtering cohorts.
-For Dynamic Base:
-Opt-In - Customers manually opt in through the customer-facing interface.
-Smart Tag Attachment - Customers are auto-enrolled based on Smart Tag membership.
-Verify the user base configuration and click Save & Continue.
-
-Note:
-To run the offer for all accounts in the given scope, select Static Base and do not configure any user base eligibility
-
-
-
-
-Field
-Required
-Description
-Notes
-User Base
-Yes
-Whether the eligible customer list is fixed or dynamically updated.
-Select Dynamic Config to allow customers to opt in throughout the offer period.
-Eligibility (Enrollment)
-Yes
-How customers are enrolled into the offer.
-Opt-In: customer self-enrolls. Smart Tag Attachment: auto-enrolled based on tag.
-Smart Tag
-No
-Cohort filter to restrict or exclude specific customer groups.
-Optional. Smart Tags must be created in the Smart Tag module before they can be used here.
-Smart Tag Selection
-No
-Specific Smart Tag names to apply.
-Select from List, then choose the tag names.
-Condition (Allow/Deny)
-No
-Whether selected Smart Tag customers are included or excluded.
-Allowed = only customers in the tag are eligible. Denied = all customers except those in the tag are eligible.
-
-
-Step 3: Configure Transaction Eligibility
-This step defines the transaction-level conditions that must be satisfied for the offer to trigger. Conditions can be combined using AND and OR logic to model complex eligibility scenarios.
-
-Each qualifying transaction that satisfies all configured conditions will trigger reward evaluation.
-
-Adding Conditions (AND Logic)
-Click Add Condition to add an eligibility filter within the current group.
-Select the attribute to filter on from the dropdown. Available attributes include:
-MCC (Merchant Category Code)
-MID (Merchant ID)
-TID (Terminal ID)
-Merchant Name
-Transaction Value
-Transaction Type
-POS Entry Mode
-Sovereignty Indicator
-Transaction Code
-For the selected attribute, choose the input method - List (select from a pre-configured list) or Input (type values directly).
-Select the Action:
-Allowed - Transactions matching this attribute value are included.
-Denied - Transactions matching this attribute value are excluded.
-Click Add Condition again to add more conditions within the same group. All conditions within a group are joined by AND logic - a transaction must satisfy all of them.
-
-Creating a New List
-When selecting an attribute that accepts a List input (e.g. MCC or MID), you can create a new named list of values directly from within the eligibility screen. This is useful when the values do not already exist as a saved list.
-
-In the attribute row, set the input method to List.
-Click the list dropdown and select Create New List.
-The Create New List form will open. Fill in the following fields:
-Name - A unique name for the list (e.g. 'Shopping MCCs', 'Shopee MIDs'). Each list name must be unique.
-Items - Enter values that are comma separated which must be part of the list OR
-Choose File - Upload a CSV file containing the values for the list.
-Issuer - Select the relevant issuer from the dropdown.
-Immutable - Select True if the list values should be locked after creation. Select False if the list may need to be updated in future.
-Click Submit to save the list.
-The newly created list will now be available to select in the attribute row.
-
-Note:
-Items field and Client field in the Create New List form can be skipped.
-If a list is set to Immutable = False, it can be updated later. Any updates to a list will apply to all active offers using that list - including in-progress customer evaluations.
-Transaction Value conditions are also used to render progress bars in the customer-facing interface. Ensure the threshold values are configured accurately.
-
-
-Once all conditions and groups are configured, verify the logic and click Save & Continue.
-
-
-Note:
-A customer becomes eligible when a transaction satisfies all conditions in at least one group.
-
-
-
-
-
-
-
-Step 4: Configure Offer Calculation
-This step defines how the reward is calculated when a qualifying transaction is identified.
-
-The Offer Calculation screen will appear.
-Select the reward type from the available options. Examples include:
-Fixed Reward - A flat reward amount per qualifying transaction.
-Percentage Based Reward - A percentage of the qualifying transaction amount.
-Slab Based Reward - Tiered rewards based on transaction amount ranges.
-Other reward structures available in the dropdown.
-Enter the required values for the selected reward type.
-Configure minimum or maximum reward caps if applicable.
-Verify the reward calculation logic and click Save & Continue.
-
-Note:
-Reward calculation is applied per qualifying transaction unless otherwise configured.
-Minimum and maximum reward caps are optional but recommended to control reward exposure.
-
-
-Offer Calculation Examples
-Fixed Reward
- Every qualifying transaction earns a flat reward, regardless of transaction amount.
- Example: Customer makes a transaction at a supermarket MCC → earns 50 reward points flat.
-Percentage Based Reward
- Reward is a percentage of the transaction amount.
- Example: Customer spends 2,000 on a qualifying MCC → earns 5% = 100 reward points. Optionally cap the maximum reward at 500 points per transaction.
-Slab Based Reward
- Reward tier depends on which spending bracket the transaction falls into.
- Example:
-Transaction value 500–1,999 → earn 50 points
-Transaction value 2,000–4,999 → earn 150 points
-
-
-
-
-Step 5: Configure Usage Limits
-This step controls how often an individual customer can earn rewards through this offer. All limit types are optional - configure only the limits relevant to your campaign design.
-
-The Usage Limits screen will appear.
-Configure the applicable limits:
-Daily Limit - Maximum number of times a customer can earn per day.
-Weekly Limit - Maximum earnings per week.
-Monthly Limit - Maximum earnings per month.
-Lifetime Limit - Maximum total earnings over the entire offer period.
-Transaction Count Limit - Maximum number of qualifying transactions that will be rewarded.
-Leave a limit field empty if no restriction is required for that time period.
-Verify the configured limits and click Save & Continue.
-
-Note:
-Usage limits apply per individual customer.
-If no limits are configured, a customer can earn rewards for every qualifying transaction within the offer period and budget.
-This screen can be skipped if no usage limits are required for the offer.
-
-
-Usage Limits Examples
-Daily Limit
- A customer can earn a reward a maximum of 2 times per day, regardless of how many qualifying transactions they make.
-Weekly Limit
- A customer can earn rewards on up to 5 qualifying transactions within a calendar week.
-Transaction Count Limit
-Only the first 2 qualifying transactions per customer will be rewarded. Subsequent qualifying transactions within the same period will not trigger a reward.
-
-Combined Example
-Daily limit = 2, Monthly limit = 10, Lifetime limit = 25. A customer who makes 5 qualifying transactions in a day will only earn rewards for the first 2. They can earn up to 10 in the month and no more than 25 over the full offer period.
-
-
-
-
-
-
-
-Step 6: Configure Posting
-This step defines when and how rewards are posted to customers after a qualifying transaction is identified and validated.
-
-The Posting Configuration screen will appear.
-If Hyperface is the system of records for rewards: Ensure the Enable Posting toggle is turned ON. This controls whether the reward is posted to the customer's account. The customer will only see the reward in their interface after posting is completed.
-If Hyperface is not the system of records, only computation and customer display is required - Turn OFF the posting toggle, and skip this section.
-Configure Posting Eligibility if required - this allows you to set additional account-level conditions that must be met before a reward is posted (e.g. account status must be active). This section can be skipped if no additional posting eligibility filter is needed.
-Select the Offer Posting method:
-Post Immediately - Reward is posted as soon as the offer subscription period ends and the transaction is validated as settled.
-Schedule - Reward is posted after a defined number of days from the reference event (typically subscription end). This allows time for transaction reversals and refunds to be accounted for.
-If Schedule is selected, configure:
-Posting Happens - Number of days to wait before posting the reward.
-Days After The - Reference event from which the delay is calculated (e.g. subscription ends).
-Enter the Posting Narration (a ledger comment). This is a mandatory system field - enter a relevant description or placeholder text.
-Enter the Reversal Narration - a comment for ledger entries when an offer is reversed.
-Verify the posting setup and click Save & Continue.
-
-Field
-Required
-Description
-Notes
-Enable Posting
-Yes
-Toggle to enable reward posting to the customer account.
-Must be ON for customers to receive rewards. Turning this OFF prevents any reward from being credited.
-Posting Eligibility
-No
-Optional filter conditions before posting is triggered.
-Can be skipped. Examples: account status, account type filters.
-Narration
-Yes
-Ledger comment recorded at the time of reward posting.
-Mandatory system field. Enter a relevant label or description.
-Posting Method
-Yes
-Post Immediately or Schedule.
-Scheduled posting is recommended to allow time for reversals and refunds to be processed before reward issuance.
-Posting Happens (days)
-Yes
-Number of days to delay posting after the reference event.
-Required if Schedule is selected. Must be greater than or equal to the system's configured Reversal Days buffer.
-Days After 
-No
-The event from which the posting delay is calculated.
-Typically set to 'subscription ends'. Select from dropdown.
-Reversal Narration
-No
-Ledger comment recorded when an offer reward is reversed.
-Enter a relevant description for reversal audit trail.
-
-
-
-
-
-
-Step 7: Configure Display Elements
-There are two parts to configure the display elements - Home Page with an offer tile on the PWA Home and Offer Details Page with more details about the specific offer.
-
-Note:
-If the offer is to be configured only for backend processing and not customer display, turn OFF the Enable display toggle and skip to Review page
-
-Home Page
-Label: Create and select a label if any categorization on PWA is required. This is optional.
-Banner Title (only for CVP offers): Enter a short, crisp title for the benefit banner display on home page
-Banner Description (only for CVP offers): Enter a short, crisp description for the benefit banner display on home page
-Display Title: Enter a title for offer card display
-Display Description: Enter a description for offer card display
-Display Order: Enter a display priority for the offer in integer. Lower the number, higher the display priority
-Display Colour: Select a colour or enter the hex code for offer display tile
-Offer/Merchant logo: Upload a merchant logo or icon
-Background Illustration: Upload a relevant image for the offer
-
-Offer Details Page
-Section Details: Add granular details about the offer such as How to Redeem, Terms and Conditions etc.
-Enter a suitable title for the section
-Add point-wise details by enabling bullets in RTE (Rich text Editor)
-Click on the “plus” button to add more blocks/sections
-Text on Button: Enter the CTA text to be displayed
-Redirection Link: Enter the complete link for redirection if CTA is clicked
-
-
-Step 8: Review and Publish
-The final step is the Review page. A consolidated summary of all configurations made across the previous steps is displayed here for final verification before the offer is published.
-
-The Review screen will display a summary of all configurations.
-Review each section carefully:
-Offer Details - Verify offer name, type, outcome, duration, issuer, and program.
-User Base - Confirm the enrollment method, Smart Tag cohort filters (if any).
-Transaction Eligibility - Verify all condition groups and AND/OR logic.
-Offer Calculation - Confirm reward type and calculation values.
-Budget - Confirm total allocated budget and thresholds.
-Usage Limits - Confirm per-customer earning limits.
-Posting Configuration - Confirm posting method, delay days, and narration.
-If any section needs correction, navigate back using the left navigation panel.
-Once all configurations are verified, click Publish.
-The offer will be set to Scheduled status and will automatically transition to Active when the configured Start Date and time is reached.
-
-Note:
-Publishing an offer makes it live in the system. Verify all configurations thoroughly before clicking Publish.
-Once an offer is Active, only the end date and display settings can be edited. All eligibility, calculation, and posting configurations are locked.
-If the offer needs to be stopped before the end date, use the Expire action from the Offer Listing page.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Managing Existing Offers
-From the Offer Listing page, you can perform the following actions on existing offers. Available actions vary depending on the current status of the offer.
-
-Status
-Description
-View
-Edit
-Duplicate
-Delete
-Expire
-Active
-Offer is currently live and running.
-✓
- End date & display only
-✓
--
-✓
-  Scheduled
-Offer is configured to start in the future.
-✓
-✓
-✓
-✓
--
-Draft
-Offer is saved but not yet active.
-✓
-✓
-✓
--
--
-Expired
-Offer end date has passed.
-✓
--
-✓
--
--
-
-
-Note:
-Editing a live (Active) offer is restricted to end date and display fields only. All eligibility and calculation rules are locked once an offer goes live.
-Duplicating an offer creates a copy in Draft status. You must open the duplicated offer, confirm the Basic Details step, and save it to retain the draft.
-Delete is only available for Scheduled offers. Active offers can be stopped using the Expire action.
-
-
-Viewing Offer Details
-Click on any offer name in the listing table to open its full detail view. The detail view shows all configured sections including eligibility criteria, calculation rules, usage limits, and posting setup.
-)
+Transactional Offers enable issuers to reward customers for performing qualifying individual transactions. Eligibility is configured using transaction-level conditions such as MCC, MID, Transaction Amount, POS Entry Mode, and other transaction attributes.
+
+This document is intended for teams responsible for creating and managing offers within the Hyperface platform.
+
+---
+
+## What are Transactional Offers?
+
+Transactional Offers are reward campaigns triggered by a customer completing a single qualifying transaction.
+
+Unlike milestone offers, no spend accumulation is required. Reward eligibility is evaluated per transaction.
+
+A Transactional Offer consists of:
+
+- Offer Details
+- User Base Configuration
+- Transaction Eligibility Rules
+- Offer Calculation Rules
+- Usage Limits
+- Posting Configuration
+- Display Elements
+
+---
+
+## Navigating to the Offer Listing Page
+
+1. Navigate to the **Offers** section.
+2. Select **Manage Offers**.
+3. The Offer Listing page will appear.
+
+### Summary Counters
+
+- Active Now
+- Approval Pending
+- Revision Required
+- Expiring This Week
+
+### Filter and Search
+
+Use the Filter Bar to narrow down offers by:
+
+- Status
+- Scope
+- Outcome Type
+- Offer Type
+- Program
+- Created By
+- Start Date
+- End Date
+
+---
+
+# Create a Transactional Offer
+
+1. Navigate to the appropriate offer category.
+2. Click **Create New Offer**.
+3. Select **Transactional Offer**.
+4. Click **Continue**.
+5. Select an Outcome Type.
+6. Continue to Offer Scope.
+
+---
+
+## Step 1: Configure Offer Details
+
+Configure:
+
+- Offer Name
+- Offer Description
+- Offer Duration
+- Issuer
+- Program Selection
+
+### Required Fields
+
+| Field | Required |
+|---------|---------|
+| Offer Name | Yes |
+| Offer Description | Yes |
+| Start Date / End Date | Yes |
+| Eligibility Level | Yes |
+| Issuer | Yes |
+| Program | Yes |
+
+---
+
+## Step 2: Configure Offer User Base
+
+Determine which customers can participate.
+
+### User Base Types
+
+#### Static Base
+
+- Fixed customer list
+- Smart Tag filtering supported
+
+#### Dynamic Base
+
+- Opt-In
+- Smart Tag Attachment
+
+### Enrollment Methods
+
+- Opt-In
+- Smart Tag Attachment
+
+---
+
+## Step 3: Configure Transaction Eligibility
+
+This step defines transaction-level conditions.
+
+Supported attributes:
+
+- MCC
+- MID
+- TID
+- Merchant Name
+- Transaction Value
+- Transaction Type
+- POS Entry Mode
+- Sovereignty Indicator
+- Transaction Code
+
+### Actions
+
+- Allowed
+- Denied
+
+### Logic
+
+- AND Conditions
+- OR Groups
+
+---
+
+## Step 4: Configure Offer Calculation
+
+Define how rewards are calculated.
+
+### Reward Types
+
+#### Fixed Reward
+
+Flat reward per transaction.
+
+#### Percentage Based Reward
+
+Percentage of transaction amount.
+
+#### Slab Based Reward
+
+Reward based on transaction value brackets.
+
+---
+
+## Step 5: Configure Usage Limits
+
+Optional reward earning limits.
+
+### Available Limits
+
+- Daily Limit
+- Weekly Limit
+- Monthly Limit
+- Lifetime Limit
+- Transaction Count Limit
+
+---
+
+## Step 6: Configure Posting
+
+Defines when rewards are posted.
+
+### Posting Methods
+
+#### Post Immediately
+
+Reward posted after validation.
+
+#### Schedule
+
+Reward posted after configured delay.
+
+### Required Fields
+
+- Enable Posting
+- Narration
+- Posting Method
+
+Optional:
+
+- Posting Eligibility
+- Reversal Narration
+
+---
+
+## Step 7: Configure Display Elements
+
+### Home Page
+
+Configure:
+
+- Label
+- Banner Title
+- Banner Description
+- Display Title
+- Display Description
+- Display Order
+- Display Colour
+- Merchant Logo
+- Background Illustration
+
+### Offer Details Page
+
+Configure:
+
+- Section Details
+- Terms and Conditions
+- How To Redeem
+- CTA Button Text
+- Redirection Link
+
+---
+
+## Step 8: Review and Publish
+
+Review all configurations:
+
+- Offer Details
+- User Base
+- Eligibility
+- Calculation
+- Usage Limits
+- Posting
+- Display Elements
+
+Click **Publish**.
+
+The offer will enter **Scheduled** status and become **Active** automatically at the configured start time.
+
+---
+
+# Managing Existing Offers
+
+### Available Actions
+
+| Status | View | Edit | Duplicate | Delete | Expire |
+|----------|------|------|------|------|------|
+| Active | Yes | Limited | Yes | No | Yes |
+| Scheduled | Yes | Yes | Yes | Yes | No |
+| Draft | Yes | Yes | Yes | No | No |
+| Expired | Yes | No | Yes | No | No |
+
+---
+
+## Viewing Offer Details
+
+Click any offer name from the Offer Listing page to open the complete configuration details.
+
+You can review:
+
+- Eligibility Rules
+- Calculation Rules
+- Usage Limits
+- Posting Configuration
+- Display Elements
