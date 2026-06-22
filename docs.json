@@ -3,9 +3,9 @@
   "name": "Hyperface Docs",
   "theme": "mint",
   "colors": {
-    "primary": "#3B82F6",
-    "light": "#60A5FA",
-    "dark": "#1D4ED8"
+  "primary": "#7C3AED",
+  "light": "#A78BFA",
+  "dark": "#5B21B6"
   },
   "navigation": {
     "groups": [
