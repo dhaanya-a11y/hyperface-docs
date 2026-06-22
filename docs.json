@@ -1,4 +1,5 @@
 {
+  "$schema": "https://mintlify.com/docs.json",
   "name": "Hyperface Docs",
   "navigation": [
     {
