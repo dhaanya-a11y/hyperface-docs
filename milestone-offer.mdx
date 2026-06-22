@@ -1,352 +1,266 @@
-# Milestone Offer
-
-(
-Milestone Offers
-User manual
-
-Index
-
-Index	2
-Introduction	3
-What are Milestone Offers?	3
-Create a Milestone Offer	4
-Step 1: Select Offer Type and Outcome	5
-Step 2: Configure Offer Details	6
-Step 3: Configure Offer User Base	8
-Step 4: Configure Milestone Eligibility	9
-Step 5: Configure Offer Calculation	11
-Step 7: Configure Usage Limits	12
-Step 8: Configure Posting	13
-Step 9: Review and Publish	15
-
-
-Introduction
-This guide explains how to create and configure Milestone Offers in the Hyperface Dashboard. Milestone Offers reward customers for reaching a cumulative spending or transaction-count target within a defined time period.
-
-This document is intended for operations and admin teams responsible for creating and managing offers within the Hyperface platform. It covers the complete milestone offer creation journey along with field-level guidance, including which fields are mandatory and which are configurable choices left to the admin's discretion.
-
-What are Milestone Offers?
-A Milestone Offer is a reward type where the customer must reach a spending or transaction-count target within a specific time period (the subscription cycle). Unlike a Transaction Offer, the target can be met through multiple smaller transactions - the system accumulates the customer's eligible activity over the cycle and evaluates the milestone threshold.
-
-Examples
-Spend 5,000 in the next 7 days and get a reward.
-Complete 5 transactions, each worth more than 1000, in the next 7 days and get a reward.
-
-
-A Milestone Offer consists of the following components:
-
-Offer Details - Basic identity, type, outcome, duration, and program scope of the offer.
-User Base Configuration - Defines which customers are eligible to participate.
-Milestone Eligibility - Defines the aggregation logic, threshold, subscription cycle, and transaction-level conditions that count toward the milestone.
-Offer Calculation Rules - Defines how the reward is calculated.
-Posting Configuration - Defines when and how rewards are posted to customers.
-Display Elements - Defines the visual elements of a benefit on the PWA
-
-Once all configurations are completed and reviewed, the offer is published and becomes available to eligible customers from the configured start date.
-
-Create a Milestone Offer
-Follow the steps below to create a new Milestone Offer. The creation journey is a sequential multi-step flow. Each step must be saved before proceeding to the next. You can navigate back to a completed step at any time using the left navigation panel.
-
-Log in to the Dashboard.
-Navigate to Portfolio Growth → Offers → Manage Offers.
-Click Create Offer.
-The offer creation journey will open, showing a step-by-step configuration flow on the left navigation panel.
-
-Step 1: Select Offer Type and Outcome
-The first screens in the journey determine the offer type and the reward outcome the customer will receive.
-
-On the offer type selection screen, select Milestone Offer.
-Click Continue.
-On the Select your offer's outcome screen, choose the outcome type the customer should receive on milestone completion. Available options typically include Cashback, Reward (points), Voucher, Smart Tag, and others depending on platform configuration.
-Click Continue to proceed to Basic Details.
-
-Note:
-The outcome type selected here determines the fields available later in the Offer Calculation step. For example, selecting Reward will surface a reward-points based calculation screen.
-
-
-Step 2: Configure Offer Details
-This section, under Basic Details → Offer Scope, captures the identity, duration, and program scope of the offer.
-
-Offer Information
-Enter the Offer Name.
-Enter the Offer Description (for internal reference).
-Configure the Offer Duration - set a Start Date & Time and an End Date & Time.
-
-Issuer and Program
-Select the Issuer from the dropdown.
-Select the Program Type (e.g. Credit Card, CASA).
-Choose whether to enable Apply to all current and future programs. If left disabled, select the specific Program(s) the offer should apply to.
-Choose whether to enable Enable progress transfer on variant upgrade. This setting carries over a customer's milestone progress if their card or account variant is upgraded mid-cycle. Enable or disable based on your program's policy.
-Verify all details and click Continue.
-
-Field
-Required
-Description
-Notes
-Offer Name
-Yes
-Display name of the offer.
-Does not need to be unique across offers.
-Offer Description
-Yes
-Internal description of the offer.
-Not shown to customers.
-Start Date & Time / End Date & Time
-Yes
-The active period of the offer.
-End date must be later than the start date. Offer status will show as Scheduled after saving and will auto-change to Active when the start time is reached.
-Issuer
-Yes
-The bank or financial institution offering this product.
-Select from the available issuers in the dropdown.
-Program Type
-Yes
-The product category this offer applies to.
-e.g. Credit Card, CASA.
-Apply to all programs toggle
-No
-When enabled, the offer applies to all existing and future programs of the selected type.
-Configurable choice. Enabling this disables individual program selection.
-Program
-Yes
-Specific program(s) the offer applies to.
-Required if the 'Apply to all programs' toggle is disabled.
-Enable progress transfer on variant upgrade
-No
-Whether milestone progress carries over if the customer's card/account variant is upgraded mid-cycle.
-Configurable choice. Enable or disable based on your program's policy.
+---
+title: Milestone Offers
+description: User Manual for Milestone Offers
+---
 
+# Milestone Offers
 
-Step 3: Configure Offer User Base
-This step, under Set-Up Offer → Offer User Base, determines which customers are eligible to participate in the milestone and how they are enrolled.
+## Introduction
 
-Select the User Base Type:
-Static Base - The eligible user list is locked at the time the offer goes live.
-Dynamic Config - Allows new eligible customers to be added throughout the offer period, typically combined with an Opt-In enrollment flow.
-Configure the Eligibility for the selected User Base Type:
-If Static Base is selected, you can choose 'All the accounts in this scope' (no additional eligibility criteria) or add specific inclusion/exclusion criteria.
-If Dynamic Config is selected, choose the enrollment method - Opt-In (customer self-enrolls) or Smart Tag Attachment (auto-enrolled based on Smart Tag membership).
-If using Smart Tags to restrict or exclude a cohort, select the Smart Tag(s) and set the condition to Allowed or Denied.
-Verify the user base configuration and click Continue.
+This guide explains how to create and configure Milestone Offers in the Hyperface Dashboard.
 
-Example
-User Base Type = Static Base, Eligibility = All the accounts in this scope, with no additional eligibility criteria - the offer applies to every account within the selected program scope.
+Milestone Offers reward customers for reaching a cumulative spending or transaction-count target within a defined time period.
 
+---
 
-Note:
-Both Static Base and Dynamic Config are valid configurations - choose based on whether you want the eligible customer list fixed at go-live or continuously updated.
-Smart Tags referenced here must already exist in the Smart Tag module before they can be used.
+## What are Milestone Offers?
 
+A Milestone Offer is a reward type where the customer must reach a spending or transaction-count target within a specific time period.
 
-Step 4: Configure Milestone Eligibility
-This is the core configuration step for a Milestone Offer. It defines how customer activity is aggregated, the threshold required to complete the milestone, the cycle over which activity is measured, and which transactions count toward the milestone.
+### Examples
 
-Aggregation Type
-Select the Aggregation Type - the parameter used to measure milestone progress:
-Sum of Transaction Values - Aggregates the total monetary value of eligible transactions.
-Count of Transactions - Aggregates the number of eligible transactions.
-Aggregate Definition
+- Spend 5,000 in the next 7 days and get a reward.
+- Complete 5 transactions worth more than 1,000 each in the next 7 days and get a reward.
 
-Threshold Configuration
-Select the threshold Condition (e.g. Greater Than And Equal To, Greater Than, Less Than, Equal To).
-Enter the Threshold value the customer must reach to complete the milestone.
+### Components
 
-Example
-Aggregation Type = Count of Transactions, Condition = Greater Than And Equal To, Threshold = 5 
-- the customer qualifies for the reward after completing 5 eligible transactions within the cycle.
+A Milestone Offer consists of:
 
-Alternatively, Aggregation Type = Sum of Transaction Values, Condition = Greater Than And Equal To, Threshold = 5,000,000 
-- the customer qualifies once their cumulative eligible spend reaches 5,000,000 within the cycle.
+- Offer Details
+- User Base Configuration
+- Milestone Eligibility
+- Offer Calculation Rules
+- Posting Configuration
+- Display Elements
 
+---
 
-Milestone Behaviour
-Choose whether to enable Lock milestone progress on achievement. When enabled, once a customer hits the threshold, their progress is locked and further qualifying activity in that cycle will not change the outcome. When disabled, progress may continue to accumulate or reset per cycle rules.
+# Create a Milestone Offer
 
-Subscription Cycle
-Select the Subscription Cycle Period:
-Custom - Define a numeric Opt-in Duration (in days) for each cycle.
-Billing Month - Aligns the milestone cycle with the customer's billing cycle instead of a fixed day count.
-Enter the Number of Cycles - how many times a customer is allowed to repeat/rejoin the milestone after a cycle ends.
+1. Log in to Dashboard.
+2. Navigate to Portfolio Growth → Offers → Manage Offers.
+3. Click Create Offer.
+4. Follow the configuration journey.
 
-Example
-Subscription Cycle = Billing Month, Number of Cycles = 1 
-- the milestone runs for one billing month and the customer can complete it once within that cycle.
+---
 
-Subscription Cycle = Custom, Opt-in Duration = 7 days, Number of Cycles = 4 
-- the milestone resets every 7 days and the customer can repeat it up to 4 times during the offer's active period.
+## Step 1: Select Offer Type and Outcome
 
+- Select **Milestone Offer**
+- Click Continue
+- Select Outcome Type:
+  - Cashback
+  - Reward Points
+  - Voucher
+  - Smart Tag
 
-Transaction Eligibility
-Configure which transactions count toward the milestone threshold using the same condition-and-group logic available in Transaction Offers.
+---
 
-Click Add Condition to define a transaction-level filter. Select the attribute (e.g. MCC, MID, Transaction Value, Merchant Name, POS Entry Mode, Transaction Type).
-Choose the input method - List (pre-configured list) or Input (type values directly).
-Set the Status/Action for the condition:
-Allowed - Transactions matching this value are included in the milestone aggregation.
-Denied - Transactions matching this value are excluded from the milestone aggregation.
-Add further conditions (AND logic within a group) or additional groups (OR logic across groups) as needed - see the Transaction Offer manual for detailed AND/OR logic and the Create New List sub-flow, which apply identically here.
+## Step 2: Configure Offer Details
 
-Example
-Attribute = MCC, Input = 2424, 4912, 4597, 5812, Status = Denied - transactions belonging to these MCCs are excluded from milestone aggregation, regardless of which aggregation type or threshold is configured.
-
-
-Processing Date
-Select which date the system should use when evaluating transaction eligibility against the cycle window:
-Transaction Date - The date the transaction occurred.
-Posting Date - The date the transaction was posted/settled to the account.
-Verify all milestone eligibility configuration and click Continue.
-
-
-Step 5: Configure Offer Calculation
-This step defines how the reward is calculated once the milestone threshold is achieved.
-
-Select the Calculation Rule. Available options depend on the outcome type selected earlier, and include rules such as Flat Multiplier, Fixed Reward, Percentage Based, and Slab Based.
-Configure the calculation values for the selected rule.
-
-Example
-Calculation Rule = Flat Multiplier, configured as 500 reward points for every 1,000 spent 
-- the customer earns reward points proportional to their qualifying spend at this fixed multiplier.
-
-
-Reward Point Capping
-Choose which capping levels can be skipped for this offer. Available options include Transaction Level, MCC, MID, Currency Level, and Program Level. Enable any combination relevant to your offer's design, or skip capping altogether if no caps are required.
-
-Reversal
-Choose whether to enable Allow reversal - this determines if previously issued rewards can be reversed if the underlying transaction is later reversed or refunded.
-Verify the calculation logic and click Continue.
-
-Note:
-Capping levels and the Allow reversal setting are configurable choices left to the admin - select based on your program's risk and reward policy. None of these options are mandatory defaults.
-
-
-
-
-
-
-
-
-Step 7: Configure Usage Limits
-This step controls how often an individual customer can earn rewards through this offer across cycles. All limit types are optional - configure only the limits relevant to your campaign design.
-
-Open the Usage Limits screen.
-Configure the applicable limits - Daily, Weekly, Monthly, Lifetime, and/or Transaction/Cycle Count limits.
-Leave a limit field empty if no restriction is required for that time period.
-Verify the configured limits and click Continue.
-
-Note:
-This screen can be skipped if no usage limits are required for the offer.
-If no limits are configured, a customer can earn a reward for every cycle they complete within the offer period, Number of Cycles, and budget.
-
-
-Step 8: Configure Posting
-This step defines when and how rewards are posted to customers after the milestone is achieved and validated.
-
-Ensure the Enable Posting toggle is turned ON. This controls whether the reward is posted to the customer's account - the customer will only see the reward in their interface after posting is completed.
-Configure Posting Eligibility if required - additional account-level conditions that must be met before a reward is posted. This can be skipped if no additional filter is needed.
-Select the Posting Schedule:
-Post Immediately - Reward is posted as soon as the subscription cycle ends and the transaction is validated as settled.
-Schedule - Reward is posted after a defined number of days from a reference event (e.g. Subscription Ends). This allows time for reversals and refunds to be accounted for.
-If Schedule is selected, configure:
-Days After - Number of days to wait before posting the reward.
-Event - The reference event from which the delay is calculated (e.g. Subscription Ends).
-Enter the Reward Point Expiry - the number of days after which unused reward points expire (applicable when the outcome type is Reward/points).
-Enter the Posting Narration - a ledger comment recorded when the reward is posted.
-Enter the Reversal Narration - a ledger comment recorded if the reward is reversed.
-Verify the posting setup and click Continue.
-
-Example
-Posting Schedule = Schedule, Days after = 8, Event = Subscription Ends - reward points are posted 8 days after the subscription cycle ends.
-Reward Point Expiry = 730 days - reward points expire if unused within 2 years of being posted.
-Posting Narration = 'RP posted on Milestone Achievement', Reversal Narration = 'RP reversed on Milestone Achievement'.
-
-
-Field
-Required
-Description
-Notes
-Enable Posting
-Yes
-Toggle to enable reward posting to the customer account.
-Must be ON for customers to receive rewards.
-Posting Eligibility
-No
-Optional filter conditions before posting is triggered.
-Can be skipped.
-Posting Schedule
-Yes
-Post Immediately or Schedule.
-Scheduled posting is recommended to allow time for reversals/refunds to be processed.
-Days After (if Schedule)
-Yes
-Number of days to delay posting after the reference event.
-Required if Schedule is selected.
-Event (if Schedule)
-No
-The event from which the posting delay is calculated.
-e.g. Subscription Ends.
-Reward Point Expiry
-No
-Number of days after which posted reward points expire.
-Applicable for Reward/points outcome type.
-Posting Narration
-Yes
-Ledger comment recorded at the time of reward posting.
-Mandatory system field.
-Reversal Narration
-No
-Ledger comment recorded when a reward is reversed.
-Enter a relevant description for the reversal audit trail.
-
-
-Step 9: Configure Display Elements
-There are two parts to configure the display elements - Home Page with an offer tile on the PWA Home and Offer Details Page with more details about the specific offer.
-
-Note:
-If the offer is to be configured only for backend processing and not customer display, turn OFF the Enable display toggle and skip to Review page
-
-Home Page
-Label: Create and select a label if any categorization on PWA is required. This is optional.
-Banner Title (only for CVP offers): Enter a short, crisp title for the benefit banner display on home page
-Banner Description (only for CVP offers): Enter a short, crisp description for the benefit banner display on home page
-Display Title: Enter a title for offer card display
-Display Description: Enter a description for offer card display
-Progress Style: Select whether it is a continuous progress bar, or step-wise progress bar.
-Display Order: Enter a display priority for the offer in integer. Lower the number, higher the display priority
-Display Colour: Select a colour or enter the hex code for offer display tile
-Offer/Merchant logo: Upload a merchant logo or icon
-Background Illustration: Upload a relevant image for the offer
-
-Offer Details Page
-Section Details: Add granular details about the offer such as How to Redeem, Terms and Conditions etc.
-Enter a suitable title for the section
-Add point-wise details by enabling bullets in RTE (Rich text Editor)
-Click on the “plus” button to add more blocks/sections
-Milestone Pending Text: Enter the text to be shown when milestone is in progress and threshold not achieved
-Milestone Completion Primary Text: Enter the first line to be shown when milestone progress is achieved
-Milestone Completion Secondary Text: Enter the second line to be shown when milestone progress is achieved
-Text on Button: Enter the CTA text to be displayed
-Redirection Link: Enter the complete link for redirection if CTA is clicked
-
-
-Step 10: Review and Publish
-The final step is the Review page. A consolidated summary of all configurations made across the previous steps is displayed here for final verification before the offer is published.
-
-The Review screen will display a summary of all configurations.
-Review each section carefully:
-Offer Details - Verify offer name, outcome type, duration, issuer, and program.
-User Base - Confirm user base type and eligibility criteria.
-Milestone Eligibility - Confirm aggregation type, threshold, subscription cycle, number of cycles, and transaction eligibility conditions.
-Offer Calculation - Confirm calculation rule, capping, and reversal settings.
-Budget - Confirm total allocated budget and thresholds.
-Usage Limits - Confirm per-customer earning limits.
-Posting Configuration - Confirm posting schedule, expiry, and narration.
-If any section needs correction, navigate back using the left navigation panel.
-Once all configurations are verified, click Publish.
-The offer will be set to Scheduled status and will automatically transition to Active when the configured Start Date and time is reached.
-
-Note:
-Publishing an offer makes it live in the system. Verify all configurations thoroughly before clicking Publish.
-Once an offer is Active, only limited fields (such as end date and display settings) can typically be edited. Eligibility, calculation, and posting configurations are locked once live.
-
-
-)
+### Offer Information
+
+Configure:
+
+- Offer Name
+- Offer Description
+- Start Date & Time
+- End Date & Time
+
+### Issuer and Program
+
+Configure:
+
+- Issuer
+- Program Type
+- Program Selection
+- Apply To All Programs
+- Progress Transfer On Variant Upgrade
+
+---
+
+## Step 3: Configure Offer User Base
+
+### User Base Types
+
+#### Static Base
+
+- Fixed customer list
+- All Accounts In Scope
+- Smart Tag Filtering
+
+#### Dynamic Config
+
+- Opt-In
+- Smart Tag Attachment
+
+### Smart Tag Options
+
+- Allowed
+- Denied
+
+---
+
+## Step 4: Configure Milestone Eligibility
+
+### Aggregation Types
+
+#### Sum of Transaction Values
+
+Aggregates customer spend.
+
+#### Count of Transactions
+
+Aggregates number of transactions.
+
+### Threshold Configuration
+
+Configure:
+
+- Greater Than
+- Greater Than Or Equal To
+- Less Than
+- Equal To
+
+### Subscription Cycle
+
+Options:
+
+- Custom
+- Billing Month
+
+### Transaction Eligibility
+
+Supported Filters:
+
+- MCC
+- MID
+- Merchant Name
+- Transaction Value
+- Transaction Type
+- POS Entry Mode
+
+### Processing Date
+
+Choose:
+
+- Transaction Date
+- Posting Date
+
+---
+
+## Step 5: Configure Offer Calculation
+
+### Calculation Rules
+
+Available options include:
+
+- Flat Multiplier
+- Fixed Reward
+- Percentage Based
+- Slab Based
+
+### Additional Options
+
+- Reward Point Capping
+- Transaction Level Cap
+- MCC Cap
+- MID Cap
+- Currency Cap
+- Program Cap
+
+### Reversal
+
+Enable or disable reward reversals.
+
+---
+
+## Step 6: Configure Usage Limits
+
+Optional limits:
+
+- Daily Limit
+- Weekly Limit
+- Monthly Limit
+- Lifetime Limit
+- Cycle Count Limit
+
+---
+
+## Step 7: Configure Posting
+
+### Posting Options
+
+#### Post Immediately
+
+Reward posts immediately after validation.
+
+#### Scheduled Posting
+
+Reward posts after configured delay.
+
+### Configuration
+
+- Enable Posting
+- Posting Eligibility
+- Days After
+- Event
+- Reward Point Expiry
+- Posting Narration
+- Reversal Narration
+
+---
+
+## Step 8: Configure Display Elements
+
+### Home Page
+
+Configure:
+
+- Label
+- Banner Title
+- Banner Description
+- Display Title
+- Display Description
+- Progress Style
+- Display Order
+- Display Colour
+- Merchant Logo
+- Background Illustration
+
+### Offer Details Page
+
+Configure:
+
+- Terms & Conditions
+- How To Redeem
+- Milestone Pending Text
+- Milestone Completion Text
+- CTA Button Text
+- Redirection Link
+
+---
+
+## Step 9: Review and Publish
+
+Review:
+
+- Offer Details
+- User Base
+- Milestone Eligibility
+- Calculation
+- Usage Limits
+- Posting
+- Display Elements
+
+Click **Publish**.
+
+The offer status becomes **Scheduled** and automatically changes to **Active** at the configured start time.
+
+---
+
+## Notes
+
+- Verify all configurations before publishing.
+- Active offers have limited edit options.
+- Eligibility and calculation rules become locked once live.
