@@ -8,16 +8,14 @@
     "dark": "#1D4ED8"
   },
   "navigation": [
-  {
-    "group": "Getting Started",
-    "pages": [
-      "introduction",
-      "getting-started",
-      "document-transaction",
-      "milestone-offer"
-    ]
-  }
-]
+    {
+      "group": "Getting Started",
+      "pages": [
+        "introduction",
+        "getting-started",
+        "document-transaction",
+        "milestone-offer"
+      ]
     }
-  
-
+  ]
+}
