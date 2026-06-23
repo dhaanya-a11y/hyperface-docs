@@ -3,7 +3,7 @@
 title: Transactional Offers
 description: User Manual for Transactional Offers
 ---
--------------------------------------------------
+
 
 ## Introduction
 
@@ -16,11 +16,47 @@ This document covers the complete offer creation journey, offer listing manageme
 ---
 
 ## What are Transactional Offers?
-
 Transactional Offers are reward campaigns triggered when a customer completes a single qualifying transaction.
 
 Unlike Milestone Offers, no spend accumulation is required. Reward eligibility is evaluated individually for each transaction.
 
+## Navigating to the Offer Listing Page
+
+The Offer Listing page is the central hub for viewing and managing all offers configured in the system.
+
+To access the Offer Listing page:
+
+1. Navigate to the **Offers** section from the left navigation menu.
+2. Select **Manage Offers**.
+3. The Offer Listing page will appear.
+
+### Offer Category Tabs
+
+Offers are grouped into categories displayed as tabs at the top of the listing page. Select the appropriate tab based on the offer type being configured before creating a new offer.
+
+### Summary Counters
+
+The Offer Listing page displays key metrics for quick monitoring:
+
+- Active Now
+- Approval Pending
+- Revision Required
+- Expiring This Week
+
+### Filter and Search
+
+Use the Filter Bar to narrow down offers by:
+
+- Status
+- Scope
+- Outcome Type
+- Offer Type
+- Program
+- Created By
+- Start Date
+- End Date
+
+Use the Search Bar to locate offers using Offer Name or Offer ID.
 ### Components
 
 A Transactional Offer consists of:
@@ -62,6 +98,14 @@ Select the reward outcome that customers will receive after completing a qualify
 ---
 
 ## Step 1: Configure Offer Details
+### Important Notes
+
+- Offer Name does not need to be unique.
+- Offer Description is for internal reference only.
+- Start time must be at least 5 minutes in the future.
+- End date must be later than the start date.
+- Offers are created in Scheduled status and automatically become Active at the configured start time.
+- If "Apply to all programs" is enabled, individual program selection is disabled.
 
 This section captures the basic identity and scope of the offer.
 
@@ -109,20 +153,30 @@ Define which customers are eligible for the offer.
 
 ## Step 3: Configure Transaction Eligibility
 
-Define the transaction-level conditions required for reward qualification.
+### Eligibility Logic
 
-### Supported Attributes
+All conditions within a group use AND logic.
 
-* MCC
-* MID
-* TID
-* Merchant Name
-* Transaction Value
-* Transaction Type
-* POS Entry Mode
-* Sovereignty Indicator
-* Transaction Code
+A customer becomes eligible when a transaction satisfies all configured conditions within a group.
 
+Conditions can be configured using:
+
+- Allowed
+- Denied
+- List Based Inputs
+- Direct Input Values
+
+### Creating Lists
+
+Lists can be created directly from the eligibility screen.
+
+Examples include:
+
+- Shopping MCCs
+- Fuel MCCs
+- Merchant MID Lists
+
+Lists can be configured as Immutable or Editable depending on business requirements.
 ![Transaction Eligibility](./2.png)
 
 ### Condition Configuration
@@ -140,33 +194,50 @@ Conditions can be combined using AND and OR logic to create advanced eligibility
 
 ## Step 4: Configure Offer Calculation
 
-Define how rewards are calculated.
+### Calculation Examples
 
-### Calculation Types
+#### Fixed Reward
 
-* Fixed Reward
-* Percentage Based Reward
-* Slab Based Reward
+Every qualifying transaction earns a predefined reward amount.
 
-### Additional Controls
+Example:
 
-* Minimum Reward Cap
-* Maximum Reward Cap
+- Qualifying supermarket transaction → 50 reward points
 
-Reward calculations are applied to every qualifying transaction.
+#### Percentage Based Reward
+
+Reward is calculated as a percentage of transaction value.
+
+Example:
+
+- Spend ₹2,000
+- Reward = 5%
+- Earn 100 reward points
+
+#### Slab Based Reward
+
+Rewards vary based on transaction value ranges.
+
+Example:
+
+- ₹500–₹1,999 → 50 points
+-- ₹2,000–₹4,999 → 150 points
+
 ![Offer Calculation](./c.png)
 
 ---
 
 ## Step 5: Configure Usage Limits
 
-Configure earning restrictions for individual customers.
+### Usage Limit Examples
 
-* Daily Limit
-* Weekly Limit
-* Monthly Limit
-* Lifetime Limit
-* Transaction Count Limit
+Examples include:
+
+- Daily Limit = 2 rewards per day
+- Weekly Limit = 5 rewards per week
+- Transaction Count Limit = First 2 qualifying transactions only
+
+Combined limits can be used to control campaign exposure and reward costs.
 
 ![Usage Limits](./3.png)
 
@@ -179,16 +250,19 @@ Examples help control reward exposure and customer earning frequency.
 ---
 
 ## Step 6: Configure Posting
+### Posting Recommendations
 
-Configure how and when rewards are posted to customers.
+Scheduled Posting is recommended because it provides time for transaction reversals and refunds before rewards are issued.
 
-### Posting Options
+Immediate Posting should only be used when reversal risk is minimal.
 
-* Enable Posting
-* Posting Eligibility
-* Immediate Posting
-* Scheduled Posting
-* Posting Narration
+### Additional Configuration
+
+- Posting Eligibility
+- Posting Delay
+- Posting Narration
+- Reversal Narration
+- Reward Expiry Rules
 * Reversal Narration
 
 ![Posting Configuration](./4.png)
@@ -251,25 +325,50 @@ The offer status becomes **Scheduled** and automatically changes to **Active** a
 
 ## Managing Existing Offers
 
-The Offer Listing page allows you to manage existing offers.
+The Offer Listing page allows users to manage existing offers throughout their lifecycle.
 
-Available actions include:
+### Available Actions
 
-* View
-* Edit
-* Duplicate
-* Delete
-* Expire
+- View
+- Edit
+- Duplicate
+- Delete
+- Expire
 
-Available actions vary depending on the current offer status.
+### Offer Statuses
 
-### Status Types
+#### Active
 
-* Active
-* Scheduled
-* Draft
-* Expired
+Offer is currently live and available to eligible customers.
 
+#### Scheduled
+
+Offer has been configured and will become active at a future date.
+
+#### Draft
+
+Offer has been created but not yet activated.
+
+#### Expired
+
+Offer has reached its end date and is no longer active.
+
+### Viewing Offer Details
+
+Click any offer name from the Offer Listing page to view:
+
+- Eligibility Rules
+- Calculation Rules
+- Usage Limits
+- Posting Configuration
+- Display Configuration
+
+### Important Notes
+
+- Active offers can only be edited for display settings and end date.
+- Eligibility and calculation rules are locked once the offer becomes active.
+- Duplicated offers are created in Draft status.
+- Scheduled offers can be deleted before activation.
 ### Viewing Offer Details
 
 Click any offer name from the Offer Listing page to view the complete offer configuration, eligibility rules, calculation settings, usage limits, posting setup, and display configuration.
