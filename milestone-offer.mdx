@@ -6,30 +6,29 @@ description: User Manual for Milestone Offers
 
 ## Introduction
 
-This guide explains how to create, configure, and publish Milestone Offers using the Hyperface Dashboard.
+This guide explains how to create and configure Milestone Offers in the Hyperface Dashboard.
 
-Milestone Offers enable issuers to reward customers when they achieve predefined spending or transaction milestones within a specified time period. These offers help drive customer engagement, increase card usage, and encourage targeted spending behavior.
+Milestone Offers reward customers for reaching a cumulative spending or transaction-count target within a defined time period.
 
 ---
 
 ## What are Milestone Offers?
 
-A Milestone Offer is a reward mechanism that grants customers a benefit after they reach a specified spending amount or transaction count within a defined eligibility period.
+A Milestone Offer is a reward type where the customer must reach a spending or transaction-count target within a specific time period.
 
-### Example Scenarios
+### Examples
 
 * Spend ₹5,000 within the next 7 days and earn a reward.
-* Complete 5 eligible transactions worth more than ₹1,000 each within 7 days and receive cashback.
+* Complete 5 transactions worth more than ₹1,000 each within the next 7 days and receive a reward.
 
-### Key Components
+### Components
 
-A Milestone Offer consists of the following configurations:
+A Milestone Offer consists of:
 
 * Offer Details
 * User Base Configuration
 * Milestone Eligibility
 * Offer Calculation Rules
-* Usage Limits
 * Posting Configuration
 * Display Elements
 
@@ -37,21 +36,18 @@ A Milestone Offer consists of the following configurations:
 
 ## Create a Milestone Offer
 
-To create a new Milestone Offer:
-
-1. Log in to the Hyperface Dashboard.
+1. Log in to Dashboard.
 2. Navigate to **Portfolio Growth → Offers → Manage Offers**.
 3. Click **Create Offer**.
-4. Select **Milestone Offer** as the offer type.
-5. Complete the configuration journey and publish the offer.
+4. Follow the offer configuration journey.
 
 ---
 
 ## Step 1: Select Offer Type and Outcome
 
-Choose **Milestone Offer** and configure the reward outcome.
+Configure the reward type and outcome.
 
-### Supported Outcome Types
+### Available Outcome Types
 
 * Cashback
 * Reward Points
@@ -62,16 +58,18 @@ Choose **Milestone Offer** and configure the reward outcome.
 
 ## Step 2: Configure Offer Details
 
-Configure the basic information required for the offer.
-
 ### Offer Information
+
+Configure:
 
 * Offer Name
 * Offer Description
 * Start Date & Time
 * End Date & Time
 
-### Issuer & Program Configuration
+### Issuer and Program Configuration
+
+Configure:
 
 * Issuer
 * Program Type
@@ -87,17 +85,13 @@ Define the customer segment eligible for the offer.
 
 ### Static Base
 
-Used when the offer is targeted to a predefined customer group.
-
 * Fixed Customer List
 * All Accounts In Scope
 * Smart Tag Filtering
 
 ### Dynamic Configuration
 
-Used when customers can become eligible dynamically.
-
-* Opt-In Enrollment
+* Opt-In
 * Smart Tag Attachment
 
 ### Smart Tag Options
@@ -108,8 +102,6 @@ Used when customers can become eligible dynamically.
 ---
 
 ## Step 4: Configure Milestone Eligibility
-
-Define the milestone conditions customers must satisfy.
 
 ### Aggregation Types
 
@@ -123,7 +115,7 @@ Calculates the total number of eligible transactions completed by the customer.
 
 ### Threshold Configuration
 
-Supported conditions include:
+Configure:
 
 * Greater Than
 * Greater Than or Equal To
@@ -134,10 +126,12 @@ Supported conditions include:
 
 Available options:
 
-* Custom Cycle
+* Custom
 * Billing Month
 
-### Transaction Eligibility Filters
+### Transaction Eligibility
+
+Supported filters:
 
 * MCC
 * MID
@@ -146,7 +140,9 @@ Available options:
 * Transaction Type
 * POS Entry Mode
 
-### Processing Date Options
+### Processing Date
+
+Choose:
 
 * Transaction Date
 * Posting Date
@@ -155,16 +151,16 @@ Available options:
 
 ## Step 5: Configure Offer Calculation
 
-Define how rewards are calculated once the milestone is achieved.
-
 ### Calculation Rules
+
+Available options include:
 
 * Flat Multiplier
 * Fixed Reward
-* Percentage Based Reward
-* Slab Based Reward
+* Percentage Based
+* Slab Based
 
-### Additional Controls
+### Additional Options
 
 * Reward Point Capping
 * Transaction Level Cap
@@ -173,17 +169,15 @@ Define how rewards are calculated once the milestone is achieved.
 * Currency Cap
 * Program Cap
 
-### Reversal Configuration
+### Reversal
 
-Enable or disable reward reversals based on business requirements.
+Enable or disable reward reversals.
 
 ---
 
 ## Step 6: Configure Usage Limits
 
-Usage limits help control reward exposure and budget allocation.
-
-Available limits include:
+Optional limits:
 
 * Daily Limit
 * Weekly Limit
@@ -195,19 +189,17 @@ Available limits include:
 
 ## Step 7: Configure Posting
 
-Configure how and when rewards are posted to eligible customers.
-
 ### Posting Options
 
 #### Post Immediately
 
-Rewards are posted immediately after successful validation.
+Rewards are posted immediately after validation.
 
 #### Scheduled Posting
 
 Rewards are posted after a configured delay.
 
-### Posting Configuration
+### Configuration
 
 * Enable Posting
 * Posting Eligibility
@@ -221,11 +213,11 @@ Rewards are posted after a configured delay.
 
 ## Step 8: Configure Display Elements
 
-Display Elements determine how the offer is presented to customers within the application.
+Display Elements control how the offer is presented to customers across the Hyperface platform.
 
 ### Home Page Configuration
 
-Configure the following elements:
+Configure:
 
 * Label
 * Banner Title
@@ -242,7 +234,7 @@ Configure the following elements:
 
 ### Offer Details Page Configuration
 
-Configure the detailed information displayed when a customer opens the offer.
+Configure:
 
 * Terms & Conditions
 * How To Redeem
@@ -257,32 +249,29 @@ Configure the detailed information displayed when a customer opens the offer.
 
 ## Step 9: Review and Publish
 
-Before publishing, review all configurations carefully.
-
-### Review Checklist
+Review all configurations before publishing:
 
 * Offer Details
-* User Base Configuration
+* User Base
 * Milestone Eligibility
-* Offer Calculation Rules
+* Calculation Rules
 * Usage Limits
 * Posting Configuration
 * Display Elements
 
-Click **Publish** once all configurations have been validated.
+Click **Publish**.
 
-The offer status changes to **Scheduled** and automatically becomes **Active** at the configured start date and time.
+The offer status becomes **Scheduled** and automatically changes to **Active** at the configured start time.
 
 ---
 
 ## Best Practices
 
-* Review all configurations before publishing.
+* Verify all configurations before publishing.
 * Use clear and customer-friendly offer descriptions.
-* Validate reward calculations before activation.
-* Ensure display content aligns with Hyperface branding guidelines.
-* Verify Terms & Conditions before making the offer live.
-* Test offer eligibility using sample customer scenarios whenever possible.
+* Review reward calculations before activation.
+* Ensure display content aligns with Hyperface branding.
+* Validate Terms & Conditions before making the offer live.
 
 ---
 
@@ -290,4 +279,4 @@ The offer status changes to **Scheduled** and automatically becomes **Active** a
 
 * Active offers have limited edit capabilities.
 * Eligibility and calculation rules become locked once the offer is live.
-* Changes to published offers may require approval based on configured workflows.
+* Review all configurations carefully before publishing.
