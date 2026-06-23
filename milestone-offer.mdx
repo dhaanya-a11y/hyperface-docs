@@ -15,6 +15,10 @@ Milestone Offers reward customers for reaching a cumulative spending or transact
 
 A Milestone Offer is a reward type where customers receive rewards after achieving a predefined spending or transaction milestone within a specified period.
 
+Unlike Transactional Offers, milestone eligibility is based on cumulative activity over a subscription cycle. Multiple qualifying transactions can contribute toward milestone completion.
+
+Once all configurations are completed and reviewed, the offer is published and becomes available to eligible customers from the configured start date.
+
 ### Examples
 
 - Spend ₹5,000 within the next 7 days and earn a reward.
@@ -57,6 +61,16 @@ Configure the reward type and outcome.
 
 ## Step 2: Configure Offer Details
 
+### Important Notes
+
+- Offer Name does not need to be unique across offers.
+- Offer Description is for internal reference only and is not shown to customers.
+- End Date & Time must always be later than Start Date & Time.
+- Offers are initially created in Scheduled status.
+- Offers automatically become Active when the configured start time is reached.
+- Enabling Apply To All Programs disables individual program selection.
+- Progress Transfer On Variant Upgrade should only be enabled when milestone progress must continue after a card or account upgrade.
+
 ### Offer Information
 
 Configure:
@@ -80,23 +94,26 @@ Configure:
 
 ## Step 3: Configure Offer User Base
 
-Define the customer segment eligible for the offer.
+### User Base Types
 
-### Static Base
+#### Static Base
 
-- Fixed Customer List
-- All Accounts In Scope
-- Smart Tag Filtering
+The eligible customer list is fixed when the offer becomes active.
 
-### Dynamic Configuration
+#### Dynamic Configuration
 
-- Opt-In
-- Smart Tag Attachment
+Allows new eligible customers to join throughout the offer lifecycle.
 
-### Smart Tag Options
+This configuration is commonly used with Opt-In based milestone campaigns.
 
-- Allowed
-- Denied
+### Smart Tag Configuration
+
+Smart Tags can be used to include or exclude customer segments.
+
+- Allowed = Only customers in the Smart Tag are eligible.
+- Denied = Customers in the Smart Tag are excluded.
+
+Smart Tags must already exist before they can be used in offer configuration.
 
 ---
 
@@ -146,6 +163,29 @@ Choose:
 - Transaction Date
 - Posting Date
 
+### Milestone Behaviour
+
+Lock Milestone Progress On Achievement determines whether milestone progress stops accumulating once the threshold is achieved.
+
+- Enabled: Progress is locked once the milestone is completed.
+- Disabled: Progress can continue based on cycle rules.
+
+### Subscription Cycle Examples
+
+Example 1:
+
+- Billing Month
+- Number of Cycles = 1
+
+The milestone runs for one billing cycle and can be completed once.
+
+Example 2:
+
+- Custom Duration = 7 Days
+- Number of Cycles = 4
+
+The milestone resets every 7 days and can be completed up to four times.
+
 ---
 
 ## Step 5: Configure Offer Calculation
@@ -172,6 +212,35 @@ Available options include:
 
 Enable or disable reward reversals.
 
+### Calculation Examples
+
+#### Fixed Reward
+
+Customers receive a predefined reward after completing the milestone.
+
+Example:
+
+- Complete milestone → Earn 500 reward points.
+
+#### Percentage Based Reward
+
+Rewards are calculated as a percentage of qualifying spend.
+
+Example:
+
+- Spend ₹10,000
+- Reward Rate = 5%
+- Earn 500 reward points.
+
+#### Slab Based Reward
+
+Different reward values are assigned to different milestone ranges.
+
+Example:
+
+- Spend ₹5,000–₹9,999 → Earn 100 points
+- Spend ₹10,000–₹19,999 → Earn 250 points
+
 ---
 
 ## Step 6: Configure Usage Limits
@@ -183,6 +252,15 @@ Optional limits:
 - Monthly Limit
 - Lifetime Limit
 - Cycle Count Limit
+
+### Usage Limit Examples
+
+- Daily Limit = 2 rewards per day
+- Weekly Limit = 5 rewards per week
+- Monthly Limit = 10 rewards per month
+- Lifetime Limit = 25 rewards during the offer period
+
+Combined limits can be used to manage reward exposure and campaign costs.
 
 ---
 
@@ -208,6 +286,18 @@ Rewards are posted after a configured delay.
 - Posting Narration
 - Reversal Narration
 
+### Posting Recommendations
+
+Scheduled Posting is recommended because it allows sufficient time for reversals and refunds before rewards are issued.
+
+Immediate Posting should only be used when reversal risk is minimal.
+
+### Additional Configuration
+
+- Posting Eligibility
+- Reward Point Expiry
+- Posting Narration
+- Reversal Narration
 ---
 
 ## Step 8: Configure Display Elements
