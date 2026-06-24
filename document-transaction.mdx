@@ -20,6 +20,22 @@ Transactional Offers are reward campaigns triggered when a customer completes a 
 
 Unlike Milestone Offers, no spend accumulation is required. Reward eligibility is evaluated individually for each transaction.
 
+### Key Characteristics
+
+Transactional Offers are evaluated at the transaction level rather than at an aggregate spend level.
+
+Key characteristics include:
+
+* Rewards are triggered by individual qualifying transactions.
+* Eligibility is evaluated in real time or near real time based on configured rules.
+* Multiple transaction attributes can be combined to define eligibility.
+* Rewards can be issued as cashback, reward points, vouchers, or Smart Tags.
+* Usage limits can be configured to control customer earning frequency.
+* Posting rules determine when rewards become visible to customers.
+
+Transactional Offers are ideal for merchant promotions, spend-based rewards, customer activation campaigns, and targeted engagement initiatives.
+
+
 ## Navigating to the Offer Listing Page
 
 The Offer Listing page is the central hub for viewing and managing all offers configured in the system.
@@ -130,6 +146,42 @@ Configure:
 ---
 
 ## Step 2: Configure Offer User Base
+### User Base Selection Guidelines
+
+Selecting the correct user base is important because it determines who can participate in the offer.
+
+Use Static Base when the eligible customer population is known in advance and should remain fixed throughout the offer period.
+
+Use Dynamic Configuration when customers should be able to become eligible after the offer has gone live.
+
+### Example Scenarios
+
+#### New Customer Campaign
+
+Target customers who opened an account within the last 30 days.
+
+Configuration:
+
+* User Base: Static Base
+* Smart Tag: New Customers
+* Condition: Allowed
+
+#### Opt-In Cashback Campaign
+
+Allow customers to enroll themselves during the campaign period.
+
+Configuration:
+
+* User Base: Dynamic Configuration
+* Enrollment Type: Opt-In
+
+### Best Practices
+
+* Validate Smart Tag membership before publishing.
+* Review inclusion and exclusion criteria carefully.
+* Use Dynamic Configuration only when ongoing enrollment is required.
+* Test enrollment scenarios before activation.
+
 
 Define which customers are eligible for the offer.
 
@@ -152,6 +204,28 @@ Define which customers are eligible for the offer.
 ---
 
 ## Step 3: Configure Transaction Eligibility
+When configuring transaction eligibility:
+
+* Use meaningful list names for MCCs, MIDs, and merchant groups.
+* Verify all condition logic before publishing.
+* Minimize unnecessary eligibility conditions to reduce maintenance complexity.
+* Test common transaction scenarios before activating the offer.
+* Review Denied conditions carefully to ensure valid transactions are not unintentionally excluded.
+
+### Example Eligibility Scenario
+
+Objective:
+
+Reward customers for fuel purchases above ₹1,000.
+
+Configuration:
+
+* MCC = Fuel MCC List
+* Transaction Amount > ₹1,000
+
+Result:
+
+Only transactions matching both conditions will qualify for reward evaluation.
 
 ### Eligibility Logic
 
@@ -193,6 +267,36 @@ Conditions can be combined using AND and OR logic to create advanced eligibility
 ---
 
 ## Step 4: Configure Offer Calculation
+### Calculation Configuration Guidelines
+
+The reward calculation determines the value customers receive after completing a qualifying transaction.
+
+The selected calculation method should align with campaign objectives, reward budgets, and expected customer behaviour.
+
+### Choosing the Right Calculation Type
+
+#### Fixed Reward
+
+Best suited for simple campaigns where every qualifying transaction should earn the same reward.
+
+#### Percentage Based Reward
+
+Useful when rewards should scale based on transaction value.
+
+#### Slab Based Reward
+
+Recommended when higher transaction values should earn progressively larger rewards.
+
+### Validation Checklist
+
+Before publishing:
+
+* Verify reward amounts.
+* Validate percentage calculations.
+* Review slab ranges for overlaps.
+* Confirm reward caps where applicable.
+* Test sample transaction scenarios.
+
 
 ### Calculation Examples
 
@@ -250,6 +354,35 @@ Examples help control reward exposure and customer earning frequency.
 ---
 
 ## Step 6: Configure Posting
+### Posting Best Practices
+
+Posting configuration determines when rewards become visible to customers.
+
+Selecting the appropriate posting method helps balance customer experience with operational risk.
+
+### Immediate Posting
+
+Recommended when:
+
+* Reversal risk is minimal.
+* Customer gratification is a priority.
+* Rewards should appear as quickly as possible.
+
+### Scheduled Posting
+
+Recommended when:
+
+* Transactions may be refunded or reversed.
+* Campaigns require validation periods.
+* Additional fraud or compliance checks are necessary.
+
+### Operational Recommendations
+
+* Configure posting delays based on expected reversal windows.
+* Use meaningful posting narrations for audit purposes.
+* Verify reversal narrations before publishing.
+* Test reward posting behaviour before activating the campaign.
+
 ### Posting Recommendations
 
 Scheduled Posting is recommended because it provides time for transaction reversals and refunds before rewards are issued.
@@ -305,7 +438,21 @@ Configure:
 
 ## Step 8: Review and Publish
 
-Review all configurations before publishing.
+Review all configurations before publishing
+
+Before publishing an offer, verify:
+
+* Offer details are accurate.
+* Program selection is correct.
+* User base configuration has been validated.
+* Eligibility rules have been reviewed.
+* Reward calculations have been tested.
+* Usage limits align with campaign objectives.
+* Posting configuration is complete.
+* Customer-facing display content has been approved.
+
+Publishing should only be performed after all configurations have been reviewed and validated.
+
 
 ### Review Checklist
 
