@@ -18,6 +18,20 @@ A Milestone Offer is a reward type where customers receive rewards after achievi
 Unlike Transactional Offers, milestone eligibility is based on cumulative activity over a subscription cycle. Multiple qualifying transactions can contribute toward milestone completion.
 
 Once all configurations are completed and reviewed, the offer is published and becomes available to eligible customers from the configured start date.
+### Key Characteristics
+
+Milestone Offers track customer progress across multiple transactions within a defined subscription cycle.
+
+Key characteristics include:
+
+* Rewards are earned after a milestone threshold is achieved.
+* Progress is accumulated across multiple eligible transactions.
+* Milestones can be based on total spend or transaction count.
+* Subscription cycles determine the duration over which activity is measured.
+* Customers may be allowed to repeat milestones across multiple cycles.
+* Transaction-level eligibility rules determine which transactions contribute toward milestone progress.
+
+Milestone Offers are commonly used for spend-based campaigns, engagement programs, customer retention initiatives, and recurring reward campaigns.
 
 ### Examples
 
@@ -48,14 +62,51 @@ A Milestone Offer consists of:
 
 ## Step 1: Select Offer Type and Outcome
 
-Configure the reward type and outcome.
+The first step in the offer creation journey is selecting the offer type and the reward outcome that customers will receive after successfully completing the milestone.
+
+The outcome selected in this step determines the configuration options available later in the Offer Calculation section.
+
+### Configure Offer Type
+
+1. Navigate to the Offer Creation journey.
+2. Select **Milestone Offer** as the offer type.
+3. Click **Continue** to proceed.
+
+### Configure Outcome Type
+
+Select the reward outcome customers should receive after achieving the milestone.
 
 ### Available Outcome Types
 
-- Cashback
-- Reward Points
-- Voucher
-- Smart Tag
+#### Cashback
+
+Rewards are credited back to the customer as cashback after milestone completion.
+
+#### Reward Points
+
+Customers receive reward points that can be redeemed according to the program's reward policy.
+
+#### Voucher
+
+Customers receive a voucher or coupon upon successful milestone completion.
+
+#### Smart Tag
+
+Customers receive a Smart Tag that can be used for segmentation, targeting, or future campaign eligibility.
+
+### Important Notes
+
+* The selected outcome type impacts the calculation options available in later steps.
+* Different outcome types may require different posting and reward configuration settings.
+* Ensure the selected reward outcome aligns with the campaign objective before proceeding.
+
+### Example
+
+If the campaign objective is to reward customers with loyalty points after reaching a spending target, select **Reward Points** as the outcome type.
+
+If the campaign objective is to return a percentage of spend to the customer, select **Cashback** as the outcome type.
+
+Click **Continue** to proceed to Offer Details.
 
 ---
 
@@ -89,10 +140,37 @@ Configure:
 - Program Selection
 - Apply To All Programs
 - Progress Transfer On Variant Upgrade
+### Why Offer Details Matter
+
+Offer Details define the identity, duration, and scope of the milestone campaign.
+
+Accurate configuration ensures:
+
+- The offer becomes active at the correct time.
+- The correct programs are targeted.
+- Milestone tracking occurs within the intended duration.
+- Operational teams can easily identify and manage the offer.
 
 ---
 
 ## Step 3: Configure Offer User Base
+### Example Scenario
+
+User Base Type = Static Base
+
+Eligibility = All Accounts In Scope
+
+Result:
+
+The offer applies to every eligible account within the selected program scope without additional enrollment requirements.
+
+### Best Practices
+
+* Validate Smart Tag membership before publishing.
+* Review inclusion and exclusion criteria carefully.
+* Use Dynamic Configuration only when ongoing enrollment is required.
+* Test enrollment scenarios before activation.
+
 
 ### User Base Types
 
@@ -118,6 +196,30 @@ Smart Tags must already exist before they can be used in offer configuration.
 ---
 
 ## Step 4: Configure Milestone Eligibility
+### Milestone Eligibility Best Practices
+
+The milestone configuration determines how customer progress is tracked and when rewards are triggered.
+
+Before publishing:
+
+* Verify aggregation type selection.
+* Validate threshold values.
+* Review subscription cycle configuration.
+* Confirm transaction eligibility conditions.
+* Test milestone completion scenarios.
+
+### Example Transaction Eligibility Rule
+
+Configuration:
+
+* MCC = Grocery
+* Transaction Value > ₹1,000
+* Status = Allowed
+
+Result:
+
+Only grocery transactions above ₹1,000 contribute toward milestone progress.
+
 
 ### Aggregation Types
 
@@ -189,6 +291,22 @@ The milestone resets every 7 days and can be completed up to four times.
 ---
 
 ## Step 5: Configure Offer Calculation
+### Calculation Configuration Guidelines
+
+The reward calculation defines the benefit customers receive after completing a milestone.
+
+The selected calculation method should align with campaign objectives, expected customer behaviour, and reward budgets.
+
+### Validation Checklist
+
+Before publishing:
+
+* Verify reward amounts.
+* Review multiplier calculations.
+* Validate slab ranges.
+* Confirm reward caps where applicable.
+* Test sample milestone completion scenarios.
+
 
 ### Calculation Rules
 
@@ -261,10 +379,35 @@ Optional limits:
 - Lifetime Limit = 25 rewards during the offer period
 
 Combined limits can be used to manage reward exposure and campaign costs.
+### Usage Limit Best Practices
+
+Usage limits help control campaign costs and prevent excessive reward earning.
+
+Before publishing:
+
+- Review expected reward exposure.
+- Configure limits based on campaign objectives.
+- Validate cycle count restrictions.
+- Ensure limits align with budget allocations.
+
+If no limits are configured, customers may continue earning rewards whenever milestone conditions are satisfied.
 
 ---
 
 ## Step 7: Configure Posting
+### Posting Best Practices
+
+Posting configuration determines when milestone rewards become visible to customers.
+
+Scheduled Posting is generally recommended because it provides sufficient time for transaction reversals, refunds, and settlement validation.
+
+### Operational Recommendations
+
+* Configure posting delays based on reversal windows.
+* Use meaningful posting narrations for audit purposes.
+* Verify reward expiry settings.
+* Review reversal narration before publishing.
+* Test reward posting behaviour before activation.
 
 ### Posting Options
 
@@ -337,6 +480,20 @@ Configure:
 ---
 
 ## Step 9: Review and Publish
+### Pre-Publish Validation Checklist
+
+Before publishing a Milestone Offer, verify:
+
+* Offer Details are accurate.
+* User Base configuration is correct.
+* Milestone Eligibility has been validated.
+* Reward calculations have been tested.
+* Usage Limits align with campaign objectives.
+* Posting Configuration is complete.
+* Display content has been reviewed and approved.
+
+Publishing should only be performed after all configurations have been reviewed and validated.
+
 
 Review all configurations before publishing:
 
