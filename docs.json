@@ -20,7 +20,8 @@
         "group": "Offer Management",
         "pages": [
           "document-transaction",
-          "milestone-offer"
+          "milestone-offer",
+          "rent-cashback"
         ]
       }
     ]
