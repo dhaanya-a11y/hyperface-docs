@@ -20,9 +20,7 @@
         "group": "Offer Management",
         "pages": [
           "document-transaction",
-          "milestone-offer",
-          "amzon-rewards",
-          "rent-cashback"
+          "milestone-offer"
         ]
       }
     ]
