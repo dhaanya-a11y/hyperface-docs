@@ -1,29 +1,26 @@
 ---
 title: Rent Cashback Offer
 description: Configure a transactional rent cashback offer.
-hidden: true
----
-
-# Rent Cashback Offer
 ---
 
 ## Overview
 
 This guide explains how to configure the **Rent Cashback** offer in the Offer Management System (OMS).
 
-## Business Objective
+## Business objective
 
 The **Rent Cashback** offer is designed to encourage customers to use their eligible credit cards for rent payments by rewarding qualifying transactions with cashback. Customers receive **5% cashback** on eligible rent transactions of **₹500 or more**, up to a maximum cashback of **₹500 per calendar month**.
+
 ![Rent Cashback Offer](./rent.jpg)
 
-## Quick Access
+## Quick access
 
 | Environment | Link |
 |------------|------|
 | Sandbox | [Open Rent Cashback Offer](https://dashboard-sandbox.hyperface.co/dashboard/portfolioGrowth/offers/smartBenefits/PROGRAM_OFFERS/bnft_e7SactS30Xz6T2) |
 | PWA | [View Offer in PWA](https://pwa.sandbox.hf.hyperface.co/) |
 
-### Offer Type
+### Offer type
 
 | Field | Value |
 |-------|-------|
@@ -34,7 +31,7 @@ This offer rewards customers with **5% cashback** on eligible **Rent MCC** trans
 
 ---
 
-# Basic Details
+## Basic details
 
 Navigate to **Offer Creation → Basic Details** and configure the following fields.
 
@@ -55,15 +52,15 @@ Navigate to **Offer Creation → Basic Details** and configure the following fie
 
 ---
 
-# Set Up Offer User Base
+## Set up offer user base
 
 After configuring the basic details, define the customer group that will be eligible for the offer.
 
-## User Base
+### User base
 
 The **User Base** determines whether the list of eligible customers remains fixed or is updated during the offer duration.
 
-### Configuration
+#### Configuration
 
 | Field | Value | Description |
 |-------|-------|-------------|
@@ -73,13 +70,13 @@ The **User Base** determines whether the list of eligible customers remains fixe
 
 ---
 
-# Set Up Transaction Eligibility
+## Set up transaction eligibility
 
 Configure the transaction conditions that determine whether a transaction qualifies for cashback.
 
-## Transaction Eligibility
+### Transaction eligibility
 
-### Configuration
+#### Configuration
 
 | Field | Value | Description |
 |-------|-------|-------------|
@@ -89,11 +86,11 @@ Configure the transaction conditions that determine whether a transaction qualif
 
 ---
 
-## Date for Offer Processing
+### Date for offer processing
 
 Choose when the offer eligibility should be evaluated.
 
-### Configuration
+#### Configuration
 
 | Field | Value | Description |
 |-------|-------|-------------|
@@ -103,13 +100,13 @@ Choose when the offer eligibility should be evaluated.
 
 ---
 
-# Calculate the Offer Outcome
+## Calculate the offer outcome
 
 After configuring the transaction eligibility, define how cashback is calculated.
 
-## Offer Calculation Rule
+### Offer calculation rule
 
-### Configuration
+#### Configuration
 
 | Field | Value | Description |
 |-------|-------|-------------|
@@ -121,11 +118,11 @@ After configuring the transaction eligibility, define how cashback is calculated
 
 ---
 
-## Funding Account
+### Funding account
 
 The **Funding Account** is the source account used to disburse cashback to eligible customers.
 
-### Configuration
+#### Configuration
 
 | Field | Value | Description |
 |-------|-------|-------------|
@@ -133,7 +130,7 @@ The **Funding Account** is the source account used to disburse cashback to eligi
 
 ---
 
-# Usage Limit
+## Usage limit
 
 The **Usage Limit** defines the maximum cashback a customer can receive during the configured validity period.
 
@@ -149,13 +146,13 @@ The **Usage Limit** defines the maximum cashback a customer can receive during t
 
 ---
 
-# Define When to Post Your Offer
+## Define when to post your offer
 
 Configure how and when cashback is posted to the customer's account.
 
-## Posting Eligibility
+### Posting eligibility
 
-### Configuration
+#### Configuration
 
 | Field | Value | Description |
 |-------|-------|-------------|
@@ -166,9 +163,9 @@ Configure how and when cashback is posted to the customer's account.
 
 ---
 
-## Narration
+### Narration
 
-### Configuration
+#### Configuration
 
 | Field | Value | Description |
 |-------|-------|-------------|
@@ -177,11 +174,11 @@ Configure how and when cashback is posted to the customer's account.
 
 ---
 
-# Craft the Perfect UI: Home Page
+## Craft the perfect UI: Home page
 
 Configure how the offer appears in the Progressive Web App (PWA).
 
-### Display Configuration
+### Display configuration
 
 | Field | Value | Description |
 |-------|-------|-------------|
@@ -196,20 +193,20 @@ Configure how the offer appears in the Progressive Web App (PWA).
 
 ---
 
-# Craft the Perfect UI: Details Page
+## Craft the perfect UI: Details page
 
 The **Details Page** provides customers with complete information about the offer.
 
-## Section Details
+### Section details
 
-### How It Works
+#### How it works
 
 1. Pay your rent using your eligible card.
 2. Spend ₹500 or more on a rent payment.
 3. Earn 5% cashback on eligible transactions.
 4. Receive up to ₹500 cashback every calendar month.
 
-### Terms & Conditions
+#### Terms and conditions
 
 - Valid only on eligible Rent MCC transactions.
 - Minimum transaction amount: ₹500.
@@ -217,7 +214,7 @@ The **Details Page** provides customers with complete information about the offe
 - Cancelled or refunded transactions are not eligible.
 - Standard terms and conditions apply.
 
-### CTA Button
+#### CTA button
 
 | Field | Value | Description |
 |-------|-------|-------------|
@@ -227,9 +224,6 @@ The **Details Page** provides customers with complete information about the offe
 
 ---
 
-# Summary
+## Summary
 
 This guide demonstrates the complete configuration of the **Rent Cashback** transactional offer, including customer eligibility, transaction qualification, cashback calculation, usage limits, posting configuration, and customer-facing UI setup in the Progressive Web App (PWA).
-
-
-
