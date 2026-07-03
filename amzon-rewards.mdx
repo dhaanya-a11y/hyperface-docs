@@ -1,1 +1,227 @@
+---
+title: Amazon Rewards Offer
+description: Configure a transactional Amazon rewards cashback offer.
+---
 
+## Overview
+
+This guide explains how to configure the **Amazon Rewards** offer in the Offer Management System (OMS).
+
+## Business objective
+
+The **Amazon Rewards** offer is designed to encourage customers to use their eligible credit cards for Amazon purchases by rewarding qualifying transactions with cashback. Customers receive **5% cashback** on eligible Amazon transactions of **₹500 or more**, up to a maximum cashback of **₹500 per calendar month**.
+
+## Quick access
+
+| Environment | Link |
+|------------|------|
+| Sandbox | [Open Amazon Rewards Offer](https://dashboard-sandbox.hyperface.co/dashboard/portfolioGrowth/offers/smartBenefits/PROGRAM_OFFERS) |
+| PWA | [View Offer in PWA](https://pwa.sandbox.hf.hyperface.co/) |
+
+### Offer type
+
+| Field | Value |
+|-------|-------|
+| Offer Type | Transactional Offer |
+| Offer Outcome | Cashback |
+
+This offer rewards customers with **5% cashback** on eligible **Amazon** transactions of **₹500 or more**, with a maximum cashback of **₹500 per calendar month**.
+
+---
+
+## Basic details
+
+Navigate to **Offer Creation → Basic Details** and configure the following fields.
+
+### Configuration
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Offer Name | Amazon Rewards | Name displayed for the offer. |
+| Offer Description | Earn 5% cashback on eligible Amazon purchases of ₹500 or more, up to a maximum cashback of ₹500 per calendar month. | Short description displayed for the offer. |
+| Offer Duration | 03 Jul 2026 – 30 Dec 2026 | Period during which the offer remains active. |
+| Eligibility Level | Account Level | Eligibility is evaluated independently for each eligible account. |
+| Issuer | Demo-Bank | Credit card issuing bank. |
+| Program Type | Credit Card | Product type for which the offer is applicable. |
+| Apply to All Current and Future Programs | Disabled | The offer applies only to the selected program. |
+| Program | IOB DEMO | Credit card program eligible for this offer. |
+
+> **Selected Configuration:** The offer is configured at the **Account Level**, allowing eligibility to be evaluated independently for each eligible account.
+
+---
+
+## Set up offer user base
+
+After configuring the basic details, define the customer group that will be eligible for the offer.
+
+### User base
+
+The **User Base** determines whether the list of eligible customers remains fixed or is updated during the offer duration.
+
+#### Configuration
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| User Base | Static Base | The eligible customer list is fixed when the offer goes live. |
+
+> **Selected Configuration:** Static Base ensures that only customers included before the offer goes live are eligible for the offer.
+
+---
+
+## Set up transaction eligibility
+
+Configure the transaction conditions that determine whether a transaction qualifies for cashback.
+
+### Transaction eligibility
+
+#### Configuration
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Transaction Eligibility | Default | Uses the default transaction eligibility configuration. |
+| Merchant | Amazon | Only transactions at Amazon are eligible. |
+| Transaction Value | Greater than or equal to ₹500 | Only Amazon transactions of ₹500 or above qualify for cashback. |
+
+---
+
+### Date for offer processing
+
+Choose when the offer eligibility should be evaluated.
+
+#### Configuration
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Offer Processing Date | Transaction Date | Cashback eligibility is evaluated using the transaction date. |
+
+> **Selected Configuration:** Using the **Transaction Date** ensures cashback is calculated based on when the customer performs the eligible Amazon transaction.
+
+---
+
+## Calculate the offer outcome
+
+After configuring the transaction eligibility, define how cashback is calculated.
+
+### Offer calculation rule
+
+#### Configuration
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Offer Calculation Rule | Percentage with Max | Cashback is calculated as a percentage with a maximum monthly limit. |
+| Cashback Percentage | 5% | Customers receive 5% cashback on eligible transactions. |
+| Maximum Cashback | ₹500 | Maximum cashback allowed per calendar month. |
+
+> **Selected Configuration:** Customers receive **5% cashback** on every eligible Amazon transaction, up to **₹500 cashback per calendar month**.
+
+---
+
+### Funding account
+
+The **Funding Account** is the source account used to disburse cashback to eligible customers.
+
+#### Configuration
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Funding Account | *(Configured Funding Account)* | Account from which cashback is credited. |
+
+---
+
+## Usage limit
+
+The **Usage Limit** defines the maximum cashback a customer can receive during the configured validity period.
+
+### Configuration
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Limit Duration | Month | Cashback limit resets every month. |
+| Limit Type | Amount | Cashback is limited by amount. |
+| Limit Value | ₹500 | Maximum cashback allowed every month. |
+
+> **Selected Configuration:** Customers can receive up to **₹500 cashback per calendar month**.
+
+---
+
+## Define when to post your offer
+
+Configure how and when cashback is posted to the customer's account.
+
+### Posting eligibility
+
+#### Configuration
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Enable Posting | Enabled | Allows cashback to be credited. |
+| Posting Eligibility | Account Status | Cashback is posted only to eligible accounts. |
+| Account Status | ACTIVE | Only active accounts receive cashback. |
+| Offer Posting | Immediately | Cashback is credited immediately after an eligible transaction. |
+
+---
+
+### Narration
+
+#### Configuration
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Posting Narration | 5% Amazon Cashback Credited | Displayed when cashback is successfully credited. |
+| Reversal Narration | 5% Amazon Cashback Reversed | Displayed if cashback is reversed. |
+
+---
+
+## Craft the perfect UI: Home page
+
+Configure how the offer appears in the Progressive Web App (PWA).
+
+### Display configuration
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Enable Display | Enabled | Displays the offer on the customer's PWA home page. |
+| Labels | Amazon Rewards | Categorizes the offer. |
+| Banner Title | Earn 5% Cashback on Amazon | Main title displayed on the banner. |
+| Banner Description | Get 5% cashback on eligible Amazon purchases of ₹500 or more, up to ₹500 cashback every calendar month. | Short summary displayed on the banner. |
+| Display Title | Amazon Rewards Offer | Title displayed on the offer card. |
+| Display Description | Shop on Amazon using your eligible card and earn 5% cashback on eligible transactions. | Description displayed on the offer card. |
+| Display Order | 1 | Determines the display priority. |
+| Display Color | #FF9900 | Primary color used for the offer card. |
+
+---
+
+## Craft the perfect UI: Details page
+
+The **Details Page** provides customers with complete information about the offer.
+
+### Section details
+
+#### How it works
+
+1. Shop on Amazon using your eligible card.
+2. Spend ₹500 or more in a single transaction.
+3. Earn 5% cashback on eligible transactions.
+4. Receive up to ₹500 cashback every calendar month.
+
+#### Terms and conditions
+
+- Valid only on eligible Amazon transactions.
+- Minimum transaction amount: ₹500.
+- Maximum cashback: ₹500 per calendar month.
+- Cancelled or refunded transactions are not eligible.
+- Standard terms and conditions apply.
+
+#### CTA button
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Text on Button | Shop on Amazon | CTA button displayed on the offer details page. |
+
+> **Selected Configuration:** The details page clearly explains the offer benefits, eligibility criteria, and cashback limits, while the **"Shop on Amazon"** CTA encourages customers to make eligible Amazon purchases.
+
+---
+
+## Summary
+
+This guide demonstrates the complete configuration of the **Amazon Rewards** transactional offer, including customer eligibility, transaction qualification, cashback calculation, usage limits, posting configuration, and customer-facing UI setup in the Progressive Web App (PWA).
