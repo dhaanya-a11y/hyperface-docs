@@ -1,1 +1,208 @@
+---
+title: Apple Store Reward Points
+description: Configure a MID-based Reward Points transactional offer.
+---
 
+# Apple Store Reward Points
+
+## Overview
+
+This guide explains how to configure the **Apple Store Reward Points** offer in the Offer Management System (OMS).
+
+## Business objective
+
+The **Apple Store Reward Points** offer is designed to encourage customers to use their eligible credit cards for purchases at Apple Store by rewarding qualifying transactions with **1,000 Reward Points**. Customers receive **1,000 Reward Points** on eligible Apple Store purchases of **₹15,000 or more**.
+
+![Apple Store Reward Points](./apple.png)
+
+## Quick access
+
+| Environment | Link |
+|------------|------|
+| Sandbox | Add Sandbox Offer Link |
+| PWA | https://pwa.sandbox.hf.hyperface.co/ |
+
+---
+
+## Offer type
+
+| Field | Value |
+|-------|-------|
+| Offer Type | Transactional Offer |
+| Offer Outcome | Reward Points |
+
+This offer rewards customers with **1,000 Reward Points** on eligible Apple Store purchases of **₹15,000 or more**.
+
+---
+
+# Basic Details
+
+Navigate to **Offer Creation → Basic Details** and configure the following fields.
+
+## Configuration
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Offer Name | Apple Store Reward Points | Name displayed for the offer. |
+| Offer Description | Earn 1,000 Reward Points on eligible Apple Store purchases of ₹15,000 or more. | Short description displayed for the offer. |
+| Offer Duration | 03 Jul 2026 – 24 Dec 2026 | Period during which the offer remains active. |
+| Eligibility Level | Account Level | Eligibility is evaluated independently for each account. |
+| Issuer | Demo-Bank | Credit card issuing bank. |
+| Program Type | Credit Card | Product type for which the offer is applicable. |
+| Apply to All Current and Future Programs | Disabled | Applies only to the selected program. |
+| Program | IOB DEMO | Eligible credit card program. |
+
+> **Selected Configuration:** The offer is configured at the **Account Level**, allowing eligibility to be evaluated independently for each account.
+
+---
+
+# Set Up Offer User Base
+
+Configure the customer group eligible for this offer.
+
+## User Base
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| User Base | Static Base | Eligible customer list remains fixed after go-live. |
+
+> **Selected Configuration:** Static Base ensures only customers included before go-live are eligible.
+
+---
+
+# Set Up Transaction Eligibility
+
+Configure the transaction conditions that determine whether a transaction qualifies for Reward Points.
+
+## Transaction Eligibility
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Transaction Eligibility | Default | Uses the default transaction eligibility configuration. |
+| MID | Wallet MCC | Eligible merchant list configured in the sandbox. |
+| Transaction Value | Greater than or equal to ₹15,000 | Only transactions meeting the minimum spend qualify. |
+
+---
+
+## Date for Offer Processing
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Offer Processing Date | Transaction Date | Reward eligibility is evaluated using the transaction date. |
+
+> **Selected Configuration:** Reward Points are calculated based on the transaction date.
+
+---
+
+# Calculate the Offer Outcome
+
+Configure how Reward Points are awarded.
+
+## Offer Calculation Rule
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Offer Calculation Rule | Flat | Fixed Reward Points for every eligible transaction. |
+| Reward Points | 1,000 | Reward Points awarded to eligible customers. |
+
+> **Selected Configuration:** Customers receive **1,000 Reward Points** after completing an eligible transaction.
+
+---
+
+# Usage Limit
+
+Configure the maximum Reward Points that can be earned.
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Duration | Month | Reward limit resets every month. |
+| Reward Limit | 1,000 Reward Points | Maximum Reward Points allowed within a month. |
+
+> **Selected Configuration:** Customers can earn up to **1,000 Reward Points** within a calendar month.
+
+---
+
+# Define When to Post Your Offer
+
+Configure how Reward Points are posted.
+
+## Posting Eligibility
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Enable Posting | Enabled | Allows Reward Points to be credited. |
+| Account Status | Active | Reward Points are credited only to active accounts. |
+| Offer Posting | Immediately | Reward Points are credited immediately after an eligible transaction. |
+
+---
+
+## Reward Points Expiry
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Reward Points Expiry | 365 Days | Reward Points expire 365 days after posting. |
+
+---
+
+## Narration
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Posting Narration | Apple Store Reward Points Credited | Displayed when Reward Points are credited. |
+| Reversal Narration | Apple Store Reward Points Reversed | Displayed when Reward Points are reversed. |
+
+---
+
+# Craft the Perfect UI: Home Page
+
+Configure how the offer appears in the Progressive Web App (PWA).
+
+## Display Configuration
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Enable Display | Enabled | Displays the offer in the PWA. |
+| Labels | Electronics | Categorizes the offer. |
+| Banner Title | Earn 1,000 Reward Points at Apple Store | Banner title shown in the PWA. |
+| Banner Description | Shop at Apple Store and earn 1,000 Reward Points on purchases of ₹15,000 or more. | Banner description displayed to customers. |
+| Display Title | Apple Store Reward Points | Offer title displayed in the PWA. |
+| Display Description | Make eligible purchases at Apple Store using your eligible credit card and earn 1,000 Reward Points. | Offer description shown in the PWA. |
+| Display Order | 2 | Determines display priority. |
+| Display Color | #2FD5C4 | Primary color for the offer card. |
+
+---
+
+# Craft the Perfect UI: Details Page
+
+The Details Page provides customers with complete information about the offer.
+
+## Section Details
+
+### How it Works
+
+1. Visit an Apple Store.
+2. Spend ₹15,000 or more using your eligible credit card.
+3. The transaction is validated against the configured Merchant ID (MID).
+4. Earn 1,000 Reward Points.
+
+### Terms and Conditions
+
+- Valid only on eligible Apple Store purchases.
+- Minimum transaction amount must be ₹15,000.
+- Earn 1,000 Reward Points on eligible purchases.
+- Cancelled or refunded transactions are not eligible.
+- Standard terms and conditions apply.
+
+### CTA Button
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Text on Button | Shop Now | CTA button displayed on the offer details page. |
+
+> **Selected Configuration:** The details page explains the offer benefits, eligibility criteria, and Reward Points, while the **"Shop Now"** CTA encourages customers to make eligible Apple Store purchases.
+
+---
+
+# Summary
+
+This guide demonstrates the complete configuration of the **Apple Store Reward Points** transactional offer, including customer eligibility, transaction qualification, Reward Point calculation, usage limits, posting configuration, and customer-facing UI setup in the Progressive Web App (PWA).
