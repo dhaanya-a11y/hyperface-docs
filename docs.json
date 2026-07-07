@@ -3,7 +3,7 @@
   "name": "Hyperface Documentation",
   "theme": "mint",
   "colors": {
-    "primary": "#00D4D4",
+    "primary": "#00D4D4", 
     "light": "#38E8E8",
     "dark": "#008B8B"
   },
