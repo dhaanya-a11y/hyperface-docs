@@ -21,6 +21,7 @@
         "pages": [
           "document-transaction",
           "milestone-offer",
+          "merchant-offer",
           "apple-rewards",
           "rent-cashback",
           "airport-lounge-rewards"
