@@ -62,63 +62,48 @@ On this screen:
 ---
 
 ---
+## Step 5: Configure the Offer User Base
 
-### Step 4: Configure the Offer Scope
+The **Offer User Base** configuration determines which users are eligible for the Transactional Offer.
 
-After selecting the **Outcome Type**, the **Offer Scope** screen is displayed.
+You can configure the user base using either a **Static Base** or a **Dynamic Config**, depending on how you want eligible users to be managed throughout the offer lifecycle.
 
-Use this screen to configure the basic details of the Transactional Offer and define where the offer will be applicable.
+---
 
-#### Configure the Basic Offer Details
+### Static Base
 
-Enter the following information:
+Select **Static Base** if you want to use a fixed set of eligible users.
 
-- **Offer Name** – Enter a name to identify the offer.
-- **Offer Description** – Enter a brief description of the offer.
-- **Offer Duration** – Select the start and end date and time during which the offer will remain active.
-- **Eligibility Level** – Select how the offer eligibility should be evaluated:
-  - **Account Level** – Evaluates eligibility independently for each account.
-  - **Customer Level** – Evaluates eligibility across all accounts belonging to the customer.
+Once the offer goes live, no additional users are added to the offer. Only the users who satisfy the configured eligibility criteria before the offer goes live are included.
 
-![Step 4 - Configure Basic Offer Details](/images/e.png)
+![Static Base](/images/g.png)
 
-#### Configure Offer Applicability
-
-Continue configuring where the offer should be applicable.
-
-Configure the following details:
-
-- **Issuer** – Select the issuer for which the offer will be applicable.
-- **Program Type** – Select the applicable program type.
-- **Apply to all current and future programs** – Enable this option to make the offer available across all existing and future programs.
-- **Program** – If the above option is disabled, select one or more applicable programs from the **Program** dropdown.
-
-After reviewing the configured details, click **Continue** to proceed to the **Set-Up Offer** configuration.
-
-![Step 4 - Configure Offer Applicability](/images/f.png)
-
-#### Static Base
-
-Select **Static Base** to use a fixed user base. Once the offer goes live, no new users are added to the offer.
-
-![Step 5 - Select Static Base](/images/g.png)
-
-After selecting **Static Base**, choose the eligibility criteria used to define the user base.
+After selecting **Static Base**, configure the eligibility criteria that should be used to identify the eligible users.
 
 The following eligibility options are available:
 
-| Eligibility Option | Description |
-|--------------------|-------------|
+| Eligibility | Description |
+|-------------|-------------|
 | **Smart Tag** | Identifies users using the configured Smart Tag. |
-| **Accounts** | Defines the user base using account-related information. |
-| **Switch Account Number** | Identifies users using the Switch Account Number. |
-| **Birthdate** | Defines the user base based on the customer's birth date. |
-| **Account Creation Date** | Defines the user base based on the account creation date. |
+| **Accounts** | Uses account-related information to identify eligible users. |
+| **Switch Account Number** | Uses the Switch Account Number to identify eligible users. |
+| **Birthdate** | Identifies users based on their birth date. |
+| **Account Creation Date** | Identifies users based on the account creation date. |
 
-Select the required eligibility option and configure the corresponding values.
+After configuring the required eligibility criteria, click **Estimate User Base** to calculate the estimated number of eligible users.
 
-![Step 5 - Static Base Eligibility](/images/h.png)
+---
 
-After configuring the eligibility criteria, click **Estimate User Base** to calculate the estimated number of eligible users.
+### Dynamic Config
 
-Once the estimated user base is displayed, click **Continue** to proceed to the **Transaction Eligibility** configuration.
+Select **Dynamic Config** if you want the user base to be updated dynamically.
+
+Eligible users who satisfy the configured eligibility criteria during the offer period are automatically added until the configured end date.
+
+![Dynamic Config](/images/g.1.png)
+
+Configure the required eligibility criteria in the same way as the **Static Base** configuration.
+
+After configuring the required eligibility criteria, click **Estimate User Base** to calculate the estimated number of eligible users.
+
+Click **Continue** to proceed to the **Transaction Eligibility** configuration.ion Eligibility** configuration.
