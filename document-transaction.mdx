@@ -62,48 +62,39 @@ On this screen:
 ---
 
 ---
-## Step 5: Configure the Offer User Base
 
-The **Offer User Base** configuration determines which users are eligible for the Transactional Offer.
+### Step 5: Configure the Offer User Base
 
-You can configure the user base using either a **Static Base** or a **Dynamic Config**, depending on how you want eligible users to be managed throughout the offer lifecycle.
+The **Offer User Base** page allows you to define which users are eligible to participate in the Transactional Offer.
 
----
+Choose the appropriate user base type based on your campaign requirements.
 
-### Static Base
+#### Static Base
 
-Select **Static Base** if you want to use a fixed set of eligible users.
+Select **Static Base** to use a fixed set of eligible users. Once the offer goes live, the user base remains unchanged.
 
-Once the offer goes live, no additional users are added to the offer. Only the users who satisfy the configured eligibility criteria before the offer goes live are included.
+![Step 5 - Select Static Base](/images/g.png)
 
-![Static Base](/images/g.png)
-
-After selecting **Static Base**, configure the eligibility criteria that should be used to identify the eligible users.
+After selecting **Static Base**, choose the eligibility criteria that will be used to identify the eligible users.
 
 The following eligibility options are available:
 
-| Eligibility | Description |
-|-------------|-------------|
+| Eligibility Option | Description |
+|--------------------|-------------|
 | **Smart Tag** | Identifies users using the configured Smart Tag. |
-| **Accounts** | Uses account-related information to identify eligible users. |
-| **Switch Account Number** | Uses the Switch Account Number to identify eligible users. |
-| **Birthdate** | Identifies users based on their birth date. |
-| **Account Creation Date** | Identifies users based on the account creation date. |
+| **Accounts** | Defines the user base using account-related information. |
+| **Switch Account Number** | Identifies users using the Switch Account Number. |
+| **Birthdate** | Defines the user base based on the customer's birth date. |
+| **Account Creation Date** | Defines the user base based on the account creation date.
 
-After configuring the required eligibility criteria, click **Estimate User Base** to calculate the estimated number of eligible users.
+Select the required eligibility option and configure the corresponding values.
+
+![Step 5 - Configure Static Base Eligibility](/images/g.1.png)
+
+After completing the configuration:
+
+- Click **Estimate User Base** to calculate the estimated number of eligible users.
+- Review the estimated user count.
+- Click **Continue** to proceed to the **Transaction Eligibility** configuration.
 
 ---
-
-### Dynamic Config
-
-Select **Dynamic Config** if you want the user base to be updated dynamically.
-
-Eligible users who satisfy the configured eligibility criteria during the offer period are automatically added until the configured end date.
-
-![Dynamic Config](/images/g.1.png)
-
-Configure the required eligibility criteria in the same way as the **Static Base** configuration.
-
-After configuring the required eligibility criteria, click **Estimate User Base** to calculate the estimated number of eligible users.
-
-Click **Continue** to proceed to the **Transaction Eligibility** configuration.ion Eligibility** configuration.
