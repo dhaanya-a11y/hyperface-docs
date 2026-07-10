@@ -22,9 +22,12 @@
           "document-transaction",
           "milestone-offer",
           "merchant-offer",
+          "gamified-offer",
           "apple-rewards",
           "rent-cashback",
-          "airport-lounge-rewards"
+          "airport-lounge-rewards",
+          "dining-milestone-cashback",
+          "myntra-merchant-cashback"
         ]
       }
     ]
