@@ -1,0 +1,559 @@
+---
+title: Gamified Offers
+description: User Manual for Gamified Offers
+---
+
+## Introduction
+
+This guide explains how to create and configure Gamified Offers in the Hyperface Dashboard.
+
+Gamified Offers reward customers progressively as they cross multiple spending or transaction-count thresholds within a defined time period, turning reward earning into a level-by-level experience.
+
+---
+
+## What are Gamified Offers?
+
+A Gamified Offer is a reward type where customers unlock multiple rewards by crossing a series of predefined thresholds — or **levels** — within a specified period.
+
+Unlike a Milestone Offer, which tracks progress toward a single target, a Gamified Offer defines **multiple thresholds**, each mapped to its **own reward**. As a customer's cumulative activity grows, they move up through the levels, unlocking a new offer every time a threshold is crossed.
+
+Once all configurations are completed and reviewed, the offer is published and becomes available to eligible customers from the configured start date.
+
+### Key Characteristics
+
+Gamified Offers track customer progress across multiple thresholds within a defined subscription cycle, unlocking a distinct reward at each level.
+
+Key characteristics include:
+
+* Multiple thresholds (levels) are configured within a single offer.
+* Each threshold has its own independent reward configuration.
+* Progress is accumulated across multiple eligible transactions, same as Milestone Offers.
+* Customers can unlock more than one level within the same cycle if cumulative activity crosses multiple thresholds.
+* Levels can be based on total spend or transaction count.
+* Subscription cycles determine the duration over which activity is measured and levels can reset.
+* Transaction-level eligibility rules determine which transactions contribute toward level progress.
+* Customer-facing UI displays progress as a level ladder or progress bar, showing the next unlockable reward.
+
+Gamified Offers are commonly used for tiered spend campaigns, engagement and retention programs, seasonal reward drives, and any campaign designed to motivate incremental spend behaviour.
+
+### Gamified Offers vs. Milestone Offers
+
+| | Gamified Offer | Milestone Offer |
+|---|---|---|
+| **Thresholds** | Multiple thresholds (levels), each with its own reward | Single threshold |
+| **Rewards** | One reward per level, unlocked progressively | One reward, unlocked once |
+| **Customer experience** | Level-by-level, game-like progression | Single target completion |
+| **Typical use case** | Tiered spend campaigns, engagement drives | Simple spend/transaction-count targets |
+
+For details on Milestone Offers, see [Milestone Offers](/milestone-offer).
+
+### Examples
+
+- Level 1: Spend ₹5,000 → Earn ₹200 cashback. Level 2: Spend ₹10,000 → Earn ₹500 cashback. Level 3: Spend ₹20,000 → Earn ₹1,200 cashback — all within the same billing month.
+- Level 1: Complete 3 transactions → Earn 100 reward points. Level 2: Complete 7 transactions → Earn 300 reward points. Level 3: Complete 12 transactions → Earn a Voucher.
+
+### Components
+
+A Gamified Offer consists of:
+
+- Offer Details
+- User Base Configuration
+- Gamification Levels (Threshold Ladder)
+- Offer Calculation Rules (per level)
+- Posting Configuration
+- Display Elements
+
+---
+
+## Create a Gamified Offer
+
+1. Log in to Dashboard.
+2. Navigate to **Portfolio Growth → Offers → Manage Offers**.
+3. Click **Create Offer**.
+4. Follow the offer configuration journey.
+
+---
+
+## Step 1: Select Offer Type and Outcome
+
+The first step in the offer creation journey is selecting the offer type and the reward outcome that customers will receive as they unlock each level.
+
+The outcome selected in this step determines the configuration options available later in the Offer Calculation section, and applies uniformly to all levels within the offer.
+
+### Configure Offer Type
+
+1. Navigate to the Offer Creation journey.
+2. Select **Gamified Offer** as the offer type.
+3. Click **Continue** to proceed.
+
+### Configure Outcome Type
+
+Select the reward outcome customers should receive as each level is unlocked.
+
+### Available Outcome Types
+
+#### Cashback
+
+Rewards are credited back to the customer as cashback each time a level is unlocked.
+
+#### Reward Points
+
+Customers receive reward points that can be redeemed according to the program's reward policy.
+
+#### Voucher
+
+Customers receive a voucher or coupon upon unlocking a level.
+
+#### Smart Tag
+
+Customers receive a Smart Tag that can be used for segmentation, targeting, or future campaign eligibility.
+
+### Important Notes
+
+* The selected outcome type applies to every level configured within the offer.
+* Different outcome types may require different posting and reward configuration settings.
+* Ensure the selected reward outcome aligns with the campaign objective before proceeding.
+
+### Example
+
+If the campaign objective is to drive escalating spend behaviour with cash rewards at each tier, select **Cashback** as the outcome type.
+
+Click **Continue** to proceed to Offer Details.
+
+---
+
+## Step 2: Configure Offer Details
+
+### Important Notes
+
+- Offer Name does not need to be unique across offers.
+- Offer Description is for internal reference only and is not shown to customers.
+- End Date & Time must always be later than Start Date & Time.
+- Offers are initially created in Scheduled status.
+- Offers automatically become Active when the configured start time is reached.
+- Enabling Apply To All Programs disables individual program selection.
+- Progress Transfer On Variant Upgrade should only be enabled when level progress must continue after a card or account upgrade.
+
+### Offer Information
+
+Configure:
+
+- Offer Name
+- Offer Description
+- Start Date & Time
+- End Date & Time
+
+### Issuer and Program Configuration
+
+Configure:
+
+- Issuer
+- Program Type
+- Program Selection
+- Apply To All Programs
+- Progress Transfer On Variant Upgrade
+
+### Why Offer Details Matter
+
+Offer Details define the identity, duration, and scope of the gamified campaign.
+
+Accurate configuration ensures:
+
+- The offer becomes active at the correct time.
+- The correct programs are targeted.
+- Level progress is tracked within the intended duration.
+- Operational teams can easily identify and manage the offer.
+
+---
+
+## Step 3: Configure Offer User Base
+
+### Example Scenario
+
+User Base Type = Static Base
+
+Eligibility = All Accounts In Scope
+
+Result:
+
+The offer applies to every eligible account within the selected program scope without additional enrollment requirements.
+
+### Best Practices
+
+* Validate Smart Tag membership before publishing.
+* Review inclusion and exclusion criteria carefully.
+* Use Dynamic Configuration only when ongoing enrollment is required.
+* Test enrollment scenarios before activation.
+
+### User Base Types
+
+#### Static Base
+
+The eligible customer list is fixed when the offer becomes active.
+
+#### Dynamic Configuration
+
+Allows new eligible customers to join throughout the offer lifecycle.
+
+This configuration is commonly used with Opt-In based gamified campaigns.
+
+### Smart Tag Configuration
+
+Smart Tags can be used to include or exclude customer segments.
+
+- Allowed = Only customers in the Smart Tag are eligible.
+- Denied = Customers in the Smart Tag are excluded.
+
+Smart Tags must already exist before they can be used in offer configuration.
+
+---
+
+## Step 4: Configure Gamification Levels
+
+The Gamification Levels step is what distinguishes a Gamified Offer from a Milestone Offer. Instead of a single threshold, you configure a **ladder of thresholds**, each unlocking its own reward.
+
+### Gamification Levels Best Practices
+
+The level configuration determines how customer progress is tracked and when each reward is triggered.
+
+Before publishing:
+
+* Verify aggregation type selection.
+* Validate threshold values for every level, in ascending order.
+* Ensure reward value increases (or otherwise makes sense) as levels progress.
+* Review subscription cycle configuration.
+* Confirm transaction eligibility conditions apply consistently across all levels.
+* Test level unlock scenarios, including customers who cross multiple thresholds in a single cycle.
+
+### Example Transaction Eligibility Rule
+
+Configuration:
+
+* MCC = Grocery
+* Transaction Value > ₹1,000
+* Status = Allowed
+
+Result:
+
+Only grocery transactions above ₹1,000 contribute toward level progress.
+
+### Aggregation Types
+
+#### Sum of Transaction Values
+
+Calculates the total eligible spend accumulated by the customer.
+
+#### Count of Transactions
+
+Calculates the total number of eligible transactions completed by the customer.
+
+### Level Configuration
+
+Each level requires:
+
+- **Level Name** – Label used to identify the level internally (for example, Level 1, Silver, Gold).
+- **Threshold Value** – The cumulative spend or transaction count required to unlock this level.
+- **Threshold Operator** – Greater Than, Greater Than or Equal To, Less Than, or Equal To.
+- **Reward Configuration** – The outcome value awarded when the level is unlocked (configured in Step 5).
+
+Click **Add Level** to configure additional thresholds. Levels are evaluated in ascending order of threshold value.
+
+### Threshold Configuration
+
+Configure per level:
+
+- Greater Than
+- Greater Than or Equal To
+- Less Than
+- Equal To
+
+### Subscription Cycle
+
+Available options:
+
+- Custom
+- Billing Month
+
+### Transaction Eligibility
+
+Supported filters (applied across all levels):
+
+- MCC
+- MID
+- Merchant Name
+- Transaction Value
+- Transaction Type
+- POS Entry Mode
+
+### Processing Date
+
+Choose:
+
+- Transaction Date
+- Posting Date
+
+### Level Behaviour
+
+Lock Level Progress On Achievement determines whether cumulative progress continues to be tracked toward the next level once a level is unlocked.
+
+- Enabled: Progress continues to accumulate so the customer can unlock subsequent levels within the same cycle.
+- Disabled: Progress resets once a level is unlocked, requiring the cycle to restart before the next level can be pursued.
+
+<Note>
+In most Gamified Offer configurations, Lock Level Progress On Achievement should remain **Disabled**, since the purpose of the offer is to allow customers to keep climbing through multiple levels within a single cycle.
+</Note>
+
+### Subscription Cycle Examples
+
+Example 1:
+
+- Billing Month
+- Number of Cycles = 1
+- Level 1 = ₹5,000, Level 2 = ₹10,000, Level 3 = ₹20,000
+
+Within one billing cycle, a customer spending ₹22,000 unlocks all three levels and receives all three rewards.
+
+Example 2:
+
+- Custom Duration = 30 Days
+- Number of Cycles = 3
+- Level 1 = 3 transactions, Level 2 = 7 transactions, Level 3 = 12 transactions
+
+The level ladder resets every 30 days and can be climbed up to three times across the offer duration.
+
+---
+
+## Step 5: Configure Offer Calculation
+
+### Calculation Configuration Guidelines
+
+The reward calculation defines the benefit customers receive at each level. Each level configured in Step 4 has its own independent calculation.
+
+The selected calculation method should align with campaign objectives, expected customer behaviour, and reward budgets.
+
+### Validation Checklist
+
+Before publishing:
+
+* Verify reward amounts configured for every level.
+* Review multiplier calculations, if used.
+* Confirm reward caps where applicable.
+* Ensure higher levels offer proportionally attractive rewards to encourage progression.
+* Test sample level-unlock scenarios across the full ladder.
+
+### Calculation Rules
+
+Available options include (configured independently per level):
+
+- Flat Multiplier
+- Fixed Reward
+- Percentage Based
+- Slab Based
+
+### Additional Options
+
+- Reward Point Capping
+- Transaction Level Cap
+- MCC Cap
+- MID Cap
+- Currency Cap
+- Program Cap
+
+### Reversal
+
+Enable or disable reward reversals. This setting applies uniformly across all levels.
+
+### Calculation Examples
+
+#### Fixed Reward Per Level
+
+Customers receive a predefined reward each time a level is unlocked.
+
+Example:
+
+- Level 1 (₹5,000 spend) → Earn ₹200 cashback
+- Level 2 (₹10,000 spend) → Earn ₹500 cashback
+- Level 3 (₹20,000 spend) → Earn ₹1,200 cashback
+
+#### Percentage Based Reward Per Level
+
+Rewards are calculated as a percentage of qualifying spend at the time the level is unlocked.
+
+Example:
+
+- Level 1: Spend ₹5,000, Reward Rate = 2% → Earn ₹100
+- Level 2: Spend ₹10,000, Reward Rate = 3% → Earn ₹300
+- Level 3: Spend ₹20,000, Reward Rate = 5% → Earn ₹1,000
+
+---
+
+## Step 6: Configure Usage Limits
+
+Optional limits:
+
+- Daily Limit
+- Weekly Limit
+- Monthly Limit
+- Lifetime Limit
+- Cycle Count Limit
+- Level Unlock Limit (maximum number of levels a customer can unlock per cycle)
+
+### Usage Limit Examples
+
+- Cycle Count Limit = 3 (the full level ladder can be completed up to 3 times)
+- Level Unlock Limit = 3 (all configured levels can be unlocked once per cycle)
+- Lifetime Limit = 25 rewards during the offer period
+
+Combined limits can be used to manage reward exposure and campaign costs.
+
+### Usage Limit Best Practices
+
+Usage limits help control campaign costs and prevent excessive reward earning, which is especially important in Gamified Offers where a single customer can unlock multiple rewards within one cycle.
+
+Before publishing:
+
+- Review expected reward exposure across the full level ladder.
+- Configure limits based on campaign objectives.
+- Validate cycle count restrictions.
+- Ensure limits align with budget allocations.
+
+If no limits are configured, customers may continue earning rewards at every level whenever threshold conditions are satisfied.
+
+---
+
+## Step 7: Configure Posting
+
+### Posting Best Practices
+
+Posting configuration determines when level rewards become visible to customers. Posting rules apply uniformly to rewards issued at every level.
+
+Scheduled Posting is generally recommended because it provides sufficient time for transaction reversals, refunds, and settlement validation.
+
+### Operational Recommendations
+
+* Configure posting delays based on reversal windows.
+* Use meaningful posting narrations that identify which level was unlocked.
+* Verify reward expiry settings.
+* Review reversal narration before publishing.
+* Test reward posting behaviour for multiple levels unlocked within the same cycle.
+
+### Posting Options
+
+#### Post Immediately
+
+Rewards are posted immediately after validation, as soon as a level is unlocked.
+
+#### Scheduled Posting
+
+Rewards are posted after a configured delay, once a level is unlocked.
+
+### Configuration
+
+- Enable Posting
+- Posting Eligibility
+- Days After
+- Event
+- Reward Point Expiry
+- Posting Narration
+- Reversal Narration
+
+### Posting Recommendations
+
+Scheduled Posting is recommended because it allows sufficient time for reversals and refunds before rewards are issued.
+
+Immediate Posting should only be used when reversal risk is minimal.
+
+### Additional Configuration
+
+- Posting Eligibility
+- Reward Point Expiry
+- Posting Narration
+- Reversal Narration
+
+---
+
+## Step 8: Configure Display Elements
+
+Display Elements control how the offer is presented to customers across the Hyperface platform, including how the level ladder and current progress are visualized.
+
+### Home Page Configuration
+
+Configure:
+
+- Label
+- Banner Title
+- Banner Description
+- Display Title
+- Display Description
+- Progress Style (Level Ladder, Progress Bar, or Badge Stepper)
+- Display Order
+- Display Colour
+- Merchant Logo
+- Background Illustration
+
+### Offer Details Page Configuration
+
+Configure:
+
+- Terms & Conditions
+- How To Redeem
+- Level Pending Text (per level, shown while the customer is progressing toward that level)
+- Level Unlocked Text (per level, shown once that level's reward is earned)
+- CTA Button Text
+- Redirection Link
+
+<Note>
+Since a Gamified Offer contains multiple levels, Level Pending Text and Level Unlocked Text should be configured for each level so customers always see accurate progress messaging for their current stage.
+</Note>
+
+---
+
+## Step 9: Review and Publish
+
+### Pre-Publish Validation Checklist
+
+Before publishing a Gamified Offer, verify:
+
+* Offer Details are accurate.
+* User Base configuration is correct.
+* All Gamification Levels — thresholds, in ascending order — have been validated.
+* Reward calculations have been tested for every level.
+* Usage Limits align with campaign objectives across the full ladder.
+* Posting Configuration is complete.
+* Display content, including the level ladder, has been reviewed and approved.
+
+Publishing should only be performed after all configurations have been reviewed and validated.
+
+Review all configurations before publishing:
+
+- Offer Details
+- User Base
+- Gamification Levels
+- Calculation Rules (per level)
+- Usage Limits
+- Posting Configuration
+- Display Elements
+
+Click **Publish**.
+
+The offer status becomes **Scheduled** and automatically changes to **Active** at the configured start time.
+
+---
+
+## Best Practices
+
+- Verify all level thresholds and rewards before publishing.
+- Keep threshold progression intuitive — each level should feel meaningfully harder to reach than the last.
+- Use clear and customer-friendly offer descriptions for every level.
+- Review reward calculations before activation.
+- Ensure display content aligns with Hyperface branding and clearly communicates level progress.
+- Validate Terms & Conditions before making the offer live.
+
+---
+
+## Notes
+
+- Active offers have limited edit capabilities.
+- Eligibility and calculation rules become locked once the offer is live.
+- Levels cannot be reordered once the offer is live; new levels can only be added above the highest existing threshold.
+- Review all configurations carefully before publishing.
