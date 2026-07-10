@@ -3,17 +3,35 @@ title: Merchant Offers
 description: Learn how to create and configure Merchant Offers in the Hyperface Dashboard.
 ---
 
-## Create a Merchant Offer
+# What is a Merchant Offer?
 
-Merchant Offers enable issuers to reward customers for making purchases at participating merchants. The offer creation journey follows a sequential multi-step workflow, where each configuration step must be completed before moving to the next. Previously completed steps can be revisited at any time using the left navigation panel.
- 
-To create a Merchant Offer:
+<Info>
+A **Merchant Offer** enables issuers to reward customers for making eligible purchases at participating merchants. Customers receive the configured reward when their transactions satisfy the merchant-specific eligibility criteria defined during offer creation.
+</Info>
 
-1. Navigate to the **Merchant Offers** tab from the **Manage Offers** page.
-2. Click **Create New Offer**.
-3. Configure the offer by completing each step in the creation journey.
-4. Review all configured details.
-5. Publish the offer.
+Merchant Offers are designed to promote spending at selected merchants by configuring transaction-based rewards. The offer creation journey follows a structured multi-step workflow, where each configuration step must be completed before proceeding to the next. Previously completed steps can be revisited at any time using the navigation panel.
+
+### Key Characteristics
+
+- **Merchant-specific rewards** – Rewards are issued only for transactions performed at eligible merchants.
+- **Flexible eligibility** – Configure merchant eligibility using merchant identifiers and transaction-related conditions.
+- **Customizable customer experience** – Configure how the offer is displayed across the customer-facing PWA.
+- **Targeted campaigns** – Restrict offers to selected customer segments using the Offer User Base.
+- **Controlled publishing** – Offers are published only after all mandatory configurations have been completed successfully.
+
+---
+
+# Create a Merchant Offer
+
+To create a new Merchant Offer, begin from the **Manage Offers** page.
+
+### Step 1: Create a New Merchant Offer
+
+On the **Manage Offers** page:
+
+- Navigate to the **Merchant Offers** tab.
+- Click **Create New Offer**.
+- The Merchant Offer creation journey is displayed.
 
 <Frame>
 
@@ -21,26 +39,34 @@ To create a Merchant Offer:
 
 </Frame>
 
-<Note>
-Merchant Offers are published only after all mandatory configuration steps have been completed successfully.
+---
 
-If a **Smart Tag** is configured as part of the Offer User Base, only customers belonging to the selected Smart Tag are eligible to participate in the offer.
-</Note>
+### Step 2: Configure Offer Details
 
-## Step 1: Configure Offer Details
+After creating a new Merchant Offer, the **Offer Details** screen is displayed.
 
-The **Offer Details** step captures the basic information required to create the Merchant Offer. This configuration determines the offer identity, validity period, issuer, eligibility level, and the programs to which the offer applies.
+Use this page to configure the basic information required for the Merchant Offer and define where the offer will be applicable.
 
-Complete the following fields:
+#### Basic Offer Details
 
-- **Offer Name** – Enter a unique and meaningful name for the offer.
-- **Offer Description** – Provide an internal description for easy identification.
-- **Offer Duration** – Select the start and end date of the offer.
-- **Eligibility Level** – Choose whether eligibility should be evaluated at the Account or Customer level.
-- **Issuer** – Select the issuing bank.
-- **Programs** – Choose the applicable program(s) or enable **Apply to all current and future programs**.
+Provide the following information:
 
-After verifying all configurations, click **Save & Continue**.
+- **Offer Name** – Enter a unique name to identify the offer.
+- **Offer Description** – Enter a brief description of the offer.
+- **Offer Duration** – Select the start and end date and time during which the offer remains active.
+- **Eligibility Level** – Select how eligibility should be evaluated:
+  - **Account Level** – Evaluates eligibility independently for each account.
+  - **Customer Level** – Evaluates eligibility across all accounts belonging to the customer.
+
+#### Offer Applicability
+
+Define where the Merchant Offer should be available.
+
+Provide the following information:
+
+- **Issuer** – Select the issuer for which the offer will be applicable.
+- **Programs** – Select one or more applicable programs.
+- **Apply to all current and future programs** – Enable this option to automatically apply the offer across all existing and future programs.
 
 <Frame>
 
@@ -48,150 +74,307 @@ After verifying all configurations, click **Save & Continue**.
 
 </Frame>
 
+After completing the configuration:
+
+- Review the configured offer details.
+- Click **Save & Continue** to proceed to the **Offer User Base** configuration.
+
 <Note>
-The offer is created in **Scheduled** status and automatically becomes **Active** once the configured start date and time is reached.
+
+The Merchant Offer is initially created in **Scheduled** status. The offer automatically becomes **Active** once the configured start date and time is reached.
+
 </Note>
 
-## Step 2: Set Up Offer User Base
+---
 
-The **Offer User Base** determines which customers are eligible to participate in the Merchant Offer. Configuring the user base is optional and can be used to restrict the offer to specific customer segments.
+### Step 3: Configure the Offer User Base
 
-You can configure eligibility using one or more of the following attributes:
+The **Offer User Base** page allows you to define which customers are eligible to participate in the Merchant Offer.
 
-- Smart Tag
-- Accounts
-- Switch Account Number
-- Birthdate
-- Account Creation Date
+Configuring the Offer User Base is optional. If no eligibility criteria are configured, the offer is available to all customers within the selected program scope.
 
-After selecting the required eligibility criteria, verify the configuration and click **Save & Continue**.
+#### Configure User Eligibility
+
+Select one or more eligibility attributes based on your campaign requirements.
+
+The following eligibility options are available:
+
+| Eligibility Option | Description |
+|--------------------|-------------|
+| **Smart Tag** | Identifies eligible customers using the configured Smart Tag. |
+| **Accounts** | Defines eligibility using account-related information. |
+| **Switch Account Number** | Identifies eligible users using the Switch Account Number. |
+| **Birthdate** | Defines eligibility based on the customer's birth date. |
+| **Account Creation Date** | Defines eligibility using the account creation date. |
 
 <Frame>
 
 ![Offer User Base](/images/3.png)
 
 </Frame>
+
+Configure the required eligibility criteria.
+
 <Frame>
 
-![Home Page Configuration](/images/4.png)
+![Offer User Base Configuration](/images/4.png)
 
 </Frame>
+
+After completing the configuration:
+
+- Review the configured eligibility rules.
+- Click **Save & Continue** to proceed to the **Display Elements** configuration.
 
 <Note>
-If no user base is configured, the Merchant Offer is available to all customers within the selected program scope.
 
-When a **Smart Tag** is configured, only customers belonging to the selected Smart Tag are eligible for the offer.
+If a **Smart Tag** is configured, only customers belonging to the selected Smart Tag are eligible for the Merchant Offer.
+
 </Note>
 
-## Step 3: Craft the Perfect UI – Home Page
+---
 
-This step controls how the Merchant Offer appears on the customer's PWA Home page. Configure the display elements to provide a clear and engaging experience for customers.
+### Step 4: Configure Display Elements
 
-Configure the following:
+After configuring the **Offer User Base**, the **Display Elements** screen is displayed.
 
-- Enable Display
-- Labels
-- Display Title
-- Display Description
-- Display Order
-- Display Colour
-- Offer/Merchant Logo
-- Background Illustration
+Use this page to configure how the Merchant Offer is presented to customers in the Progressive Web Application (PWA). Configure the display elements for both the **Home** page and the **Offer** page to provide a consistent and engaging customer experience.
 
-After completing the display configuration, click **Save & Continue**.
-<Frame>
+#### Configure the Home Page
 
-![Offer Details Page](/images/5.png)
+The **Home** page allows you to define how the Merchant Offer appears on the customer's home screen.
 
-</Frame>
+Provide the following information:
 
-<Frame>
-
-![Review and Publish](/images/6.png)
-
-</Frame>
-<Note>
-Turn **OFF** the **Enable Display** toggle if the offer should remain active in the backend but should not be visible to customers.
-</Note>
-
-## Step 4: Offer Details Page
-
-The **Offer Details Page** provides customers with complete information about the Merchant Offer after they open it from the PWA.
-
-Configure the following components:
-
-- Add one or more **Section Details** such as **How It Works**, **Terms & Conditions**, or additional offer information.
-- Enter an appropriate **Section Title**.
-- Add the **Section Content** using the Rich Text Editor (RTE).
-- Click **Add Section** to create additional information blocks.
-- Configure the **Text on Button** (CTA).
-- Configure the **Redirection Link**.
-
-Review the configured content before proceeding.
-<Frame>
-
-![Managing Existing Offers](/images/7.png)
-
-</Frame>
+- **Enable Display** – Enable this option to display the Merchant Offer in the customer's PWA.
+- **Labels** – Select one or more labels to categorize the offer.
+- **Display Title** – Enter the title displayed for the offer.
+- **Display Description** – Enter a brief description of the offer.
+- **Display Order** – Specify the display priority of the offer.
+- **Display Colour** – Select the primary color used for the offer card.
+- **Offer/Merchant Logo** – Upload the logo to be displayed with the offer.
+- **Background Illustration** – Upload the background image displayed for the offer.
 
 <Frame>
 
-![Viewing Merchant Offer Details](/images/8.png)
+![Home Page Configuration](/images/5.png)
 
 </Frame>
 
-## Step 5: Review and Publish
+#### Configure the Offer Page
 
-The **Review** page provides a consolidated summary of all configurations completed throughout the Merchant Offer creation journey.
+The **Offer** page displays additional information about the Merchant Offer before the customer opens the detailed view.
 
-Before publishing, verify:
+Review the configured display elements to ensure the offer is presented clearly and consistently.
 
-- Basic Details
-- Offer User Base
-- Home Page Configuration
-- Offer Details Page Configuration
+<Frame>
 
-If any changes are required, return to the corresponding step using the left navigation panel.
+![Offer Page Configuration](/images/6.png)
 
-Once all configurations have been verified, click **Publish**.
+</Frame>
+
+After completing the configuration:
+
+- Review the configured display settings.
+- Click **Save & Continue** to proceed to the **Offer Details Page** configuration.
 
 <Note>
-The Merchant Offer remains in **Scheduled** status until the configured start date and time. Once activated, only permitted fields can be modified.
+
+Disable **Enable Display** if the Merchant Offer should remain active in the backend but should not be visible to customers in the PWA.
+
 </Note>
 
-## Managing Existing Offers
+---
 
-The **Merchant Offers** listing page enables users to manage offers throughout their lifecycle. The actions available depend on the current status of the offer.
+### Step 5: Configure the Offer Details Page
 
-Supported actions include:
+After configuring the **Display Elements**, the **Offer Details Page** screen is displayed.
 
-- View
-- Edit
-- Duplicate
-- Delete
-- Expire
+Use this page to configure the detailed information customers see after opening the Merchant Offer from the PWA.
 
-## Viewing Offer Details
+#### Configure Section Details
 
-Click on any Merchant Offer from the **Offer Listing** page to view its complete configuration.
+Use **Section Details** to organize and present important information about the Merchant Offer.
 
-The Offer Details view provides a consolidated summary of all information configured during the offer creation journey, making it easier to review the offer without entering edit mode.
+For each section, provide the following information:
 
-The page displays the following sections:
+- **Section Title** – Enter the heading displayed for the section.
+- **Section Content** – Enter the content using the Rich Text Editor (RTE).
+- **Add Section** – Click **Add Section** to create additional information blocks, such as **How It Works**, **Terms & Conditions**, or offer-specific details.
 
-- **Basic Details**
+#### Configure Call-to-Action (CTA)
+
+Configure the action customers can perform directly from the Offer Details page.
+
+Provide the following information:
+
+- **Text on Button** – Enter the text displayed on the CTA button.
+- **Redirection Link** – Enter the destination URL to which customers are redirected after clicking the CTA button.
+
+<Frame>
+
+![Offer Details Page](/images/7.png)
+
+</Frame>
+
+<Frame>
+
+![Offer Details Configuration](/images/8.png)
+
+</Frame>
+
+After completing the configuration:
+
+- Review the configured Offer Details page settings.
+- Click **Save & Continue** to proceed to the **Review** page.
+
+---
+
+### Step 6: Review and Publish
+
+After completing all configuration steps, the **Review** page is displayed.
+
+Use this page to verify every configuration before publishing the Merchant Offer.
+
+Review the following sections:
+
+- **Offer Details**
 - **Offer User Base**
-- **Home Page Configuration**
-- **Offer Details Page Configuration**
+- **Display Elements**
+- **Offer Details Page**
+
+If any changes are required:
+
+- Use the navigation panel on the left to return to the corresponding configuration step.
+- Update the required information.
+- Return to the **Review** page to verify the changes.
+
+Once all configurations have been reviewed:
+
+- Click **Publish** to publish the Merchant Offer.
 
 <Note>
-The Offer Details view is read-only and is intended for reviewing the complete offer configuration. To make changes, use the **Edit** action from the Offer Listing page (if permitted based on the offer status).
 
-Editing an **Active** Merchant Offer is limited to permitted fields such as the end date and display-related configurations.
+The Merchant Offer remains in **Scheduled** status until the configured start date and time is reached. Once the offer becomes **Active**, only supported fields can be modified.
 
-Duplicating an offer creates a new draft that can be modified and published independently.
-
-Only **Scheduled** offers can be deleted.
 </Note>
 
+---
 
+## Managing Existing Merchant Offers
+
+The **Merchant Offers** listing page enables users to manage Merchant Offers throughout their lifecycle. The actions available depend on the current status of the offer.
+
+From this page, users can:
+
+- View Merchant Offer details.
+- Edit an existing Merchant Offer.
+- Duplicate a Merchant Offer.
+- Delete a Merchant Offer.
+- Expire an active Merchant Offer.
+
+Use the available filters and search options to quickly locate a specific Merchant Offer.
+
+---
+
+## Viewing Merchant Offer Details
+
+Click any Merchant Offer from the **Merchant Offers** listing page to view its complete configuration.
+
+The **Offer Details** page provides a consolidated, read-only view of all configurations completed during the Merchant Offer creation journey, making it easy to review the offer without entering edit mode.
+
+The following sections are displayed:
+
+- **Offer Details**
+- **Offer User Base**
+- **Display Elements**
+- **Offer Details Page**
+
+Review each section to verify the complete offer configuration.
+
+<Frame>
+
+![Managing Existing Offers](/images/9.png)
+
+</Frame>
+
+<Frame>
+
+![Viewing Merchant Offer Details](/images/10.png)
+
+</Frame>
+
+<Note>
+
+The **Offer Details** page is intended for reviewing the complete Merchant Offer configuration.
+
+To modify an existing Merchant Offer, use the **Edit** action from the Merchant Offers listing page. Editing permissions depend on the current status of the offer.
+
+- **Draft** offers can be edited freely before publishing.
+- **Scheduled** offers can be modified until they become active.
+- **Active** offers support editing only for permitted fields, such as the offer end date and display-related configurations.
+- **Expired** offers are available for reference and cannot be reactivated.
+
+</Note>
+
+---
+
+## Duplicate a Merchant Offer
+
+The **Duplicate** action creates a new Merchant Offer by copying the configuration of an existing offer.
+
+When a Merchant Offer is duplicated:
+
+- All configurable settings are copied to the new offer.
+- The duplicated offer is created in **Draft** status.
+- Review and update the required fields before publishing the new offer.
+
+Duplicating an offer helps reduce manual effort when creating similar campaigns.
+
+---
+
+## Delete a Merchant Offer
+
+The **Delete** action permanently removes a Merchant Offer from the system.
+
+Before deleting an offer:
+
+- Verify that the offer is no longer required.
+- Ensure the offer is eligible for deletion based on its current status.
+
+<Note>
+
+Only Merchant Offers in **Draft** or **Scheduled** status can be deleted.
+
+Published or Active Merchant Offers cannot be deleted. If an active offer is no longer required, use the **Expire** action to stop the campaign.
+
+</Note>
+
+---
+
+## Expire a Merchant Offer
+
+Use the **Expire** action to end an active Merchant Offer before its configured end date.
+
+After a Merchant Offer is expired:
+
+- The offer is no longer available to customers.
+- No new transactions are evaluated for reward eligibility.
+- Historical offer data remains available for reporting and auditing purposes.
+
+<Note>
+
+Expiring a Merchant Offer immediately stops further reward processing while preserving the offer history for future reference.
+
+</Note>
+
+---
+
+## Next Steps
+
+After creating and publishing a Merchant Offer, you can:
+
+- Monitor offer performance using the Dashboard.
+- Review customer eligibility and reward distribution.
+- Create additional Merchant Offers for different campaigns.
+- Duplicate existing Merchant Offers to launch similar campaigns more efficiently.
