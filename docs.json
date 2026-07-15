@@ -20,6 +20,28 @@
         "group": "Offer Management",
         "pages": [
           "document-transaction",
+          {
+  "group": "Offer Management",
+  "pages": [
+    {
+      "group": "Transactional Offer",
+      "pages": [
+        "transaction-offer/introduction",
+        "transaction-offer/create-transactional-offer",
+        "transaction-offer/offer-scope",
+        "transaction-offer/offer-user-base",
+        "transaction-offer/transaction-eligibility",
+        "transaction-offer/offer-calculation",
+        "transaction-offer/budget",
+        "transaction-offer/usage-limits",
+        "transaction-offer/posting",
+        "transaction-offer/display-elements",
+        "transaction-offer/communication",
+        "transaction-offer/sample-configurations"
+      ]
+    }
+  ]
+}
           "milestone-offer",
           "merchant-offer",
           "gamified-offer",
