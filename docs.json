@@ -18,54 +18,42 @@
       {
         "group": "Offer Management",
         "pages": [
-          "introduction",
+          "offer/introduction",
+          "offer/offer-type",
+          "offer/outcome-type",
+          "offer/offer-scope",
+          "offer/offer-user-base",
+          "offer/transaction-eligibility",
+          "offer/offer-calculation",
+          "offer/budget",
+          "offer/usage-limits",
+          "offer/posting",
+          "offer/display-elements",
+          "offer/communication",
           {
             "group": "Transactional Offer",
             "pages": [
-              "transaction-offer/introduction",
-              "transaction-offer/create-offer",
-              "transaction-offer/offer-type",
-              "transaction-offer/outcome-type",
-              "transaction-offer/offer-scope",
-              "transaction-offer/offer-user-base",
-              "transaction-offer/transaction-eligibility",
-              "transaction-offer/offer-calculation",
-              "transaction-offer/budget",
-              "transaction-offer/usage-limits",
-              "transaction-offer/posting",
-              "transaction-offer/display-elements",
-              "transaction-offer/communication"
+              "transaction-offer/introduction"
             ]
           },
           {
             "group": "Milestone Offer",
             "pages": [
-              "milestone-offer/introduction",
-              "milestone-offer/create-offer",
-              "milestone-offer/offer-type",
-              "milestone-offer/outcome-type",
-              "milestone-offer/offer-details",
-              "milestone-offer/offer-user-base",
-              "milestone-offer/milestone-eligibility",
-              "milestone-offer/budget",
-              "milestone-offer/posting",
-              "milestone-offer/display-elements",
-              "milestone-offer/communication"
+              "milestone-offer/introduction"
             ]
           },
           {
             "group": "Merchant Offer",
             "pages": [
-              "merchant-offer/introduction",
-              "merchant-offer/create-offer",
-              "merchant-offer/offer-details",
-              "merchant-offer/offer-user-base",
-              "merchant-offer/budget",
-              "merchant-offer/display-elements",
-              "merchant-offer/communication"
+              "merchant-offer/introduction"
             ]
           },
-          "gamified-offer",
+          {
+            "group": "Gamified Offer",
+            "pages": [
+              "gamified-offer/introduction"
+            ]
+          },
           "apple-rewards",
           "rent-cashback",
           "airport-lounge-rewards",
