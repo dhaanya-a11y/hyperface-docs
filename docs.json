@@ -13,14 +13,12 @@
         "group": "Getting Started",
         "pages": [
           "introduction",
-          "getting-started"     
         ]
       },
       {
         "group": "Offer Management",
         "pages": [
           {
-            "group": "Offer",
             "pages": [
               "offer/introduction",
               "offer/offer-type",
