@@ -1,67 +1,55 @@
----
-title: Introduction
-description: Overview of the Offer Management documentation.
----
+# Offer Type
 
-# Introduction
+## What is an Offer Type?
 
-Welcome to the **Offer Management** documentation.
+An **Offer Type** defines how a customer becomes eligible to receive a reward. It determines the business objective of an Offer and the qualification logic used to evaluate customer activities. Selecting the appropriate Offer Type is the first step in creating an Offer, as it defines the configuration journey and the business rules that will be applied.
 
-The Offer Management module enables issuers to create, configure, publish, and manage customer reward campaigns through an intuitive step-by-step workflow. Depending on the business requirement, different offer types can be configured to reward customers for eligible transactions, spending milestones, merchant purchases, and other campaign objectives.
-
-This documentation provides detailed guidance for configuring each offer type, including eligibility criteria, reward calculation, budgeting, display settings, communication, and publishing.
-
+Hyperface supports multiple Offer Types, allowing issuers to create campaigns for different business objectives.
+  
 ---
 
-## Supported Offer Types
+## Transactional Offer
 
-The following offer types are currently documented:
+A **Transactional Offer** rewards customers whenever a single qualifying transaction satisfies the configured eligibility criteria. Each transaction is evaluated independently, making it suitable for campaigns where rewards should be issued immediately after every eligible transaction.
 
-### Transactional Offers
+Typical business use cases include fuel cashback, dining offers, shopping rewards, and UPI cashback campaigns.
 
-Reward customers for completing eligible transactions that satisfy the configured transaction criteria.
+![Transactional Offer](/images/c.png)
 
-### Merchant Offers
-
-Reward customers for making eligible purchases at participating merchants based on the configured merchant eligibility conditions.
-
-### Milestone Offers
-
-Reward customers after they successfully achieve predefined spending or transaction milestones during the offer period.
-
-### Gamified Offers
-
-Reward customers as they progress through multiple milestones or challenges within a gamified campaign.
+👉 [Transactional Offer Configuration](/transaction-offer/introduction)
 
 ---
 
-## Documentation Structure
+## Milestone Offer
 
-Each offer guide follows a consistent step-by-step configuration journey, covering:
+A **Milestone Offer** rewards customers after they achieve predefined spending or transaction milestones within a specified period. Rewards are issued only after the configured milestone conditions are successfully completed.
 
-- Creating a new offer
-- Configuring offer details
-- Setting up the offer user base
-- Defining eligibility conditions
-- Configuring reward calculation
-- Setting budgets and approvals
-- Configuring display elements
-- Setting up communication
-- Reviewing and publishing the offer
+Typical business use cases include monthly spending campaigns, spend-and-earn rewards, transaction count campaigns, and customer retention programs.
+
+![Milestone Offer](/images/0.2.png)
+
+👉 [Milestone Offer Configuration](/milestone-offer/introduction)
 
 ---
 
-## Before You Begin
+## Merchant Offer
 
-Before creating an offer, ensure that:
+A **Merchant Offer** rewards customers for making purchases at participating merchants. Eligibility is determined using merchant-specific criteria, making it suitable for targeted merchant campaigns and partner promotions.
 
-- The required issuer and program are available.
-- The appropriate reward outcome has been identified.
-- Any required customer eligibility criteria are defined.
-- The necessary permissions are available to create and publish offers.
+Typical business use cases include restaurant cashback, shopping offers, travel promotions, and exclusive merchant partnerships.
 
-<Note>
+![Merchant Offer](/images/1.png)
 
-The available configuration steps may vary depending on the selected offer type.
+👉 [Merchant Offer Configuration](/merchant-offer/introduction)
 
-</Note>
+---
+
+## Gamified Offer
+
+A **Gamified Offer** rewards customers through interactive campaigns, challenges, or engagement-based activities. Customers unlock rewards after completing predefined objectives, making campaigns more engaging and encouraging repeat participation.
+
+Typical business use cases include spin-the-wheel campaigns, scratch cards, seasonal promotions, and customer engagement challenges.
+
+![Gamified Offer](/images/0.2.png)
+
+👉 [Gamified Offer Configuration](/gamified-offer)
