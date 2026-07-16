@@ -1,10 +1,25 @@
+
+---
+title: Introduction
+description: Overview of Hyperface Documentation
+---
+
+# Introduction
+
 ## What is a Transactional Offer?
 
 <Info>
 A **Transactional Offer** rewards customers for completing a **single qualifying transaction** that satisfies the configured eligibility criteria. Each qualifying transaction is evaluated independently, and eligible customers receive the configured reward based on the selected outcome type.
 </Info>
+<Note>
 
-A Transactional Offer is the simplest offer type on the Hyperface Platform: eligibility is assessed **per transaction**, not across a series of transactions or over a subscription cycle. As soon as a transaction meets the configured **Transaction Eligibility** criteria (such as MCC, MID, TID, or Transaction Value), the reward defined in the **Offer Calculation** step is applied to that transaction.
+Before creating a Transactional Offer, ensure that:
+
+- The required issuer and program have already been configured.
+- The reward outcome has been identified.
+- Any Smart Tags required for user eligibility have already been created.
+
+</Note>
 
 ### Key characteristics
 
@@ -24,6 +39,27 @@ A Transactional Offer is the simplest offer type on the Hyperface Platform: elig
 For details on Milestone Offers, see [Milestone Offers](/milestone-offer).
 
 ---
+Create Offer
+      ↓
+Select Offer Type
+      ↓
+Select Outcome Type
+      ↓
+Offer Scope
+      ↓
+Offer User Base
+      ↓
+Transaction Eligibility
+      ↓
+Offer Calculation
+      ↓
+Budget
+      ↓
+Usage Limits
+      ↓
+Posting
+      ↓
+Display Elements
 ## Create a Transactional Offer
 
 To create a new Transactional Offer, begin from the **Manage Offers** page.
