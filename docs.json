@@ -12,30 +12,12 @@
       {
         "group": "Getting Started",
         "pages": [
-          "introduction",
-          "getting-started"     
+          "getting-started"
         ]
       },
       {
         "group": "Offer Management",
         "pages": [
-          {
-            "group": "Offer",
-            "pages": [
-              "offer/introduction",
-              "offer/offer-type",
-              "offer/outcome-type",
-              "offer/offer-scope",
-              "offer/offer-user-base",
-              "offer/transaction-eligibility",
-              "offer/offer-calculation",
-              "offer/budget",
-              "offer/usage-limits",
-              "offer/posting",
-              "offer/display-elements",
-              "offer/communication"
-            ]
-          },
           {
             "group": "Transactional Offer",
             "pages": [
@@ -82,7 +64,25 @@
               "merchant-offer/communication"
             ]
           },
-          "gamified-offer",
+          {
+            "group": "Gamified Offer",
+            "pages": [
+              "gamified-offer/introduction",
+              "gamified-offer/create-offer",
+              "gamified-offer/offer-type",
+              "gamified-offer/outcome-type",
+              "gamified-offer/offer-details",
+              "gamified-offer/offer-user-base",
+              "gamified-offer/gamification-levels",
+              "gamified-offer/offer-calculation",
+              "gamified-offer/usage-limits",
+              "gamified-offer/posting",
+              "gamified-offer/display-elements",
+              "gamified-offer/review-and-publish",
+              "gamified-offer/best-practices",
+              "gamified-offer/notes"
+            ]
+          },
           "apple-rewards",
           "rent-cashback",
           "airport-lounge-rewards",
