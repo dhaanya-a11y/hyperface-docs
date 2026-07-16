@@ -19,19 +19,24 @@
       {
         "group": "Offer Management",
         "pages": [
-          "transaction-offer/introduction",
-          "transaction-offer/create-offer",
-          "transaction-offer/offer-type",
-          "transaction-offer/outcome-type",
-          "transaction-offer/offer-scope",
-          "transaction-offer/offer-user-base",
-          "transaction-offer/transaction-eligibility",
-          "transaction-offer/offer-calculation",
-          "transaction-offer/budget",
-          "transaction-offer/usage-limits",
-          "transaction-offer/posting",
-          "transaction-offer/display-elements",
-          "transaction-offer/communication",
+          {
+            "group": "Transactional Offer",
+            "pages": [
+              "transaction-offer/introduction",
+              "transaction-offer/create-offer",
+              "transaction-offer/offer-type",
+              "transaction-offer/outcome-type",
+              "transaction-offer/offer-scope",
+              "transaction-offer/offer-user-base",
+              "transaction-offer/transaction-eligibility",
+              "transaction-offer/offer-calculation",
+              "transaction-offer/budget",
+              "transaction-offer/usage-limits",
+              "transaction-offer/posting",
+              "transaction-offer/display-elements",
+              "transaction-offer/communication"
+            ]
+          },
           "milestone-offer",
           "merchant-offer",
           "gamified-offer",
