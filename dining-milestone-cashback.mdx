@@ -1,0 +1,160 @@
+---
+title: Dining Spend Milestone Cashback
+description: Configure a cumulative dining-spend Milestone Offer.
+hidden: true
+---
+
+## Overview
+
+This guide explains how to configure the **Dining Spend Milestone Cashback** offer in the Offer Management System (OMS), using the Milestone Offer flow.
+
+## Business objective
+
+The **Dining Spend Milestone Cashback** offer is designed to encourage customers to use their eligible credit cards for dining by rewarding cumulative monthly spend. Customers who spend **₹20,000 or more** on eligible dining transactions within a single billing month receive **₹1,000 cashback** — repeatable for up to **6 billing cycles**.
+
+### Offer type
+
+| Field | Value |
+|-------|-------|
+| Offer Type | Milestone Offer |
+| Offer Outcome | Cashback |
+
+This offer rewards customers with a flat **₹1,000 cashback** once cumulative eligible dining spend crosses **₹20,000** within a billing month.
+
+---
+
+## Step 1: Select Offer Type and Outcome
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Offer Type | Milestone Offer | Reward is based on cumulative activity across a subscription cycle, not a single transaction. |
+| Outcome Type | Cashback | Reward is credited back to the customer as cashback. |
+
+> **Selected Configuration:** Cashback is selected as the outcome type since the campaign objective is to return a fixed cash reward once the spend milestone is reached.
+
+---
+
+## Step 2: Configure Offer Details
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Offer Name | Dining Spend Milestone Cashback | Name displayed for the offer. |
+| Offer Description | Spend ₹20,000 or more on dining every billing month and earn ₹1,000 cashback. | Short description displayed for the offer. |
+| Offer Duration | 01 Aug 2026 – 31 Jan 2027 | Period during which the offer remains active (6 billing months). |
+| Eligibility Level | Account Level | Eligibility is evaluated independently for each account. |
+| Issuer | Demo-Bank | Credit card issuing bank. |
+| Program Type | Credit Card | Product type for which the offer is applicable. |
+| Apply to All Current and Future Programs | Disabled | Applies only to the selected program. |
+| Program | IOB DEMO | Eligible credit card program. |
+| Progress Transfer On Variant Upgrade | Disabled | Milestone progress does not carry over if the customer upgrades their card variant. |
+
+---
+
+## Step 3: Configure Offer User Base
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| User Base Type | Static Base | The eligible customer list is fixed when the offer goes live. |
+
+> **Selected Configuration:** Static Base ensures only customers included before go-live are eligible for this campaign.
+
+---
+
+## Step 4: Configure Milestone Eligibility
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Aggregation Type | Sum of Transaction Values | Cumulative eligible dining spend is tracked per billing month. |
+| Threshold | Greater Than or Equal To ₹20,000 | The milestone completes once cumulative spend reaches ₹20,000. |
+| Subscription Cycle | Billing Month | Progress resets at the start of each billing month. |
+| Number of Cycles | 6 | The milestone can be completed once per billing month, for up to 6 months. |
+| Transaction Eligibility – MCC | Dining / Restaurant MCC | Only dining transactions contribute toward milestone progress. |
+| Processing Date | Transaction Date | Progress is calculated using the transaction date. |
+| Lock Milestone Progress On Achievement | Enabled | Progress stops accumulating once ₹20,000 is reached within a cycle. |
+
+> **Selected Configuration:** Locking progress on achievement prevents additional dining spend within the same billing month from being wasted against an already-completed milestone — the counter simply resets at the next cycle.
+
+---
+
+## Step 5: Configure Offer Calculation
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Offer Calculation Rule | Fixed Reward | A predefined cashback amount is paid on milestone completion. |
+| Cashback Amount | ₹1,000 | Amount credited once the ₹20,000 threshold is reached. |
+
+> **Selected Configuration:** Customers receive a flat **₹1,000 cashback** every billing month the ₹20,000 dining-spend milestone is achieved.
+
+---
+
+## Step 6: Configure Usage Limits
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Cycle Count Limit | 6 | The milestone can be completed at most once per billing month, across 6 months. |
+| Lifetime Limit | ₹6,000 | Maximum cashback payable across the full offer duration. |
+
+---
+
+## Step 7: Configure Posting
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Enable Posting | Enabled | Allows cashback to be credited. |
+| Offer Posting | Scheduled Posting | Cashback is posted after a configured delay. |
+| Days After | 3 Days | Posting occurs 3 days after each billing cycle ends. |
+| Event | Cycle End | Posting delay is measured from the end of the billing cycle. |
+| Posting Narration | Dining Milestone Cashback Credited | Displayed when cashback is credited. |
+| Reversal Narration | Dining Milestone Cashback Reversed | Displayed if cashback is reversed. |
+
+> **Selected Configuration:** Scheduled Posting with a 3-day delay gives enough time for transaction reversals and refunds to settle before cashback is credited.
+
+---
+
+## Step 8: Configure Display Elements
+
+### Home Page
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Enable Display | Enabled | Displays the offer on the customer's PWA home page. |
+| Label | Dining | Categorizes the offer. |
+| Banner Title | Earn ₹1,000 Cashback on Dining Spends | Banner title shown in the PWA. |
+| Banner Description | Spend ₹20,000 on dining every billing month and earn ₹1,000 cashback. | Banner description displayed to customers. |
+| Display Title | Dining Spend Milestone Cashback | Offer title displayed on the card. |
+| Display Description | Track your monthly dining spend and earn cashback once you cross ₹20,000. | Offer description shown on the card. |
+| Progress Style | Progress Bar | Visualizes cumulative spend against the ₹20,000 threshold. |
+| Display Order | 4 | Determines display priority. |
+| Display Colour | #E85D3D | Primary colour used for the offer card. |
+
+### Offer Details Page
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Milestone Pending Text | You're ₹{remaining} away from ₹1,000 cashback this month. | Shown while the milestone is in progress. |
+| Milestone Completion Text | You've earned ₹1,000 cashback for this month's dining spends! | Shown once the milestone is achieved. |
+| Terms & Conditions | Valid only on eligible dining MCC transactions; cancelled or refunded transactions are excluded; standard terms apply. | Displayed on the offer details page. |
+| How To Redeem | Use your eligible credit card at any dining outlet; cashback is credited automatically once ₹20,000 is spent in a billing month. | Explains the redemption flow. |
+| CTA Button Text | Track My Spend | CTA displayed on the offer details page. |
+| Redirection Link | /offers/dining-milestone-cashback | Destination when the CTA is tapped. |
+
+---
+
+## Step 9: Review and Publish
+
+Before publishing, verify:
+
+- Offer Details are accurate.
+- User Base configuration is correct.
+- Milestone Eligibility — aggregation type, threshold, and cycle configuration — has been validated.
+- Offer Calculation and Usage Limits align with the campaign budget.
+- Posting Configuration allows sufficient time for reversals.
+- Display content has been reviewed and approved.
+
+Click **Publish**. The offer status becomes **Scheduled** and automatically changes to **Active** at the configured start time.
+
+---
+
+## Summary
+
+This guide demonstrates the complete configuration of the **Dining Spend Milestone Cashback** Milestone Offer — cumulative eligibility tracking, threshold-based reward calculation, cycle-based usage limits, scheduled posting, and customer-facing UI setup in the Progressive Web App (PWA).

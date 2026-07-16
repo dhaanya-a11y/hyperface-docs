@@ -1,0 +1,101 @@
+---
+title: Myntra Fashion Cashback
+description: Configure a merchant-specific fashion cashback Merchant Offer.
+hidden: true
+---
+
+## Overview
+
+This guide explains how to configure the **Myntra Fashion Cashback** offer in the Offer Management System (OMS), using the Merchant Offer flow.
+
+## Business objective
+
+The **Myntra Fashion Cashback** offer is designed to encourage customers to use their eligible credit cards for fashion purchases at **Myntra**. Customers receive a flat **₹300 cashback** on eligible Myntra purchases of **₹2,000 or more**.
+
+### Offer type
+
+| Field | Value |
+|-------|-------|
+| Offer Type | Merchant Offer |
+| Participating Merchant | Myntra |
+
+This offer rewards customers with **₹300 cashback** on eligible Myntra purchases of ₹2,000 or more.
+
+---
+
+## Step 1: Configure Offer Details
+
+Navigate to **Merchant Offers → Create New Offer** and configure the following fields.
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Offer Name | Myntra Fashion Cashback | Name displayed for the offer. |
+| Offer Description | Get flat ₹300 cashback on Myntra purchases of ₹2,000 or more. | Internal description for easy identification. |
+| Offer Duration | 15 Jul 2026 – 15 Oct 2026 | Period during which the offer remains active. |
+| Eligibility Level | Account Level | Eligibility is checked per account, independently. |
+| Issuer | Demo-Bank | The issuing bank. |
+| Programs | IOB DEMO | Applicable card program. |
+| Apply to All Current and Future Programs | Disabled | The offer applies only to the selected program. |
+
+> **Selected Configuration:** The offer is scoped to a single program at the Account Level, so eligibility for the Myntra cashback is checked independently for each cardholder's account.
+
+---
+
+## Step 2: Set Up Offer User Base
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Smart Tag | Myntra_Frequent_Shoppers | Restricts eligibility to a pre-built customer segment. |
+| Smart Tag Status | Allowed | Only customers in the Smart Tag are eligible. |
+
+> **Selected Configuration:** Only customers belonging to the **Myntra_Frequent_Shoppers** Smart Tag are eligible to participate — the offer is not open to the full program base.
+
+---
+
+## Step 3: Craft the Perfect UI – Home Page
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Enable Display | Enabled | Shows the offer on the customer's PWA home page. |
+| Labels | Fashion | Categorizes the offer. |
+| Display Title | Myntra Fashion Cashback | Title shown on the offer card. |
+| Display Description | Shop at Myntra and get flat ₹300 cashback on purchases of ₹2,000 or more. | Description shown on the offer card. |
+| Display Order | 5 | Determines display priority relative to other offers. |
+| Display Colour | #FF3F6C | Primary colour used for the offer card, matching Myntra's brand pink. |
+| Offer/Merchant Logo | Myntra logo | Displayed alongside the offer. |
+| Background Illustration | Fashion-themed illustration | Background art for the offer card. |
+
+---
+
+## Step 4: Offer Details Page
+
+| Section | Content |
+|---------|---------|
+| How It Works | 1. Shop at Myntra using your eligible credit card. 2. Spend ₹2,000 or more in a single transaction. 3. Receive ₹300 cashback credited to your account. |
+| Terms & Conditions | Valid only on eligible Myntra purchases; minimum transaction amount ₹2,000; cancelled or refunded transactions are not eligible; standard terms and conditions apply. |
+
+| Field | Value | Description |
+|-------|-------|-------------|
+| Text on Button | Shop on Myntra | CTA button displayed on the offer details page. |
+| Redirection Link | myntra://home | Deep link opened when the CTA is tapped. |
+
+> **Selected Configuration:** The details page explains the eligibility criteria and cashback amount, while the **"Shop on Myntra"** CTA sends customers directly into the Myntra app.
+
+---
+
+## Step 5: Review and Publish
+
+Before publishing, verify:
+
+- Offer Details are accurate.
+- Offer User Base — Smart Tag membership — has been validated.
+- Home Page Display content matches Myntra's brand guidelines.
+- Offer Details Page sections and CTA have been reviewed.
+
+Click **Publish**. The offer remains in **Scheduled** status until the configured start date and time; once Active, only permitted fields can be modified.
+
+---
+
+## Summary
+
+This guide demonstrates the complete configuration of the **Myntra Fashion Cashback** Merchant Offer, including Smart-Tag–based eligibility, merchant-branded display configuration, and customer-facing UI setup in the Progressive Web App (PWA).
