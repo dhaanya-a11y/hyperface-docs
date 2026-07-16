@@ -1,0 +1,47 @@
+---
+title: Introduction
+description: Overview of Transaction Offers in the Hyperface Dashboard.
+---
+
+## What is a Transactional Offer?
+
+<Info>
+A **Transactional Offer** rewards customers for completing a **single qualifying transaction** that satisfies the configured eligibility criteria. Each qualifying transaction is evaluated independently, and eligible customers receive the configured reward based on the selected outcome type.
+</Info>
+
+A Transactional Offer is the simplest offer type on the Hyperface Platform: eligibility is assessed **per transaction**, not across a series of transactions or over a subscription cycle. As soon as a transaction meets the configured **Transaction Eligibility** criteria (such as MCC, MID, TID, or Transaction Value), the reward defined in the **Offer Calculation** step is applied to that transaction.
+
+### Key characteristics
+
+- **Single-transaction evaluation** – Each transaction is checked independently against the eligibility criteria; there is no requirement to accumulate spend or transaction count.
+- **Immediate qualification** – A customer becomes eligible for the reward the moment a single transaction satisfies the configured conditions.
+- **Configurable outcome** – The reward can be issued as Cashback, Reward Points, a Voucher, a Smart Tag, an Accelerated Reward, or Partner Points.
+- **Usage limits still apply** – While each transaction is evaluated on its own, the total benefit a customer can earn is still bounded by the configured **Usage Limits** (for example, a monthly cashback cap).
+
+### Transactional Offers vs. Milestone Offers
+
+| | Transactional Offer | Milestone Offer |
+|---|---|---|
+| **Evaluation basis** | Single qualifying transaction | Cumulative activity across multiple transactions |
+| **Time window** | None required (evaluated per transaction) | Defined subscription cycle |
+| **Reward trigger** | Immediately on the qualifying transaction | On reaching the milestone target |
+
+For details on Milestone Offers, see [Milestone Offers](/milestone-offer).
+
+## Sample Configurations
+
+### Sample 1 – Rent Cashback (MCC-Based)
+
+👉 [View Sample Configuration](/rent-cashback)
+
+---
+
+### Sample 2 – Apple Store Reward Points (MID-Based)
+
+👉 [View Sample Configuration](/apple-rewards)
+
+---
+
+### Sample 3 – Airport Lounge Reward Points (Flight MCC-Based)
+
+👉 [View Sample Configuration](/airport-lounge-rewards)
