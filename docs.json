@@ -20,6 +20,23 @@
         "group": "Offer Management",
         "pages": [
           {
+            "group": "Offer",
+            "pages": [
+              "offer/introduction",
+              "offer/offer-type",
+              "offer/outcome-type",
+              "offer/offer-scope",
+              "offer/offer-user-base",
+              "offer/transaction-eligibility",
+              "offer/offer-calculation",
+              "offer/budget",
+              "offer/usage-limits",
+              "offer/posting",
+              "offer/display-elements",
+              "offer/communication"
+            ]
+          },
+          {
             "group": "Transactional Offer",
             "pages": [
               "transaction-offer/introduction",
