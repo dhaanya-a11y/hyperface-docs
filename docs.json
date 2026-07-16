@@ -38,7 +38,18 @@
             ]
           },
           "milestone-offer",
-          "merchant-offer",
+          {
+            "group": "Merchant Offer",
+            "pages": [
+              "merchant-offer/introduction",
+              "merchant-offer/create-offer",
+              "merchant-offer/offer-details",
+              "merchant-offer/offer-user-base",
+              "merchant-offer/budget",
+              "merchant-offer/display-elements",
+              "merchant-offer/communication"
+            ]
+          },
           "gamified-offer",
           "apple-rewards",
           "rent-cashback",
