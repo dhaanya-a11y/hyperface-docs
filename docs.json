@@ -37,7 +37,22 @@
               "transaction-offer/communication"
             ]
           },
-          "milestone-offer",
+          {
+            "group": "Milestone Offer",
+            "pages": [
+              "milestone-offer/introduction",
+              "milestone-offer/create-offer",
+              "milestone-offer/offer-type",
+              "milestone-offer/outcome-type",
+              "milestone-offer/offer-details",
+              "milestone-offer/offer-user-base",
+              "milestone-offer/milestone-eligibility",
+              "milestone-offer/budget",
+              "milestone-offer/posting",
+              "milestone-offer/display-elements",
+              "milestone-offer/communication"
+            ]
+          },
           {
             "group": "Merchant Offer",
             "pages": [
