@@ -23,7 +23,7 @@
           "offer/outcome-type",
           "offer/offer-scope",
           "offer/offer-user-base",
-          "offer/transaction-eligibility",
+           "offer-management/milestone-eligibility",
           "offer/offer-calculation",
           "offer/budget",
           "offer/usage-limits",
