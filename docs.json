@@ -29,13 +29,10 @@
           "offer/usage-limits",
           "offer/posting",
           "offer/display-elements",
-          "offer/communication",
-
           "transaction-offer/introduction",
           "milestone-offer/introduction",
           "merchant-offer/introduction",
           "gamified-offer/introduction",
-
           "apple-rewards",
           "rent-cashback",
           "airport-lounge-rewards",
