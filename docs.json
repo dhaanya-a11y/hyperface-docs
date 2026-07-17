@@ -19,11 +19,16 @@
         "group": "Offer Management",
         "pages": [
           "offer/introduction",
-          "offer/offer-type",
-          "offer/outcome-type",
-          "offer/offer-scope",
-          "offer/transaction-eligibility",
+          {
+            "group": "Basic Details",
+            "pages": [
+              "offer/offer-type",
+              "offer/outcome-type",
+              "offer/offer-scope"
+            ]
+          },
           "offer/offer-user-base",
+          "offer/transaction-eligibility",
           "offer/milestone-eligibility",
           "offer/offer-calculation",
           "offer/budget",
