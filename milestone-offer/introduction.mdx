@@ -3,7 +3,7 @@ title: Milestone Offer
 description: Learn how to configure Milestone Offers in the Hyperface Dashboard.
 ---
 
-# Introduction
+# Milestone Offer
 
 ## What is a Milestone Offer?
 
@@ -15,72 +15,9 @@ A **Milestone Offer** rewards customers after they achieve predefined spending o
 
 Milestone Offers encourage customers to continue spending or transacting until they reach a defined goal. You can configure milestone criteria, specify which transactions contribute towards milestone progress, and reward customers upon successful milestone completion.
 
----
-
-# Configure a Milestone Offer
-
 Milestone Offer configuration consists of two parts:
 
-- **Milestone Eligibility** – Defines how milestone progress is calculated.
+- **[Milestone Eligibility](/offer/milestone-eligibility)** – Defines how milestone progress is calculated.
 - **Transaction Eligibility** – Defines which transactions contribute towards milestone completion.
 
 ---
-
-## Milestone Eligibility
-
-Milestone Eligibility determines how customer progress is tracked and when a milestone is considered complete.
-
-<Frame>
-  <img src="/images/Screenshot 2026-07-17 105521.png" alt="Milestone Eligibility" />
-</Frame>
-
-### Configuration Fields
-
-| Field | Description |
-|--------|-------------|
-| **Aggregate By** | Select how eligible transactions should be accumulated to calculate milestone progress. For example, **Sum of Transaction Values** aggregates the total value of qualifying transactions. |
-| **Define Threshold** | Specify the milestone condition by selecting a comparison operator and entering the threshold value. In the example shown, the milestone is achieved when the total transaction value is **Greater Than 10000**. |
-| **Lock milestone progress on achievement** | When enabled, milestone progress is locked after the customer reaches the configured threshold. Subsequent qualifying purchases or refunds will not modify the completed milestone. |
-| **Subscription Cycle Period** | Select the period during which milestone progress is evaluated, such as Monthly, Quarterly, or Yearly. The example shown uses **Quarter**. |
-| **Number of Cycles** | Specify the number of subscription cycles during which the configured milestone remains active. |
-
-Once the milestone criteria have been configured, define the transaction conditions that contribute towards milestone completion.
-
----
-
-## Transaction Eligibility
-
-Transaction Eligibility determines which transactions are considered while evaluating milestone progress. Only transactions that satisfy the configured eligibility criteria contribute towards achieving the milestone.
-
-<Frame>
-  <img src="/images/Screenshot 2026-07-17 105533.png" alt="Transaction Eligibility" />
-</Frame>
-
-### Configuration Fields
-
-Select the required transaction attribute and configure the corresponding conditions.
-
-| Attribute | Description |
-|-----------|-------------|
-| **MCC** | Filters transactions based on the Merchant Category Code. |
-| **MID** | Filters transactions using the Merchant Identifier. |
-| **TID** | Filters transactions using the Terminal Identifier. |
-| **POS Entry Mode** | Filters transactions based on the payment entry mode used during the transaction. |
-| **Transaction Value** | Filters transactions according to the transaction amount. |
-| **Transaction Type** | Filters transactions based on the transaction type. |
-| **Sovereignty Indicator** | Filters transactions using the configured sovereignty indicator. |
-| **Transaction Code** | Filters transactions based on the transaction code. |
-
-Multiple eligibility conditions can be configured to precisely define which transactions contribute towards milestone completion.
-
----
-
-## Next Steps
-
-After configuring the Milestone Offer, continue with the remaining common offer configuration:
-
-- [Offer Calculation](/offer/offer-calculation)
-- [Budget](/offer/budget)
-- [Posting](/offer/posting)
-- [Display Elements](/offer/display-elements)
-- [Communication](/offer/communication)
