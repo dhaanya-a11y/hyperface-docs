@@ -19,6 +19,24 @@ Milestone Offer configuration consists of two parts:
 
 - **[Milestone Eligibility](/offer/milestone-eligibility)** – Defines how milestone progress is calculated.
 - **Transaction Eligibility** – Defines which transactions contribute towards milestone completion.
+<Frame>
+  <img src="/images/Screenshot 2026-07-17 105533.png" alt="Transaction Eligibility Configuration" />
+</Frame>
+
+### Transaction Eligibility
+
+Configure the transaction filters that determine which transactions contribute towards milestone progress.
+
+| Field | Description |
+|-------|-------------|
+| **MCC (Merchant Category Code)** | Filters eligible transactions based on the merchant's business category. Only transactions matching the selected MCC(s) contribute towards milestone progress. |
+| **MID (Merchant Identifier)** | Filters transactions made at specific merchants using their Merchant ID. Only transactions from the selected merchant(s) are considered. |
+| **TID (Terminal Identifier)** | Filters transactions based on the terminal where the transaction was processed. This can be used to restrict eligibility to specific merchant terminals. |
+| **POS Entry Mode** | Filters transactions based on the payment entry method, such as Chip, Swipe, Contactless, or Manual Entry. |
+| **Transaction Value** | Defines the transaction amount criteria required for milestone progress. You can configure comparison operators and threshold values. |
+| **Transaction Type** | Filters transactions based on their type, such as Purchase, Refund, or Cash Withdrawal. |
+| **Sovereignty Indicator** | Filters transactions based on whether they are Domestic or International. |
+| **Transaction Code** | Filters transactions using transaction processing codes to include or exclude specific transaction types. |
 
 
 ---
