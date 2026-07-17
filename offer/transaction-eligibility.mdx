@@ -1,35 +1,32 @@
+## Configure Transaction Eligibility
 
-###Configure Transaction Eligibility 
+After configuring the **Offer User Base**, define the transaction conditions that determine whether a transaction qualifies for the Transactional Offer.
 
-After configuring the **Offer User Base**, the **Transaction Eligibility** screen is displayed.
+### Configure Transaction Conditions
 
-Use this page to define the transaction conditions that must be satisfied for the offer to be applied.
-
-#### Configure Transaction Conditions
-
-Select the transaction attributes that should be used to evaluate transaction eligibility.
+Select one or more transaction attributes to define the eligibility criteria for the offer.
 
 The following transaction attributes are available:
 
 | Transaction Attribute | Description |
 |-----------------------|-------------|
-| **MCC** | Defines eligibility based on the Merchant Category Code (MCC). |
-| **MID** | Defines eligibility based on the Merchant Identifier (MID). |
-| **TID** | Defines eligibility based on the Terminal Identifier (TID). |
-| **POS Entry Mode** | Defines eligibility based on the Point-of-Sale (POS) entry mode. |
-| **Transaction Value** | Defines eligibility based on the transaction amount. |
-| **Transaction Type** | Defines eligibility based on the transaction type. |
-| **Sovereignty Indicator** | Defines eligibility based on the transaction sovereignty indicator. |
-| **Transaction Code** | Defines eligibility based on the transaction code. |
-| **Payer VPA** | Defines eligibility based on the payer Virtual Payment Address (VPA). |
-| **Payee VPA** | Defines eligibility based on the payee Virtual Payment Address (VPA). |
+| **MCC** | Evaluates transactions based on the Merchant Category Code (MCC). |
+| **MID** | Evaluates transactions based on the Merchant Identifier (MID). |
+| **TID** | Evaluates transactions based on the Terminal Identifier (TID). |
+| **POS Entry Mode** | Evaluates transactions based on the Point-of-Sale (POS) entry mode. |
+| **Transaction Value** | Evaluates transactions based on the transaction amount. |
+| **Transaction Type** | Evaluates transactions based on the transaction type. |
+| **Sovereignty Indicator** | Evaluates transactions based on the transaction sovereignty indicator. |
+| **Transaction Code** | Evaluates transactions based on the transaction code. |
+| **Payer VPA** | Evaluates transactions based on the payer Virtual Payment Address (VPA). |
+| **Payee VPA** | Evaluates transactions based on the payee Virtual Payment Address (VPA). |
 
 ![Step 6 - Configure Transaction Eligibility](/images/h.png)
 
-After selecting the required transaction attribute:
+For each selected transaction attribute:
 
-- Select the appropriate comparison operator.
-- Enter or select the required value.
-- Add additional transaction conditions, if required.
-- Select the transaction posting date on which the eligibility should be evaluated.
-- Click **Continue** to proceed to the **Offer Calculation** configuration.
+- Select the appropriate **comparison operator**.
+- Enter or select the corresponding **attribute value**.
+- Add additional conditions, if required, to build the eligibility criteria.
+- Select the **Transaction Posting Date** that should be used for eligibility evaluation.
+---
