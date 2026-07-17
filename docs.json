@@ -24,7 +24,6 @@
           "offer/offer-scope",
           "offer/offer-user-base",
           "offer/milestone-eligibility",
-          "offer/transaction-eligibility",
           "offer/offer-calculation",
           "offer/budget",
           "offer/usage-limits",
