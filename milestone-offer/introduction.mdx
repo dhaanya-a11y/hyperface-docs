@@ -18,3 +18,61 @@ A **Milestone Offer** rewards customers when they achieve predefined spending or
 Milestone Offers enable issuers to encourage customer engagement by rewarding customers as they progress towards configured spending or transaction milestones. Multiple milestone levels can be configured, allowing customers to unlock rewards after completing each milestone.
 
 ---
+## Milestone Eligibility
+
+Milestone Eligibility allows you to define the conditions that customers must satisfy across multiple qualifying transactions before they become eligible for the configured reward. Unlike Transactional Offers, rewards are issued only after the configured milestone threshold is achieved.
+
+<Frame>
+  <img src="/images/0.1.png" alt="Milestone Eligibility Configuration" />
+</Frame>
+
+### Configure Milestone Eligibility
+
+Configure the milestone using the following fields:
+
+| Field | Description |
+|--------|-------------|
+| **Aggregate By** | Select how qualifying transactions should be aggregated to evaluate milestone progress. In the example shown, **Sum of Transaction Values** is selected, meaning the total transaction amount is accumulated until the configured threshold is reached. |
+| **Define Threshold** | Configure the milestone target by specifying the comparison operator and threshold value. In the example shown, customers become eligible when the aggregated transaction value is **Greater Than 10000**. |
+| **Lock milestone progress on achievement** | Enable this option to lock the customer's milestone progress once the threshold has been achieved. As indicated in the interface, later eligible purchases or refunds will not increase or decrease the recorded milestone progress. |
+| **Subscription Cycle Period** | Select the duration over which milestone progress is evaluated. In the example shown, the cycle period is configured as **Quarter**. |
+| **Number of Cycles** | Specify the number of subscription cycles during which the milestone remains active. |
+
+After configuring the milestone conditions, define which transactions contribute towards milestone completion.
+
+---
+
+## Transaction Eligibility
+
+Transaction Eligibility specifies the transaction attributes that are considered when evaluating milestone progress. Only transactions that satisfy the configured eligibility criteria contribute towards the milestone threshold.
+
+<Frame>
+  <img src="/images/0.2.png" alt="Transaction Eligibility Configuration" />
+</Frame>
+
+### Configure Transaction Eligibility
+
+Select one or more transaction attributes and configure the required conditions.
+
+The available attributes shown include:
+
+| Attribute | Description |
+|-----------|-------------|
+| **MCC** | Merchant Category Code used to identify merchant categories. |
+| **MID** | Merchant Identifier associated with the transaction. |
+| **TID** | Terminal Identifier used for the transaction. |
+| **POS Entry Mode** | Specifies how the card or payment instrument was presented during the transaction. |
+| **Transaction Value** | Filters transactions based on the transaction amount. |
+| **Transaction Type** | Filters transactions based on the transaction type. |
+| **Sovereignty Indicator** | Filters transactions based on the configured sovereignty indicator. |
+| **Transaction Code** | Filters transactions using the transaction code. |
+
+Configure the required transaction conditions by selecting the appropriate attributes and defining the corresponding values.
+
+Once Milestone Eligibility has been configured, continue with the remaining common offer configuration:
+
+- [Offer Calculation](/offer/offer-calculation)
+- [Budget](/offer/budget)
+- [Posting](/offer/posting)
+- [Display Elements](/offer/display-elements)
+- [Communication](/offer/communication)
