@@ -1,14 +1,42 @@
----
-title: Offer User Base
-description: Overview of the Offer User Base concept in the Hyperface Dashboard.
----
+# Offer User Base
 
 ## What is Offer User Base?
 
-The Offer User Base defines which customers are eligible to participate in a given offer, using either a fixed list of customers or dynamic, criteria-based enrollment.
+Offer User Base defines the group of customers who are eligible to participate in an offer. It allows issuers to specify whether the offer should target a predefined set of users or dynamically determine eligible users based on configured criteria.
 
-## Why is it used?
+Selecting the appropriate user base ensures that offers are delivered only to the intended customer segment.
 
-It exists so that an offer can be targeted to a specific customer segment — such as newly onboarded customers, a Smart-Tagged group, or accounts meeting particular criteria — instead of being made available to every customer in the program by default.
+---
 
-[Placeholder: Offer User Base screenshot]
+## Static Base
+
+Select **Static Base** when the set of eligible users is fixed before the offer is published. Once the offer is activated, the user base remains unchanged unless the offer is modified.
+
+After selecting **Static Base**, choose the eligibility criteria that will be used to identify the eligible users.
+
+![Step 5 - Select Static Base](/images/g.png)
+
+### Eligibility Options
+
+The following eligibility options are available for defining the user base:
+
+| Eligibility Option | Description | Example |
+|--------------------|-------------|---------|
+| **Smart Tag** | Identifies users based on a predefined Smart Tag assigned to customers. | Premium Customer |
+| **Accounts** | Defines eligible users using account-related information. | Savings Account |
+| **Switch Account Number** | Identifies users using their Switch Account Number. | 1234567890 |
+| **Birthdate** | Targets customers based on their date of birth. | Customers born in July |
+| **Account Creation Date** | Targets customers based on when their account was created. | Accounts created after 01 Jan 2025 |
+
+After selecting an eligibility option, configure the corresponding values required for that option.
+
+![Step 5 - Configure Static Base Eligibility](/images/g.1.png)
+
+### Estimate User Base
+
+Once the eligibility criteria have been configured:
+
+1. Click **Estimate User Base** to calculate the estimated number of eligible users.
+2. Review the estimated user count displayed by the system.
+3. Verify that the estimated audience aligns with the campaign requirements.
+4. Click **Continue** to proceed to the **Transaction Eligibility** configuration.

@@ -1,14 +1,56 @@
----
-title: Offer Calculation
-description: Overview of Offer Calculation in the Hyperface Dashboard.
----
+# Offer Calculation
 
 ## What is Offer Calculation?
 
-Offer Calculation defines how the reward value is derived once a transaction, milestone, or level qualifies — for example, as a flat amount, a percentage of spend, or a slab-based structure.
+Offer Calculation defines how the reward is calculated for every qualifying transaction. Once a transaction satisfies the configured eligibility criteria, the selected calculation rule determines the reward that will be issued to the customer.
 
-## Why is it used?
+After configuring **Transaction Eligibility**, configure the calculation method that best aligns with your campaign requirements.
 
-It exists to determine the actual monetary or points value a customer receives, which directly shapes both the customer's incentive and the campaign's cost.
+![Step 7 - Configure Offer Calculation](/images/i.png)
 
-[Placeholder: Offer Calculation screenshot]
+## Offer Calculation Rules
+
+Select the appropriate **Offer Calculation Rule** based on how the reward should be calculated.
+
+| Calculation Rule | Description | Example |
+|------------------|-------------|---------|
+| **Flat** | Awards a fixed reward amount for every qualifying transaction, regardless of the transaction value. | ₹100 Cashback |
+| **Percentage** | Awards a percentage of the qualifying transaction amount. The reward varies based on the transaction value. | 5% Cashback |
+| **Slab** | Awards different reward values based on predefined transaction value ranges or slabs. | ₹50 for ₹500–₹999, ₹100 for ₹1000–₹1999 |
+
+After selecting a calculation rule:
+
+1. Configure the corresponding reward value.
+2. Review the calculated reward before proceeding.
+
+---
+
+## Skip Cashback Capping (Optional)
+
+Use **Skip Cashback Capping** to exclude cashback limits configured at specific levels. This option allows the configured offer to bypass selected cashback capping rules during reward calculation.
+
+The following capping levels can be excluded:
+
+| Cashback Capping Level | Description |
+|-------------------------|-------------|
+| **Program Level** | Ignores cashback limits configured at the program level. |
+| **Transaction Level** | Ignores cashback limits configured for individual transactions. |
+| **MCC** | Ignores cashback limits configured for specific Merchant Category Codes (MCC). |
+| **MID** | Ignores cashback limits configured for specific Merchant Identifiers (MID). |
+| **Currency Level** | Ignores cashback limits configured for specific currencies. |
+
+---
+
+## Allow Reversal
+
+Enable **Allow Reversal** if rewards should be reversed whenever the corresponding qualifying transaction is reversed or refunded. This ensures that reward credits remain consistent with the final transaction status.
+
+---
+
+## Complete the Configuration
+
+After completing the Offer Calculation configuration:
+
+1. Review the configured calculation rule and reward values.
+2. Verify the cashback capping and reversal settings, if applicable.
+3. Click **Continue** to proceed to the **Budget** configuration.
