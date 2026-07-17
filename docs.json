@@ -30,30 +30,10 @@
           "offer/posting",
           "offer/display-elements",
           "offer/communication",
-          {
-            "group": "Transactional Offer",
-            "pages": [
-              "transaction-offer/introduction"
-            ]
-          },
-          {
-            "group": "Milestone Offer",
-            "pages": [
-              "milestone-offer/introduction"
-            ]
-          },
-          {
-            "group": "Merchant Offer",
-            "pages": [
-              "merchant-offer/introduction"
-            ]
-          },
-          {
-            "group": "Gamified Offer",
-            "pages": [
-              "gamified-offer/introduction"
-            ]
-          },
+          "transaction-offer/introduction",
+          "milestone-offer/introduction",
+          "merchant-offer/introduction",
+          "gamified-offer/introduction",
           "apple-rewards",
           "rent-cashback",
           "airport-lounge-rewards",
