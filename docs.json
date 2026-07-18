@@ -10,12 +10,6 @@
   "navigation": {
     "groups": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "introduction"
-        ]
-      },
-      {
         "group": "Offer Management",
         "pages": [
           "offer/introduction",
