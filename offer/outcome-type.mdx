@@ -1,30 +1,70 @@
-# Outcome Type
-
 ## What is an Outcome Type?
 
-An Outcome Type defines the reward or benefit that a customer receives after successfully meeting an offer's eligibility criteria. It determines the type of benefit that will be issued once the offer conditions are fulfilled.
+An **Outcome Type** defines the reward or benefit that a customer receives after successfully meeting an offer's eligibility criteria. It determines the type of benefit that is issued once the configured offer conditions are fulfilled.
 
-During offer creation, select the Outcome Type that best aligns with your campaign objective.
+Outcome Type is one of the first choices made during the offer creation journey, immediately after selecting the **Offer Type**. During offer creation, select the Outcome Type that best aligns with your campaign objective.
+
+The selected Outcome Type establishes the type of value delivered to the customer—whether it is money, reward points, a voucher, a Smart Tag, or another supported reward. This selection influences the subsequent reward configuration steps.
+
+<Note>
+The selected **Outcome Type** affects the configuration options available in **Offer Calculation** and **Posting**. Different outcome types require different reward and posting configurations. For example, a **Smart Tag** outcome does not require a monetary reward calculation like **Cashback** or **Reward Points**.
+</Note>
 
 ![Step 3 - Select the Outcome Type](/images/d.png)
+
+## Comparing Outcome Types
+
+| Consideration | Cashback | Reward Points | Voucher | Smart Tag | Accelerated Reward | Partner Points |
+|---------------|----------|---------------|----------|-----------|--------------------|----------------|
+| **Customer receives** | A monetary credit to their account | Loyalty points in the issuer's rewards program | A digital or physical voucher | A tag used for customer segmentation, rather than a direct reward | A higher earning rate on the standard rewards program | Loyalty points in a partner's rewards program |
+| **Depends on** | Offer Calculation (Flat / Percentage / Slab) | Offer Calculation (Points Formula) | A predefined voucher or coupon | No additional reward value calculation | An existing base rewards program | An existing partner points integration |
+| **Best for** | Direct monetary incentives | Driving engagement with the issuer's loyalty program | Campaign-specific redeemable rewards | Customer segmentation and future targeting | Increasing the earning rate of an existing rewards program | Cross-promoting a partner or co-branded rewards program |
+
+<Note>
+Available Outcome Types may vary based on the configured environment. Some outcome types may appear as **Coming Soon** and are not available for selection until they are enabled.
+</Note>
 
 ---
 
 ## Cashback
 
-Cashback credits a predefined monetary amount or percentage of the eligible transaction value to the customer's account after the offer conditions are successfully met.
+Cashback credits a predefined monetary amount or percentage of the eligible transaction value to the customer's account after the configured offer conditions are successfully met.
+
+**When to use it**
+
+Choose **Cashback** when the objective is to provide a direct monetary incentive. It is well suited for campaigns that encourage customer spending across cards, UPI, or CASA-linked transactions.
+
+**Example**
+
+A bank wants credit card customers to earn **5% cashback** on fuel transactions. Select **Cashback** as the Outcome Type, then configure the reward calculation under **Offer Calculation**.
 
 ---
 
 ## Reward Points
 
-Reward Points award loyalty points to customers upon successful completion of the offer conditions. The credited points can be accumulated and redeemed as part of the issuer's rewards program.
+Reward Points award loyalty points to customers after they successfully satisfy the configured offer conditions. The awarded points can be accumulated and redeemed through the issuer's rewards program.
+
+**When to use it**
+
+Choose **Reward Points** when the objective is to increase engagement with an existing loyalty program rather than provide a direct monetary reward.
+
+**Example**
+
+A bank wants premium credit card customers to earn **2 reward points for every ₹100 spent** on dining. Select **Reward Points** as the Outcome Type, then configure the points calculation under **Offer Calculation**.
 
 ---
 
 ## Voucher
 
-Voucher issues a digital or physical voucher to eligible customers after the configured offer conditions are satisfied. The voucher can then be redeemed according to the campaign rules.
+Voucher issues a digital or physical voucher to eligible customers after the configured offer conditions are successfully satisfied. The voucher can then be redeemed according to the campaign rules.
+
+**When to use it**
+
+Choose **Voucher** when the reward is intended to be a one-time redeemable benefit, such as an onboarding incentive or a partner-brand promotion.
+
+**Example**
+
+A bank wants to reward customers who open a new savings account with a **₹500 shopping voucher**. Select **Voucher** as the Outcome Type.
 
 ---
 
@@ -32,14 +72,29 @@ Voucher issues a digital or physical voucher to eligible customers after the con
 
 Smart Tag assigns a predefined tag to customers after they qualify for an offer. These tags can be used for customer segmentation and to enable targeted campaigns in the future.
 
+**When to use it**
+
+Choose **Smart Tag** when the objective is customer identification rather than issuing a reward. Smart Tags help create customer segments that can later be used in **Offer User Base** for targeted campaigns.
+
+**Example**
+
+A bank wants to identify customers who spend more than **₹1,00,000 in a quarter** to target them with a future premium campaign. Select **Smart Tag** as the Outcome Type and configure the tag that should be assigned upon qualification.
+
 ---
 
-## Accelerated Reward
+## What Happens After Configuration?
 
-Accelerated Reward increases the reward earning rate for eligible transactions, allowing customers to earn enhanced rewards compared to the standard reward program.
+After an Outcome Type is selected, the dashboard proceeds to the **Offer Scope** configuration. The selected Outcome Type remains fixed for the offer and determines the reward-related configurations available later in **Offer Calculation** and **Posting**.
 
----
+## Which Outcome Type Should You Select?
 
-## Partner Points
+<Tip>
 
-Partner Points credit loyalty points from a participating partner rewards program instead of the issuer's standard reward points, based on the configured campaign.
+- Select **Cashback** to reward customers with a direct monetary credit.
+- Select **Reward Points** to award points through the issuer's loyalty program.
+- Select **Voucher** to issue a redeemable voucher or coupon.
+- Select **Smart Tag** to segment qualifying customers without issuing a monetary reward.
+- Select **Accelerated Reward** to increase the earning rate of an existing rewards program.
+- Select **Partner Points** to award points through a partner loyalty program.
+
+</Tip>
