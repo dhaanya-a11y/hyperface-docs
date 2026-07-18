@@ -6,9 +6,9 @@
 
 Hyperface supports four Offer Types: **Transactional**, **Milestone**, **Merchant**, and **Gamified**.
 
-<Note>
-The Offer Type selected here determines the configuration options available in the subsequent steps of the offer creation journey — including which eligibility screen (Transaction Eligibility, Milestone Eligibility, and so on) and which Offer Calculation options are shown. Choose the Offer Type that matches the reward behaviour you want before continuing.
-</Note>
+<Warning>
+Offer Type determines which configuration screens and options appear for the rest of the offer creation journey. Confirm the correct Offer Type before proceeding — switching it after later steps have been configured may require reconfiguring those steps.
+</Warning>
 
 ![Step 2 - Select the Offer Type](/images/c.png)
 
@@ -20,15 +20,24 @@ The Offer Type selected here determines the configuration options available in t
 | Evaluation | Each transaction evaluated independently | Progress accumulated until the milestone is achieved | Eligibility based on merchant-specific criteria | Progress tracked through configured levels or activities |
 | Best for | Straightforward cashback or reward campaigns | Encouraging sustained spend or engagement over time | Merchant-funded or partner-specific promotions | Engagement-driven, interactive campaigns |
 
+### How Offer Type shapes the rest of the journey
+
+The eligibility step shown later in the journey depends on the Offer Type selected here:
+
+| Offer Type | Eligibility step shown later |
+|---|---|
+| Transactional | **Transaction Eligibility** — conditions based on individual transaction attributes |
+| Milestone | **Milestone Eligibility** — progress tracked towards a spend or transaction threshold |
+| Gamified | **Gamification Levels** — progress tracked through configured levels or challenges |
+| Merchant | No separate eligibility screen — eligibility is defined through merchant selection as part of **Offer Details** and **Offer User Base** |
+
 ---
 
 ## Transactional Offer
 
 A **Transactional Offer** rewards customers when an individual transaction satisfies the configured eligibility criteria. Each qualifying transaction is evaluated independently, making this Offer Type suitable for cashback and transaction-based reward campaigns.
 
-<Button href="/transaction-offer/introduction">
-View Transactional Offer →
-</Button>
+![Step 3 - Select the Outcome Type](/images/d.png)
 
 ---
 
@@ -36,10 +45,7 @@ View Transactional Offer →
 
 A **Milestone Offer** rewards customers after successfully achieving predefined spending or transaction milestones within a specified period. Rewards are issued only after all configured milestone conditions are met.
 
-<Button href="/milestone-offer/introduction">
-View Milestone Offer →
-</Button>
-
+![Step 1 - Select Offer Type](/images/0.2.png)
 ---
 
 ## Merchant Offer
@@ -49,6 +55,7 @@ A **Merchant Offer** rewards customers for making eligible purchases at particip
 <Button href="/merchant-offer/introduction">
 View Merchant Offer →
 </Button>
+![Step 1 - Create a Merchant Offer](/images/1.png) 
 
 ---
 
@@ -56,11 +63,10 @@ View Merchant Offer →
 
 A **Gamified Offer** rewards customers through interactive and engagement-based campaigns. Customers participate in activities or challenges to unlock rewards, creating an engaging reward experience.
 
-<Button href="/gamified-offer/introduction">
-View Gamified Offer →
-</Button>
+![Introduction](/images/0.png)
 
 ---
+
 ## Example: Choosing the correct Offer Type
 
 A bank wants to reward customers who spend a total of ₹50,000 across transactions in a calendar month, rather than rewarding any single transaction.
@@ -70,13 +76,11 @@ A bank wants to reward customers who spend a total of ₹50,000 across transacti
 
 Selecting **Transactional Offer** here would be incorrect — it would reward every qualifying transaction individually instead of tracking progress towards the ₹50,000 target.
 
-## What Happens After Configuration?
-
-After an Offer Type is selected, the dashboard proceeds to the **Outcome Type** screen. The selected Offer Type determines which eligibility and calculation screens appear later in the journey — for example, a Transactional Offer shows **Transaction Eligibility**, while a Milestone Offer shows **Milestone Eligibility**.
-
 ## Which Offer Type Should You Select?
 
+<Tip>
 - Reward every qualifying transaction on its own → select **Transactional Offer**.
 - Reward customers only after they reach a cumulative spend or transaction target → select **Milestone Offer**.
 - Reward purchases made specifically at participating merchants → select **Merchant Offer**.
 - Reward customers for completing interactive challenges or activities → select **Gamified Offer**.
+</Tip>
