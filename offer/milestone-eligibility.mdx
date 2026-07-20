@@ -134,17 +134,31 @@ Only transactions that satisfy the configured **Transaction Eligibility** condit
 
 </Warning>
 
-Select an attribute to build a condition on. The available attributes include:
+Select one or more transaction attributes to define which transactions contribute towards milestone progress.
 
-- **MCC**
-- **MID**
-- **TID**
-- **POS Entry Mode**
-- **Transaction Value**
-- **Transaction Type**
-- **Sovereignty Indicator**
-- **Transaction Code**
+| Transaction Attribute | What It Evaluates | Example |
+|------------------------|--------------------|---------|
+| **MCC** | The Merchant Category Code (MCC) recorded against the transaction. | 5541 (Fuel Stations) |
+| **MID** | The Merchant Identifier (MID) of the merchant where the transaction was made. | A specific merchant's MID |
+| **TID** | The Terminal Identifier (TID) of the terminal used for the transaction. | A specific POS terminal's TID |
+| **POS Entry Mode** | The mode used to capture card details at the point of sale. | Contactless |
+| **Transaction Value** | The amount of the transaction. | Greater than ₹1,000 |
+| **Transaction Type** | The type of transaction performed. | Purchase |
+| **Sovereignty Indicator** | Whether the transaction was made domestically or internationally. | Domestic |
+| **Transaction Code** | The transaction code associated with the transaction. | A specific transaction code |
+| **Payer VPA** | The Virtual Payment Address (VPA) of the customer making a UPI payment. | customer@upi |
+| **Payee VPA** | The Virtual Payment Address (VPA) of the recipient of a UPI payment. | merchant@upi |
 
+<Tip>
+
+Not every transaction attribute applies to every transaction.
+
+- **Payer VPA** and **Payee VPA** are applicable only to UPI transactions.
+- **MCC**, **MID**, and **TID** are applicable only to card transactions.
+
+Select the transaction attributes that match the payment channel and transaction type your milestone offer is intended for.
+
+</Tip>
 Use the **+** control to add more than one condition.
 
 <Note>
