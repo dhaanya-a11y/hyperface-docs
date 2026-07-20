@@ -1,9 +1,7 @@
 ---
 title: Milestone Eligibility
-description: Learn how to configure Milestone Eligibility for Milestone Offers.
+description: Configure the conditions customers must satisfy to achieve a milestone and become eligible for the configured reward.
 ---
-
-# Milestone Eligibility
 
 Milestone Eligibility defines how customer progress is tracked and determines when a customer becomes eligible to receive the configured milestone reward.
 
@@ -14,77 +12,50 @@ Configure the milestone criteria by defining how progress is calculated, the tar
 </Frame>
 
 ## Aggregate By
-
 Aggregate By determines how milestone progress is calculated across qualifying transactions.
-
 The following aggregation methods are available:
 
 ### Sum of Transaction Values
-
 Progress is calculated by adding the value of all qualifying transactions. Customers complete the milestone once the cumulative transaction value reaches the configured threshold.
-
 **Example**
-
 If the threshold is **₹10,000**, transactions of ₹2,000, ₹3,000 and ₹5,000 together complete the milestone.
 
 ### Count of Transactions
-
 Progress is calculated based on the number of qualifying transactions instead of their value.
-
 **Example**
-
 If the threshold is **10 transactions**, the milestone is achieved after the customer completes 10 qualifying transactions, irrespective of the transaction amount.
 
 ---
-
 ## Define Threshold
-
 Configure the milestone target by selecting the comparison operator and entering the threshold value.
-
 The selected threshold works together with the chosen aggregation method to determine when the milestone is achieved.
 
 ---
-
 ## Lock Milestone Progress on Achievement
-
 Enable this option to lock milestone progress after the configured threshold has been achieved.
-
 Once enabled, subsequent qualifying purchases or refunds will not modify the completed milestone progress.
 
 ---
-
 ## Subscription Cycle Period
-
 Select the subscription cycle during which milestone progress is evaluated.
-
 The selected cycle determines how frequently milestone progress is accumulated and reset.
 
 ---
-
 ## Number of Cycles
-
 Specify the number of subscription cycles for which the configured milestone remains active.
-
 Customers can continue progressing towards milestones for the configured number of cycles.
 
 ---
-
 # Transaction Eligibility
-
 Transaction Eligibility defines which transactions contribute towards milestone completion.
-
 Only transactions matching the configured conditions are considered while calculating milestone progress.
-
 <Frame>
   <img src="/images/Screenshot 2026-07-17 105533.png" alt="Transaction Eligibility Configuration" />
 </Frame>
 
 ---
-
 ## Next Steps
-
 After configuring Milestone Eligibility, continue with the remaining offer configuration:
-
 - [Offer Calculation](/offer/offer-calculation)
 - [Budget](/offer/budget)
 - [Posting](/offer/posting)
