@@ -22,7 +22,6 @@ The **Offer Type** is the foundation of the offer configuration journey. It dete
 
 For this guide, select **Transaction Offers**, which is designed to reward customers based on qualifying transactions that meet the configured eligibility rules. This offer type is commonly used for campaigns such as cashback, discounts, and reward points.
 
-➡️ **Continue to:** **[Offer Type](/offer/offer-type)
 ## Configure the Outcome Type
 
 ![Step 3 - Select the Outcome Type](/images/d.png)
@@ -37,7 +36,8 @@ Suppose you want to reward customers with **₹100 cashback** after they make a 
 
 After selecting the required **Outcome Type**, click **Continue** to proceed to the **Offer Scope** configuration.
 
-➡️  **Continue to:** **[Outcome Type](/offer/outcome-type)
+➡️ **Continue to:** **[Offer Type](/offer/offer-type)
+
 ## Configure the Offer Scope
 
 ![Step 4 - Configure Basic Offer Details](/images/e.png)
@@ -66,6 +66,7 @@ Create a Transactional Offer by entering the offer details, selecting the requir
 
 ---
 ➡️ **Continue to:** **[Offer Scope](/offer/offer-scope)**
+
 ## Configure Offer User Base
 
 ![Step 5 - Select Static Base](/images/g.png)
@@ -92,6 +93,7 @@ Suppose the offer should be available only to a specific group of eligible users
 ---
 
 ➡️ **Continue to:** **[Offer User Base](/offer/offer-user-base)**
+
 ## Configure Transaction Eligibility
 
 ![Step 6 - Configure Transaction Eligibility](/images/h.png)
@@ -115,6 +117,7 @@ Select the required **Transaction Attribute**, choose the appropriate **comparis
 
 ---
 ➡️ **Continue to:** **[Transaction Eligibility](/offer/transaction-eligibility)**
+
 ## Configure Offer Calculation
 
 ![Step 7 - Configure Offer Calculation](/images/i.png)
@@ -134,6 +137,7 @@ Select the required calculation rule, configure the reward value, choose the app
 
 ---
 ➡️ **Continue to:** **[Offer Calculation](/offer/offer-calculation)**
+
 ## Configure Budget
 
 ![Step 8 - Configure Budget](/images/j.png)
@@ -166,6 +170,7 @@ Define the appropriate usage limits to control the number of times the offer can
 
 ---
 ➡️ **Continue to:** **[Usage Limits](/offer/usage-limits)**
+
 ## Configure Posting
 
 ![Step 10 - Configure Posting](/images/l.png)
@@ -185,6 +190,7 @@ Enable posting, configure the required posting eligibility, choose the appropria
 
 ---
 ➡️ **Continue to:** **[Posting](/offer/posting)**
+
 ## Configure Display Elements
 
 Configure how the Transactional Offer is displayed to customers across the PWA.
@@ -225,3 +231,169 @@ Configure the display content, branding, and offer details to provide a consiste
 
 ---
 ➡️ **Continue to:** **[Display Elements](/offer/display-elements)**
+
+---
+
+<Frame>
+
+<img
+  src="/images/n.png"
+  alt="Configure Offer Details Page"
+  style={{ height: "350px", width: "500px" }}
+  className="rounded-lg"
+/>
+
+</Frame>
+
+## Offer Details Page
+
+The **Offer Details Page** defines the information customers see after selecting an offer from the Home or Offer Listing page. This page provides a comprehensive view of the offer, helping customers understand its benefits, eligibility requirements, redemption process, and any additional information before they choose to participate.
+
+A well-designed Offer Details page improves customer engagement by presenting clear, structured, and informative content while maintaining a consistent brand experience.
+
+### What You'll Configure
+
+Configure the following customer-facing elements:
+
+- **Section Details** – Create one or more information sections by adding headings and descriptive content to explain the offer, benefits, eligibility, redemption process, terms, or any other important details.
+- **Call-to-Action (CTA)** – Configure the CTA button text and the destination URL that customers are redirected to after selecting the action.
+- **Advanced Settings** – Configure any additional display settings available for the Offer Details page.
+
+<Frame>
+
+<img
+  src="/images/n.1.png"
+  alt="Offer Details Configuration"
+  style={{ height: "350px", width: "500px" }}
+  className="rounded-lg"
+/>
+
+</Frame>
+
+### Best Practices
+
+- Organize information into meaningful sections so customers can quickly understand the offer.
+- Use concise, customer-friendly language for titles and descriptions.
+- Configure a clear and actionable CTA that guides customers to the next step.
+- Ensure branding and messaging remain consistent with the Home and Offer Listing pages.
+
+<Tip>
+
+The Offer Details page is designed to provide additional context about the offer. It complements the Home and Offer Listing pages by giving customers all the information they need before availing the offer.
+
+</Tip>
+
+### Example
+
+For a **5% Fuel Cashback Offer**, you can add sections such as **Offer Benefits**, **Eligibility Criteria**, **How to Earn Cashback**, and **Terms & Conditions**. Configure a CTA such as **Locate Nearby Fuel Stations** or **Know More**, allowing customers to access additional information with a single click.
+
+➡️ **Continue to:** **[Communication](/offer/communication)**
+
+---
+
+<Tip>
+
+Use **Static Base** when the offer targets a fixed group of customers. Use **Dynamic Configuration** when customer eligibility should be evaluated continuously based on the configured criteria.
+
+</Tip>
+
+➡️ **Continue to:** **[Offer User Base](/offer/offer-user-base)**
+
+---
+## Configure Transaction Eligibility
+
+<Frame>
+
+<img
+  src="/images/h.png"
+  alt="Configure Transaction Eligibility"
+  style={{ height: "350px", width: "500px" }}
+  className="rounded-lg"
+/>
+
+</Frame>
+
+The **Transaction Eligibility** step defines the conditions that determine whether a transaction qualifies for the Transactional Offer. Every transaction made by an eligible customer is evaluated against the configured transaction rules, and rewards are issued only when all the specified conditions are satisfied.
+
+Configure one or more transaction attributes by selecting the required comparison operators and corresponding values. Multiple eligibility conditions can be combined to precisely identify qualifying transactions.
+
+### Configure Transaction Conditions
+
+Build the transaction eligibility rules by configuring the following:
+
+- **Transaction Attribute** – Select the transaction attribute that should be evaluated.
+- **Comparison Operator** – Choose the appropriate operator to compare the selected attribute.
+- **Value** – Specify the value against which the transaction attribute will be evaluated.
+- **Add Criteria** – Add multiple conditions to create more granular transaction eligibility rules.
+- **Transaction Posting Date** – Select the transaction posting date that should be considered while evaluating transaction eligibility.
+
+### Supported Transaction Attributes
+
+You can configure eligibility using supported transaction attributes such as:
+
+- **Merchant Category Code (MCC)**
+- **Merchant ID (MID)**
+- **Terminal ID (TID)**
+- **POS Entry Mode**
+- **Transaction Value**
+- **Transaction Type**
+- **Sovereignty Indicator**
+- **Transaction Code**
+- **Payer VPA**
+- **Payee VPA**
+
+### Example
+
+Suppose you're creating a **5% Fuel Cashback Offer** that should only apply to fuel purchases above **₹2,000**.
+
+Configure the **Merchant Category Code (MCC)** to identify fuel merchants, set the **Transaction Value** to **Greater than or equal to ₹2,000**, and add any additional conditions required for your campaign.
+
+<Note>
+
+The **Offer User Base** determines **who** is eligible for the offer, while **Transaction Eligibility** determines **which transactions** made by those customers qualify for rewards.
+
+</Note>
+
+➡️ **Continue to:** **[Transaction Eligibility](/offer/transaction-eligibility)**
+
+---
+## Configure Offer Calculation
+
+<Frame>
+
+<img
+  src="/images/i.png"
+  alt="Configure Offer Calculation"
+  style={{ height: "350px", width: "500px" }}
+  className="rounded-lg"
+/>
+
+</Frame>
+
+The **Offer Calculation** step defines how rewards are calculated for transactions that satisfy the configured eligibility criteria. Select the appropriate calculation rule, configure the reward value, and define any additional reward processing settings before proceeding.
+
+### Configure Offer Calculation
+
+Configure the following:
+
+- **Offer Calculation Rule** – Select the method used to calculate the offer outcome.
+- **Outcome Value** – Specify the reward amount or value that will be awarded to eligible customers.
+- **Skip Cashback Capping** – Enable or disable cashback capping at the required level, such as **Program**, **Transaction**, **Merchant Category Code (MCC)**, **Merchant ID (MID)**, or **Currency**.
+- **Allow Reversal** – Enable this option to reverse the reward if the qualifying transaction is subsequently reversed.
+
+### Example
+
+Suppose you're creating a **5% Fuel Cashback Offer** with a maximum cashback of **₹200** per qualifying transaction.
+
+Select the appropriate **Offer Calculation Rule**, configure the cashback percentage as the **Outcome Value**, define the required cashback capping settings, and enable **Allow Reversal** if the cashback should be reversed when the original transaction is reversed.
+
+<Note>
+
+Offer Calculation determines **how much reward** is issued after a transaction satisfies all configured eligibility conditions.
+
+</Note>
+
+➡️ **Continue to:** **[Offer Calculation](/offer/offer-calculation)**
+
+---
+
