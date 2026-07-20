@@ -1,51 +1,106 @@
-### Configure Posting
+---
+title: Posting
+description: Configure when and how the offer benefit is posted to the customer's account.
+---
 
-After configuring the **Usage Limits**, the **Posting** screen is displayed.
+## What is Posting?
+The **Posting** section defines **when** the configured offer benefit is credited to the customer's account and **under what conditions** the posting should occur.
+After configuring **Usage Limits**, use this step to configure the posting schedule, define posting eligibility conditions, and specify the ledger narrations that should be recorded when benefits are posted or reversed.
+<img
+  src="/images/l.png"
+  alt="Step 10 - Configure Posting"
+  style={{ height: "300px", width: "400px" }}
+  className="rounded-lg"
+/>
 
-Use this page to define when the offer benefit should be posted to the customer's account and specify the eligibility criteria for posting.
+<Note>
+**Posting** controls only the reward crediting process. A customer must first satisfy all previously configured offer conditions before the configured posting rules are evaluated.
+</Note>
 
-#### Enable Posting
+---
 
-Enable **Posting** to allow the configured benefit to be credited to the customer's account.
+## Enable Posting
 
-#### Configure Posting Eligibility
+Enable **Posting** to allow the configured offer benefit to be credited to the customer's account.
 
-Select the eligibility criteria that must be satisfied before the benefit is posted.
+If Posting is disabled, the offer benefit is not posted even when all eligibility conditions are satisfied.
 
+---
+
+## Configure Posting Eligibility
+Configure the conditions that must be satisfied before the reward is posted.
 For each posting eligibility condition:
-
 - Select the required eligibility attribute.
-- Configure the corresponding values.
+- Configure the corresponding value.
 - Specify whether the condition is **Allowed** or **Restricted**, as applicable.
-- Click **Add more** to configure additional posting eligibility conditions.
+- Click **Add More** to configure additional posting eligibility conditions.
 
-#### Configure Offer Posting
+<Tip>
 
-Choose when the offer benefit should be posted.
+Use multiple posting eligibility conditions when the reward should be posted only for specific customer segments, products, or transaction scenarios.
 
-The following posting options are available:
+</Tip>
+
+---
+
+## Configure Offer Posting
+
+Choose when the configured benefit should be credited.
 
 | Posting Option | Description |
 |----------------|-------------|
-| **Post Immediately** | Credits the benefit immediately after the configured posting conditions are satisfied. |
-| **Schedule** | Credits the benefit at a scheduled date and time. |
+| **Post Immediately** | Credits the benefit immediately after all configured posting conditions are satisfied. |
+| **Schedule** | Credits the benefit on the configured date and time. |
 
-![Step 10 - Configure Posting](/images/l.png)
+### Post Immediately
+**When to use it**
+Choose **Post Immediately** when customers should receive their reward as soon as all configured conditions are satisfied.
+**Example**
+Reward customers with cashback immediately after an eligible purchase is successfully processed.
 
-#### Configure Narration
+### Schedule
+**When to use it**
+Choose **Schedule** when rewards should be credited at a later date or during a predefined posting window.
+**Example**
+Credit monthly cashback to all eligible customers on the **1st day of the following month**.
 
-Provide the narration that should be recorded in the ledger during posting and reversal.
-
-Configure the following fields:
-
-- **Posting Narration** – Enter the message to be recorded when the benefit is successfully posted.
-- **Reversal Narration** – Enter the message to be recorded if the posted benefit is reversed.
-
-![Step 10 - Configure Narration](/images/l.1.png)
-
-After completing the configuration:
-
-- Review the configured posting settings.
-- Click **Continue** to proceed to the **Display Elements** configuration.
+<Warning>
+Changing the posting schedule after an offer is active may affect when future rewards are credited. Review the configured posting option before publishing the offer.
+</Warning>
 
 ---
+
+## Configure Narration
+Provide the ledger narration that should be recorded during posting and reversal.
+<img
+  src="/images/l.1.png"
+  alt="Step 10 - Configure Narration"
+  style={{ height: "300px", width: "400px" }}
+  className="rounded-lg"
+/>
+
+Configure the following fields:
+| Field | Description | Example |
+|--------|-------------|---------|
+| **Posting Narration** | Message recorded in the ledger when the reward is successfully posted. | Cashback credited for Fuel Offer |
+| **Reversal Narration** | Message recorded in the ledger if the posted reward is reversed. | Cashback reversed due to transaction reversal |
+
+<Note>
+Posting and Reversal Narrations are recorded for operational and audit purposes. Choose clear and meaningful descriptions so posted and reversed rewards can be easily identified.
+</Note>
+
+---
+
+## What Happens After Configuration?
+Once the configured posting conditions are satisfied, the reward is credited according to the selected **Posting Option**.
+If **Allow Reversal** was enabled during **Offer Calculation**, the configured **Reversal Narration** is used whenever a posted reward is subsequently reversed.
+
+---
+
+## Complete the Configuration
+After completing the **Posting** configuration:
+1. Verify that **Posting** is enabled, if required.
+2. Review the configured **Posting Eligibility** conditions.
+3. Confirm the selected **Posting Option**.
+4. Review the configured **Posting Narration** and **Reversal Narration**.
+5. Click **Continue** to proceed to the **Display Elements** configuration.
