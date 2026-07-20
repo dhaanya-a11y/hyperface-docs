@@ -1,39 +1,81 @@
-# Usage Limits
+---
+title: Usage Limits
+description: Configure the limits that control how frequently customers can earn rewards for an offer.
+---
+Usage Limits control how often an individual customer can earn rewards through this offer across cycles. All limit types are optional — configure only the limits relevant to your campaign design.
 
-## What are Usage Limits?
+## Why Usage Limits Matter
+At enterprise scale, an offer isn't evaluated against one customer — it runs against an entire portfolio, often hundreds of thousands of accounts, for the full duration of the campaign. Without a per-customer cap, a small number of high-frequency or high-value customers can absorb a disproportionate share of the reward spend, while the rest of the eligible base sees comparatively little benefit from the same campaign.
 
-The **Usage Limits** section defines the maximum reward or benefit that a customer can receive within a specified period. These limits help control reward distribution, prevent excessive usage, and ensure that the offer complies with the campaign budget and business policies.
+Usage Limits exist to make reward distribution predictable and governable:
+- **Cost containment** — bounds how much any single customer can draw from the offer, so spend stays proportionate to intended reach rather than concentrated in a few accounts.
+- **Fair distribution** — keeps the reward experience consistent across the customer base the offer was designed for, rather than rewarding transaction frequency alone.
+- **Abuse resistance** — reduces the incentive for a customer (or a fraud ring) to repeatedly manufacture qualifying transactions purely to extract reward value.
+- **Predictable reporting** — gives Finance and campaign owners a per-customer ceiling to model expected payout against, instead of relying on Budget alone as the only backstop.
 
-Configure one or more usage limits based on your campaign requirements.
+<Note>
+**Usage Limits** and **Budget** cap reward exposure from two different angles: **Budget** limits the total reward spend across *all* customers for the offer, while **Usage Limits** limit how much a *single* customer can earn within a given period. Budget answers "how much can this campaign cost in total"; Usage Limits answers "how much can any one customer draw from it." Enterprise campaigns typically need both — Budget alone cannot prevent uneven concentration of spend across the customer base.
+</Note>
 
 ![Step 9 - Configure Usage Limits](/images/k.png)
 
 ## Usage Limit Configuration
-
 Configure the following fields:
-
 | Field | Description | Example |
 |-------|-------------|---------|
-| **Duration** | Select the time period during which the usage limit should be applied. | Monthly |
-| **Limit Type** | Select the type of limit that should be enforced for the offer. | Cashback Amount |
+| **Duration** | Select the time period during which the usage limit should be applied — for example, Daily, Monthly, Quarterly, or Annual. | Monthly |
+| **Limit Type** | Select the type of limit that should be enforced for the offer. Available options generally correspond to the offer's configured Outcome Type. | Cashback Amount |
 | **Limit Value** | Specify the maximum reward amount or usage value that a customer can receive during the selected duration. | ₹500 |
 
 ### Multiple Usage Limits
-
 If the campaign requires more than one usage limit:
-
 1. Click **Add More**.
 2. Configure the additional usage limit.
 3. Repeat the process until all required limits have been added.
+This allows multiple usage limits to apply to the same offer at once. Layering limits across different durations is a common enterprise pattern — a tight monthly cap keeps monthly cost predictable, while a looser quarterly or annual cap protects against cumulative exposure over the life of the campaign.
 
-This allows multiple usage limits to be applied to the same offer based on different campaign requirements.
+<Tip>
+When a campaign spans multiple product lines or customer tiers with different expected spend behaviour, model the monthly limit against your **average** expected customer, and the longer-duration limit against your **outlier** customer — this keeps typical customers unaffected while still bounding worst-case exposure.
+</Tip>
 
 ---
+## Examples across enterprise scenarios
+**Mass-market cashback card**
+A bank runs a 5% fuel cashback campaign across its entire debit card base. To keep per-customer payout predictable at portfolio scale:
+1. Set **Duration** to **Monthly**.
+2. Set **Limit Type** to **Cashback Amount**.
+3. Set **Limit Value** to `₹300`.
+No customer draws more than ₹300/month from the campaign, regardless of fuel spend volume, keeping the monthly cost per active customer consistent across a large base.
+
+**Premium travel card, tiered exposure**
+A bank wants to reward its premium travel card segment generously, but still needs a ceiling in case of anomalous usage:
+1. Add a monthly limit: **Cashback Amount**, `₹5,000`.
+2. Add a second, annual limit: **Cashback Amount**, `₹40,000`.
+
+The monthly limit keeps normal high spenders fully rewarded; the annual limit only engages for the small number of accounts approaching worst-case usage across the year.
+
+**Salary account onboarding incentive**
+A one-time onboarding reward should not be re-earned repeatedly within the offer period:
+1. Set **Duration** to **Annual** (matching the offer's duration).
+2. Set **Limit Type** to **Cashback Amount**.
+3. Set **Limit Value** equal to the single intended reward amount.
+This effectively converts a per-transaction reward rule into a one-time-per-customer benefit for the life of the offer.
+
+---
+
+## What Happens After Configuration?
+Each qualifying transaction's calculated reward (from **Offer Calculation**) counts against every applicable Usage Limit for that customer, in addition to counting against the offer's overall **Budget**. Once a customer reaches a configured limit for its duration, further qualifying transactions in that period do not earn additional reward until the next period begins.
+
+<Warning>
+If no usage limits are configured, a customer's earnings under this offer are constrained only by the offer's overall **Budget** — there is no per-customer ceiling. At enterprise scale, this means a small subset of customers could consume a disproportionate share of the total budget before it is exhausted for everyone else. Configure at least one usage limit for any campaign where predictable, evenly distributed spend matters.
+</Warning>
 
 ## Complete the Configuration
 
 After completing the Usage Limits configuration:
+1. Review all configured usage limits against expected customer behaviour for the segment.
+2. Verify the duration, limit type, and limit values align with the campaign's cost model.
+3. Confirm how the configured limits interact with the offer's overall **Budget** approval.
+4. Click **Continue** to proceed to the **Posting** configuration.
 
-1. Review all configured usage limits.
-2. Verify the duration, limit type, and limit values.
-3. Click **Continue** to proceed to the **Posting** configuration.
+
