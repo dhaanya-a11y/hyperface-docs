@@ -5,7 +5,7 @@ description: Configure the transaction conditions that determine whether a trans
 
 Defines the conditions a transaction must satisfy for an offer to apply to it. Once a customer or account qualifies under the **Offer User Base**, every transaction they make is checked against the conditions configured here. Only transactions that satisfy these conditions are treated as qualifying transactions and move forward to **Offer Calculation**.
 
-Transaction Eligibility is configured using **Transaction Attributes** — properties of a transaction such as the merchant, terminal, amount, or payment channel used.
+Transaction Eligibility is configured using **Transaction Attributes**—properties of a transaction such as the merchant, terminal, amount, or payment channel used.
 
 <Note>
 **Offer User Base** determines *who* is evaluated for the offer. **Transaction Eligibility** determines *which of their transactions* qualify. A customer belonging to the eligible user base still needs to make a transaction that satisfies the configured Transaction Eligibility conditions before any reward is calculated.
@@ -31,10 +31,21 @@ Select one or more transaction attributes to define the conditions a qualifying 
 | **Payee VPA** | The Virtual Payment Address (VPA) of the recipient of a UPI payment. | merchant@upi |
 
 <Tip>
-Not every attribute applies to every transaction. **Payer VPA** and **Payee VPA** are only relevant to UPI transactions, while **MCC**, **MID**, and **TID** are only relevant to card transactions. Select attributes that match the transaction and payment channel your offer is intended for.
+
+Not every attribute applies to every transaction.
+
+- **Payer VPA** and **Payee VPA** are applicable only to UPI transactions.
+- **MCC**, **MID**, and **TID** are applicable only to card transactions.
+
+Select the transaction attributes that match the payment channel and transaction type your offer is intended for.
+
 </Tip>
 
 ## Configure Transaction Conditions
+
+<Warning>
+All configured transaction conditions are evaluated together. Ensure the selected transaction attributes, comparison operators, and values accurately reflect the intended eligibility criteria before proceeding.
+</Warning>
 
 For each transaction attribute selected:
 
@@ -45,13 +56,13 @@ For each transaction attribute selected:
 
 ### Add Multiple Conditions
 
-Add more than one transaction condition if the offer should evaluate more than one attribute — for example, requiring both a specific **MCC** and a minimum **Transaction Value**. All configured conditions apply to the same transaction eligibility check.
+Add more than one transaction condition if the offer should evaluate more than one attribute—for example, requiring both a specific **MCC** and a minimum **Transaction Value**. All configured conditions apply to the same transaction eligibility check.
 
 ### Transaction Posting Date
 
 Select the **Transaction Posting Date** to specify the date used when checking whether a transaction falls within the offer's evaluation window.
 
-## Example: Cashback on high-value UPI transactions
+## Example: Cashback on High-Value UPI Transactions
 
 To reward customers for UPI payments above ₹500:
 
@@ -65,7 +76,7 @@ Only UPI transactions above ₹500 made by customers in the configured user base
 
 ## What Happens After Configuration?
 
-Every transaction made by a customer in the eligible user base is checked independently against the configured Transaction Eligibility conditions. A transaction that satisfies all configured conditions becomes a qualifying transaction and proceeds to **Offer Calculation**, where the reward is computed. There is no requirement to accumulate spend or transaction count — each transaction is evaluated on its own.
+Every transaction made by a customer in the eligible user base is checked independently against the configured Transaction Eligibility conditions. A transaction that satisfies all configured conditions becomes a qualifying transaction and proceeds to **Offer Calculation**, where the reward is computed. There is no requirement to accumulate spend or transaction count—each transaction is evaluated on its own.
 
 ## Complete the Configuration
 
