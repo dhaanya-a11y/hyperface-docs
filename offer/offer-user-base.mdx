@@ -1,24 +1,63 @@
-# Offer User Base
+---
+title: Offer User Base
+description: Configure the eligible users who can participate in the offer.
+---
 
 ## What is Offer User Base?
 
-Offer User Base defines the group of customers who are eligible to participate in an offer. It allows issuers to specify whether the offer should target a predefined set of users or dynamically determine eligible users based on configured criteria.
+Offer User Base, configured under **Set-Up Offer → Offer User Base**, determines which customers are eligible to participate in the offer and how they are enrolled.
 
-Selecting the appropriate user base ensures that offers are delivered only to the intended customer segment.
+This step exists so that a reward campaign can be precisely targeted rather than applied blanket-wide. Without it, an offer would need to evaluate every customer in the applicable Issuer/Program scope, which is rarely the intent—most campaigns are designed for a specific segment.
 
----
+<Note>
+**Offer User Base** determines *who* is evaluated for the offer. Downstream steps—**Transaction Eligibility**, **Milestone Eligibility**, or **Gamification Levels**, depending on the Offer Type—determine *which of their activity* actually counts towards the reward. A customer can belong to the eligible user base and still never earn a reward if their transactions never satisfy the later eligibility conditions.
+</Note>
 
-## Static Base
-
-Select **Static Base** when the set of eligible users is fixed before the offer is published. Once the offer is activated, the user base remains unchanged unless the offer is modified.
-
-After selecting **Static Base**, choose the eligibility criteria that will be used to identify the eligible users.
+<Note>
+Eligibility here is evaluated within the boundary already set in **Offer Scope**. Specifically, the configured **Eligibility Level** (**Account Level** or **Customer Level**) determines whether the criteria below are evaluated per account or across all of a customer's accounts.
+</Note>
 
 ![Step 5 - Select Static Base](/images/g.png)
 
-### Eligibility Options
+---
 
-The following eligibility options are available for defining the user base:
+## Static Base vs Dynamic Config
+
+| Consideration | Static Base | Dynamic Config |
+|---|---|---|
+| Audience | Fixed once the offer is published | Automatically determined by evaluating customers against the configured criteria during the evaluation period |
+| Best for | A known, closed audience decided in advance | Criteria-based eligibility that should reflect current customer data rather than a fixed list |
+| Evaluation | Once, before publishing | Ongoing, against live customer data |
+
+### Static Base
+
+Select **Static Base** when the set of eligible users is fixed before the offer is published. Once the offer is activated, the user base remains unchanged unless the offer is modified.
+
+**Example**
+
+A bank wants to run an invite-only campaign for **2,000** pre-selected, relationship-manager-nominated customers. Since the list is decided in advance and shouldn't change once the campaign starts, **Static Base** is the right choice.
+
+### Dynamic Config
+
+Select **Dynamic Config** when the eligible user base should be automatically determined rather than fixed in advance. Customers who satisfy the configured conditions during the evaluation period are included in the eligible user base.
+
+**Example**
+
+A bank wants a welcome cashback offer to apply to every savings account opened during the offer period. New accounts keep opening continuously, so a fixed list decided on day one would miss later joiners—**Dynamic Config** with an **Account Creation Date** criterion keeps the eligible set current.
+
+<Tip>
+
+Choose **Static Base** when the eligible audience is predefined and unlikely to change.
+
+Choose **Dynamic Config** when eligibility should automatically adapt as customer information changes over time.
+
+</Tip>
+
+---
+
+## Configure Eligibility
+
+Whichever user base type you select, configure the eligibility criteria used to identify eligible customers.
 
 | Eligibility Option | Description | Example |
 |--------------------|-------------|---------|
@@ -28,22 +67,49 @@ The following eligibility options are available for defining the user base:
 | **Birthdate** | Targets customers based on their date of birth. | Customers born in July |
 | **Account Creation Date** | Targets customers based on when their account was created. | Accounts created after 01 Jan 2025 |
 
-After selecting an eligibility option, configure the corresponding values required for that option.
+![Step 5 - Configure Static Base Eligibility](/images/g.1.png)
+
+### Smart Tag
+
+**When to use it:** when eligibility should be based on a customer segment that already exists as a Smart Tag, avoiding re-defining the same segment logic across multiple offers.
+
+**Example:** Reward customers already tagged **Premium Banking Customer** with an exclusive lounge access offer.
+
+### Accounts
+
+**When to use it:** when eligibility depends on the type of account or product held, rather than customer-level attributes.
+
+**Example:** Restrict a cashback offer to customers holding a **Savings Account**, excluding current account holders.
+
+### Switch Account Number
+
+**When to use it:** when a specific, already-known list of accounts needs to be targeted directly—useful for controlled pilots rather than criteria-based segments.
+
+**Example:** Run a pilot version of a new offer on **500** named account numbers before a wider rollout.
+
+### Birthdate
+
+**When to use it:** for lifecycle or celebratory campaigns tied to a personal date rather than transaction behaviour.
+
+**Example:** Offer **10% dining cashback** to customers during their birthday month.
+
+### Account Creation Date
+
+**When to use it:** for onboarding or tenure-based campaigns—rewarding new-to-bank customers, or recognising long-tenured account holders.
+
+**Example:** A welcome cashback offer for accounts opened after **01 Jan 2025**, or a loyalty reward restricted to accounts opened before **2020**.
 
 ---
 
-## Dynamic Config
+## Estimate User Base
 
-Select **Dynamic Config** when the eligible user base should be evaluated dynamically based on the configured eligibility criteria. Users who satisfy the defined conditions are automatically included in the offer during the evaluation period.
+<Warning>
+Review the estimated user count before proceeding. If the estimate is significantly higher or lower than expected, verify the configured eligibility criteria to ensure the intended audience has been selected.
+</Warning>
 
-After selecting **Dynamic Config**, configure the required eligibility criteria and review the estimated user base before proceeding.
-![Step 5 - Configure Static Base Eligibility](/images/g.1.png)
-
-### Estimate User Base
-
-After configuring the eligibility criteria:
+Once the eligibility criteria have been configured:
 
 1. Click **Estimate User Base** to calculate the estimated number of eligible users.
-2. Review the estimated user count.
-3. Verify that the audience matches your campaign requirements.
+2. Review the estimated user count displayed by the system.
+3. Verify that the estimated audience aligns with the campaign requirements.
 4. Click **Continue** to proceed to the next configuration step.
