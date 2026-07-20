@@ -1,20 +1,60 @@
-# Offer Calculation
+---
+title: Offer Calculation
+description: Configure how rewards are calculated for qualifying transactions.
+---
 
-Offer Calculation defines how the reward is calculated for every qualifying transaction. Once a transaction satisfies the configured eligibility criteria, the selected calculation rule determines the reward that will be issued to the customer.
+## What is Offer Calculation?
+
+**Offer Calculation** defines how the reward is calculated for every qualifying transaction. Once a transaction satisfies the configured eligibility criteria, the selected calculation rule determines the reward that will be issued to the customer.
 
 After configuring **Transaction Eligibility**, configure the calculation method that best aligns with your campaign requirements.
 
-![Step 7 - Configure Offer Calculation](/images/i.png)
+<img
+  src="/images/i.png"
+  alt="Step 7 - Configure Offer Calculation"
+  style={{ height: "300px", width: "400px" }}
+  className="rounded-lg"
+/>
+
+<Note>
+The configured **Offer Calculation Rule** determines only **how the reward amount is calculated**. Reward eligibility is determined by the previously configured **Transaction Eligibility** conditions.
+</Note>
+
+---
 
 ## Offer Calculation Rules
-
 Select the appropriate **Offer Calculation Rule** based on how the reward should be calculated.
-
 | Calculation Rule | Description | Example |
 |------------------|-------------|---------|
 | **Flat** | Awards a fixed reward amount for every qualifying transaction, regardless of the transaction value. | ₹100 Cashback |
 | **Percentage** | Awards a percentage of the qualifying transaction amount. The reward varies based on the transaction value. | 5% Cashback |
-| **Slab** | Awards different reward values based on predefined transaction value ranges or slabs. | ₹50 for ₹500–₹999, ₹100 for ₹1000–₹1999 |
+| **Slab** | Awards different reward values based on predefined transaction value ranges or slabs. | ₹50 for ₹500–₹999, ₹100 for ₹1,000–₹1,999 |
+
+### Flat
+**When to use it**
+Choose **Flat** when every qualifying transaction should receive the same reward, irrespective of the transaction amount.
+**Example**
+Reward customers with **₹100 cashback** for every qualifying transaction.
+
+### Percentage
+**When to use it**
+Choose **Percentage** when the reward should be calculated as a percentage of the qualifying transaction amount.
+**Example**
+Reward customers with **5% cashback** on every qualifying purchase.
+
+### Slab
+**When to use it**
+Choose **Slab** when different reward values should be issued based on predefined transaction value ranges.
+**Example**
+- ₹50 cashback for transactions between **₹500–₹999**
+- ₹100 cashback for transactions between **₹1,000–₹1,999**
+
+<Tip>
+Select the calculation rule that best matches your campaign objective.
+- Use **Flat** for fixed rewards.
+- Use **Percentage** when rewards should scale with transaction value.
+- Use **Slab** when different transaction ranges should receive different rewards.
+</Tip>
 
 After selecting a calculation rule:
 
@@ -37,18 +77,36 @@ The following capping levels can be excluded:
 | **MID** | Ignores cashback limits configured for specific Merchant Identifiers (MID). |
 | **Currency Level** | Ignores cashback limits configured for specific currencies. |
 
+<Warning>
+
+Skipping cashback capping allows rewards to bypass the selected capping rules. Enable this option only when the campaign is intended to override existing cashback limits.
+
+</Warning>
+
 ---
 
 ## Allow Reversal
 
 Enable **Allow Reversal** if rewards should be reversed whenever the corresponding qualifying transaction is reversed or refunded. This ensures that reward credits remain consistent with the final transaction status.
 
+<Note>
+
+When **Allow Reversal** is enabled, any reward issued for a qualifying transaction can be reversed if the original transaction is subsequently reversed or refunded.
+
+</Note>
+
+---
+
+## What Happens After Configuration?
+
+Once the **Offer Calculation** is configured, every qualifying transaction is evaluated using the selected calculation rule. The calculated reward is then considered for budget validation, posting, and reward distribution based on the remaining offer configuration.
+
 ---
 
 ## Complete the Configuration
 
-After completing the Offer Calculation configuration:
+After completing the **Offer Calculation** configuration:
 
-1. Review the configured calculation rule and reward values.
-2. Verify the cashback capping and reversal settings, if applicable.
+1. Review the configured **Calculation Rule** and reward values.
+2. Verify the **Cashback Capping** and **Allow Reversal** settings, if applicable.
 3. Click **Continue** to proceed to the **Budget** configuration.
