@@ -10,7 +10,6 @@ This screen sits inside the **Set-Up Offer** step of the offer creation journey,
 <Note>
 
 Three concepts work together here:
-
 - **Offer User Base** determines *who* is tracked.
 - **Transaction Eligibility** determines *which of their transactions* count.
 - **Milestone Eligibility** determines *how that activity accumulates* and *when the milestone is achieved*.
@@ -25,102 +24,66 @@ Three concepts work together here:
 />
 
 ---
-
 ## Aggregate By
-
-**Aggregate By** determines how milestone progress is calculated across qualifying transactions.
-
+Determines how milestone progress is calculated across qualifying transactions.
 | Consideration | Sum of Transaction Values | Count of Transactions |
 |---|---|---|
 | Progress is based on | The cumulative value of qualifying transactions | The number of qualifying transactions |
 | Best for | Rewarding total spend regardless of the number of transactions | Rewarding transaction frequency regardless of transaction size |
 
 ### Sum of Transaction Values
-
 Progress is calculated by adding the value of all qualifying transactions. Customers complete the milestone once the cumulative transaction value reaches the configured threshold.
-
 **Example**
-
 If the threshold is **₹10,000**, transactions of **₹2,000**, **₹3,000**, and **₹5,000** together complete the milestone.
 
 ### Count of Transactions
-
 Progress is calculated based on the number of qualifying transactions instead of their value.
-
 **Example**
-
 If the threshold is **10 transactions**, the milestone is achieved after the customer completes **10 qualifying transactions**, irrespective of the transaction amount.
 
 ---
-
 ## Define Threshold
-
 **Define Threshold** sets the target the aggregate is compared against. On the dashboard, this reads as a single sentence:
-
 > Reward the customer when eligible spends are **[comparison operator] [value]**
-
 For example:
-
 > Reward the customer when eligible spends are **Greater Than** `10000`.
-
 The selected threshold works together with the chosen **Aggregate By** method to determine when the milestone is achieved.
 
 ---
-
 ## Lock Milestone Progress on Achievement
-
 Enable this option to lock milestone progress once the threshold is reached.
-
 > Once the milestone threshold is reached, progress will remain fixed. Later eligible purchases or refunds will not increase or decrease the progress value.
-
 <Tip>
-
 Leave this option disabled if progress should continue accumulating beyond the threshold—for example, when configuring milestone offers with multiple increasing reward tiers.
-
 </Tip>
 
 ---
-
 ## Subscription Cycle Period
-
 **Subscription Cycle Period** determines how frequently milestone progress is accumulated and reset. For example, selecting **Quarter** evaluates and resets progress every quarter.
 
 ---
-
 ## Number of Cycles
-
 **Number of Cycles** determines how many subscription cycles the milestone remains active before it stops evaluating new activity.
-
 For example, a value of **2** keeps the milestone active for **2 subscription cycles**.
-
 <Note>
-
 **Subscription Cycle Period** and **Number of Cycles** work together:
-
 - **Subscription Cycle Period** defines how often milestone progress resets.
 - **Number of Cycles** defines how many of those cycles the milestone remains active.
 
 </Note>
 
 ---
-
 ## Example: Quarterly Spend Milestone
-
 To reward customers who spend over **₹10,000** in eligible transactions each quarter for **2 consecutive quarters**:
-
 1. Set **Aggregate By** to **Sum of Transaction Values**.
 2. Set **Define Threshold** to **Greater Than** `10000`.
 3. Set **Subscription Cycle Period** to **Quarter**.
 4. Set **Number of Cycles** to `2`.
-
 A customer whose eligible spend exceeds **₹10,000** in a given quarter achieves the milestone for that quarter. Progress resets at the start of the next quarter, for up to **2 quarters**.
 
 ---
-
 ## Transaction Eligibility
-
 **Transaction Eligibility** determines which transactions contribute towards milestone completion. Only transactions matching the configured conditions are considered while calculating milestone progress.
-
 <img
   src="/images/Screenshot 2026-07-17 105533.png"
   alt="Transaction Eligibility Configuration"
@@ -129,9 +92,7 @@ A customer whose eligible spend exceeds **₹10,000** in a given quarter achieve
 />
 
 <Warning>
-
 Only transactions that satisfy the configured **Transaction Eligibility** conditions contribute towards milestone progress. Transactions that do not meet these conditions are ignored when calculating the milestone.
-
 </Warning>
 
 Select one or more transaction attributes to define which transactions contribute towards milestone progress.
@@ -168,13 +129,10 @@ This uses the same transaction attributes as the standalone **Transaction Eligib
 </Note>
 
 ### Which Date Counts
-
 This screen also lets you choose which transaction date should be used to evaluate eligibility.
-
 One option is **Posting Date** ("Offer will run on posting date"). If left unconfigured, evaluation defaults to the issuer-level setting.
 
 ---
-
 ## What Happens After Configuration?
 
 Every qualifying transaction made by a customer in the eligible user base contributes to that customer's milestone progress based on the configured **Aggregate By** method.
