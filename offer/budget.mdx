@@ -2,31 +2,84 @@
 title: Budget
 description: Configure the budget allocated for the offer and define the spending limits for reward distribution.
 ---
-The **Budget** section defines the total reward allocation available for an offer. It helps issuers control campaign spending by specifying the maximum budget that can be utilized throughout the offer lifecycle.
 
-In addition to budget allocation, this step also captures the approver responsible for reviewing and approving the configured budget before the offer can be published.
+## What is Budget?
 
-![Step 8 - Configure Budget](/images/j.png)
+The **Budget** section defines the maximum reward allocation available for an offer throughout its lifecycle. It enables issuers to control campaign spending by specifying the total budget available for reward distribution.
+
+This step also captures the **Approver** responsible for reviewing and approving the configured budget before the offer can be published.
+
+<img
+  src="/images/j.png"
+  alt="Step 8 - Configure Budget"
+  style={{ height: "300px", width: "400px" }}
+  className="rounded-lg"
+/>
+
+<Note>
+
+The configured budget represents the maximum reward amount that can be distributed for the offer. Once the available budget is exhausted, no additional rewards are issued until the budget is increased or the offer is updated.
+
+</Note>
+
+---
 
 ## Budget Configuration
-Configure the following fields before proceeding:
+
+Configure the following fields before proceeding.
+
 | Field | Description | Example |
 |-------|-------------|---------|
-| **Set Budget** | Specifies the total reward budget allocated for the offer. Rewards will be issued only until the configured budget is exhausted. | ₹10,00,000 |
+| **Set Budget** | Specifies the total reward budget allocated for the offer. Rewards are distributed only while sufficient budget remains available. | ₹10,00,000 |
 | **Approver** | Select the user responsible for reviewing and approving the configured budget before the offer is published. | John Doe |
 
-<Info>
-An offer cannot be published until the configured budget has been reviewed and approved by the selected approver.
-</Info>
+### Set Budget
+
+The configured budget acts as the maximum reward allocation for the campaign. Every reward issued as part of the offer is deducted from this budget until it is exhausted.
+
+**Example**
+
+If the configured budget is **₹10,00,000**, rewards continue to be distributed until the total rewards issued reach **₹10,00,000**.
+
+### Approver
+
+Select the user responsible for reviewing and approving the configured budget.
+
+The offer cannot be published until the selected approver reviews and approves the budget configuration.
+
+<Warning>
+
+Budget approval is mandatory before an offer can be published. Ensure the correct approver is selected before proceeding.
+
+</Warning>
 
 ---
+
 ## Advanced Settings
-Expand **Advanced Settings** to configure additional budget-related parameters, such as budget controls and advanced allocation settings, based on your campaign requirements.
+
+Expand **Advanced Settings** to configure additional budget controls and allocation settings based on your campaign requirements.
+
+<Tip>
+
+Use **Advanced Settings** only when additional budget controls are required for your campaign. For standard campaigns, the default budget configuration is generally sufficient.
+
+</Tip>
 
 ---
+
+## What Happens After Configuration?
+
+Once the budget is approved, the configured amount becomes the maximum reward allocation available for the offer.
+
+As customers earn rewards, the corresponding reward value is deducted from the available budget. Rewards continue to be distributed until the configured budget is exhausted.
+
+---
+
 ## Complete the Configuration
-After completing the Budget configuration:
-1. Verify the configured budget amount.
-2. Confirm the selected approver.
-3. Review any advanced settings, if configured.
+
+After configuring the **Budget**:
+
+1. Review the configured **Budget** amount.
+2. Confirm the selected **Approver**.
+3. Review any **Advanced Settings**, if configured.
 4. Click **Continue** to proceed to the **Usage Limits** configuration.
