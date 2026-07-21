@@ -3,20 +3,27 @@ title: Transaction Eligibility
 description: Configure the transaction conditions that determine whether a transaction qualifies for an offer.
 ---
 
-Defines the conditions a transaction must satisfy for an offer to apply to it. Once a customer or account qualifies under the **Offer User Base**, every transaction they make is checked against the conditions configured here. Only transactions that satisfy these conditions are treated as qualifying transactions and move forward to **Offer Calculation**.
+## Overview
 
-Transaction Eligibility is configured using **Transaction Attributes**—properties of a transaction such as the merchant, terminal, amount, or payment channel used.
+The **Transaction Eligibility** section defines the conditions that a transaction must satisfy to qualify for an offer. Once a customer is included in the configured **Offer User Base**, each of their transactions is evaluated against the configured transaction criteria. Only qualifying transactions proceed to **Offer Calculation** for reward computation.
+
+Configure these conditions using **Transaction Attributes**, such as the merchant, terminal, transaction amount, payment channel, and other supported transaction properties.
 
 <Note>
-**Offer User Base** determines *who* is evaluated for the offer. **Transaction Eligibility** determines *which of their transactions* qualify. A customer belonging to the eligible user base still needs to make a transaction that satisfies the configured Transaction Eligibility conditions before any reward is calculated.
+
+**Offer User Base** determines **who** is evaluated for an offer, while **Transaction Eligibility** determines **which transactions** qualify for a reward. A customer may belong to the eligible user base but will receive a reward only when a transaction satisfies the configured eligibility conditions.
+
 </Note>
 
-<img
-  src="/images/h.png"
-  alt="Step 6 - Configure Transaction Eligibility"
-  style={{ height: "300px", width: "400px" }}
-  className="rounded-lg"
-/>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/h.png"
+      alt="Configure Transaction Eligibility"
+      className="w-full"
+    />
+  </div>
 
 ## Transaction Attributes
 
@@ -57,12 +64,14 @@ For each transaction attribute selected:
 - Select the appropriate comparison operator.
 - Enter or select the value the attribute should be compared against.
 
-<img
-  src="/images/eligibility-conditions.png"
-  alt="Step 6 - Configure Transaction Conditions"
-  style={{ height: "300px", width: "400px" }}
-  className="rounded-lg"
-/>
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/eligibility-conditions.png"
+      alt="Configure Transaction Conditions"
+      className="w-full"
+    />
+  </div>
+</div>
 
 ### Add Multiple Conditions
 
