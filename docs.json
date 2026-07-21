@@ -22,7 +22,7 @@
             ]
           },
           {
-            "group": "Set-Up Offer",
+            "group": "Rules Settings",
             "pages": [
               "offer/offer-user-base",
               "offer/transaction-eligibility",
