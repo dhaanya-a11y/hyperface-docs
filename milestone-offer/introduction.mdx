@@ -3,26 +3,23 @@ title: Milestone Offer
 description: Overview of Milestone Offers in the Hyperface Dashboard.
 ---
 
-# Milestone Offer
-
-## What is a Milestone Offer?
-
 <Info>
 A **Milestone Offer** rewards customers for achieving a **predefined spending or transaction milestone** within a configured subscription cycle. Unlike Transactional Offers, customer progress is accumulated across multiple qualifying transactions until the configured milestone threshold is reached.
 </Info>
 
 ### Key characteristics
 
-- **Cumulative progress tracking** – Eligible transactions are accumulated until the configured milestone threshold is achieved.
+- **Cumulative progress tracking** – Eligible transactions accumulate toward the configured milestone threshold until it is achieved.
 - **Milestone-based qualification** – Customers become eligible for rewards only after completing the configured spending or transaction milestone.
 - **Configurable outcome** – Rewards can be issued as Cashback, Reward Points, Voucher, Smart Tag, Accelerated Reward, or Partner Points.
-- **Subscription cycle support** – Milestones are evaluated within the configured subscription cycle and can be repeated based on the configured number of cycles.
+- **Subscription cycle support** – Milestones are evaluated within the configured subscription cycle and can repeat based on the configured number of cycles.
 
 The **Offer Type** is the foundation of the offer configuration journey. It determines how customers qualify for milestone-based rewards.
 
 For this guide, select **Milestone Offer**, which is designed to reward customers after they successfully complete predefined spending or transaction milestones. This offer type is commonly used for loyalty campaigns, spending challenges, milestone rewards, and recurring engagement programs.
 
 ---
+
 ## Configure the Offer Type
 
 ![Step 2 - Select the Offer Type](/images/0.2.png)
@@ -35,9 +32,10 @@ For this walkthrough, select **Milestone Offer**. This offer type rewards custom
 
 Suppose you want to reward customers after they spend **₹10,000** within a billing cycle. Select **Milestone Offer** to configure milestone-based rewards.
 
+➡️ **Continue to:** **[Offer Type](/offer/offer-type)**
+
 ---
 
-➡️ **Continue to:** **[Offer Type](/offer/offer-type)**
 ## Configure the Outcome Type
 
 ![Step 3 - Select the Outcome Type](/images/0.3.png)
@@ -52,9 +50,10 @@ Suppose you want to reward customers with **₹500 cashback** after they spend *
 
 After selecting the required **Outcome Type**, click **Continue** to proceed to the **Offer Scope** configuration.
 
+➡️ **Continue to:** **[Outcome Type](/offer/outcome-type)**
+
 ---
 
-➡️ **Continue to:** **[Outcome Type](/offer/outcome-type)**
 ## Configure the Offer Scope
 
 ![Step 4 - Configure Basic Offer Details](/images/0.4.png)
@@ -78,13 +77,18 @@ Define the applicability of the offer by configuring:
 - **Program** – Select specific program(s) if the offer should not apply to all programs.
 - **Enable Progress Transfer on Variant Upgrade** – Preserve a customer's milestone progress when they upgrade to another supported card or account variant.
 
+<Info>
+Without this enabled, a customer who upgrades mid-cycle starts their milestone progress over on the new variant. Enable it for campaigns where you don't want an upgrade to reset a customer's accumulated progress.
+</Info>
+
 ### Example
 
 Create a Milestone Offer by entering the offer details, selecting the required eligibility level, and choosing the applicable issuer and program(s). Enable **Apply to all current and future programs** if the offer should automatically apply to every program under the selected program type.
 
+➡️ **Continue to:** **[Offer Scope](/offer/offer-scope)**
+
 ---
 
-➡️ **Continue to:** **[Offer Scope](/offer/offer-scope)**
 ## Configure Offer User Base
 
 ![Step 5 - Select Static Base](/images/0.5.png)
@@ -108,14 +112,23 @@ Configure the following:
 
 Suppose the offer should be available only to customers enrolled through a Smart Tag or a defined user segment. Select the appropriate user base type, configure the eligibility criteria, add additional filters if required, and use **Estimate User Base** to verify the expected audience before proceeding.
 
----
+<Tip>
+Choose **Static Base** when the eligible audience is predefined and unlikely to change. Choose **Dynamic Config** when new customers should keep joining the eligible base as they meet the criteria — useful for always-on milestone campaigns rather than one-time cohorts.
+</Tip>
 
 ➡️ **Continue to:** **[Offer User Base](/offer/offer-user-base)**
+
+---
+
 ## Configure Milestone Eligibility
 
-![Step 6 - Configure Milestone Eligibility](/images/Screenshot 2026-07-17 105521.png)
+![Step 6 - Configure Milestone Eligibility](/images/Screenshot%202026-07-17%20105521.png)
 
 Configure the milestone conditions that determine when a customer becomes eligible for the configured reward.
+
+<Info>
+**Offer User Base** determines *who* is evaluated for this offer. **Milestone Eligibility** and **Transaction Eligibility** — configured below — determine *which of their transactions* actually count toward the milestone. A customer can belong to the eligible user base and still never complete the milestone if their transactions don't satisfy these conditions.
+</Info>
 
 First, define how milestone progress should be tracked by selecting the appropriate aggregation method and configuring the milestone threshold.
 
@@ -126,11 +139,16 @@ Configure the following:
 - **Lock Milestone Progress on Achievement** – Enable this option to stop tracking progress after the milestone has been achieved.
 - **Subscription Cycle Period** – Select the duration over which milestone progress should be tracked.
 - **Number of Cycles** – Specify how many times the milestone can be repeated during the offer period.
+
+<Warning>
+Changing **Lock Milestone Progress on Achievement** or the **Subscription Cycle Period** after the offer is active may affect how in-progress customer milestones are evaluated. Review these settings carefully before publishing.
+</Warning>
+
 ➡️ **Continue to:** **[Milestone Eligibility](/offer/milestone-eligibility)**
 
 ### Transaction Eligibility
 
-![Step 6 - Configure Transaction Eligibility](/images/Screenshot 2026-07-17 105533.png)
+![Step 6 - Configure Transaction Eligibility](/images/Screenshot%202026-07-17%20105533.png)
 
 Configure the transaction conditions that determine which transactions contribute towards milestone completion.
 
@@ -152,7 +170,12 @@ Select the required **Transaction Attribute**, choose the appropriate **comparis
 
 Suppose customers should receive a reward after completing **5 eligible transactions** of **₹500 or more** during a monthly subscription cycle. Configure the aggregation as **Count of Transactions**, set the threshold to **5**, and add transaction eligibility conditions to include only qualifying transactions.
 
+<Tip>
+Set **Number of Cycles** higher than 1 to turn a one-time milestone into a repeating reward — for example, rewarding customers every month they hit the spend threshold, rather than only once for the life of the offer.
+</Tip>
+
 ---
+
 ## Configure Offer Calculation
 
 ![Step 7 - Configure Offer Calculation](/images/0.6.png)
@@ -168,13 +191,18 @@ Configure the following:
 - **Skip Reward Capping** – Enable or disable reward capping at the required level, such as **Program**, **Transaction**, **MCC**, **MID**, or **Currency**.
 - **Allow Reversal** – Enable this option to reverse the reward if one or more qualifying transactions are subsequently reversed.
 
+<Info>
+Reward capping limits the maximum payout per customer at the configured level, independent of the milestone threshold itself. A customer can hit the spending milestone and still receive a capped reward if the calculated value exceeds the configured cap.
+</Info>
+
 ### Example
 
 Select the required calculation rule, configure the reward value, choose the applicable reward capping settings, and enable **Allow Reversal** if rewards should be reversed when qualifying transactions are reversed.
 
+➡️ **Continue to:** **[Offer Calculation](/offer/offer-calculation)**
+
 ---
 
-➡️ **Continue to:** **[Offer Calculation](/offer/offer-calculation)**
 ## Configure Budget
 
 ![Step 8 - Configure Budget](/images/j.png)
@@ -191,9 +219,10 @@ Configure the following:
 
 Enter the required budget amount, select the appropriate approver, and configure any additional budget settings based on your business requirements.
 
+➡️ **Continue to:** **[Budget](/offer/budget)**
+
 ---
 
-➡️ **Continue to:** **[Budget](/offer/budget)**
 ## Configure Posting
 
 ![Step 9 - Configure Posting](/images/l.png)
@@ -214,9 +243,14 @@ Configure the following:
 
 Enable posting, configure the required posting eligibility, choose the appropriate posting method, specify the reward point expiry if applicable, and provide the posting and reversal narration.
 
----
+<Warning>
+Changing the posting schedule after an offer is active may affect when future rewards are credited. Review the configured posting option before publishing the offer.
+</Warning>
 
 ➡️ **Continue to:** **[Posting](/offer/posting)**
+
+---
+
 ## Configure Display Elements
 
 Configure how the Milestone Offer is displayed to customers across the PWA.
@@ -258,7 +292,5 @@ Configure the following:
 ### Example
 
 Configure the display content, milestone progress messages, branding, and offer details to provide a consistent customer experience across the PWA.
-
----
 
 ➡️ **Continue to:** **[Display Elements](/offer/display-elements)**
