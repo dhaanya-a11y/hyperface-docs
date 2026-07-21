@@ -40,7 +40,15 @@
         "group": "Offer Configuration Guides",
         "pages": [
           "transaction-offer/introduction",
-          "milestone-offer/introduction"
+          "milestone-offer/introduction",
+          {
+            "group": "Sample Configurations",
+            "pages": [
+              "rent-cashback",
+              "apple-rewards",
+              "airport-lounge-rewards"
+            ]
+          }
         ]
       }
     ]
