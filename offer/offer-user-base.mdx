@@ -3,9 +3,17 @@ title: Offer User Base
 description: Configure the eligible users who can participate in the offer.
 ---
 
-Offer User Base, configured under **Set-Up Offer → Offer User Base**, determines which customers are eligible to participate in the offer and how they are enrolled.
+## Overview
 
-This step exists so that a reward campaign can be precisely targeted rather than applied blanket-wide. Without it, an offer would need to evaluate every customer in the applicable Issuer/Program scope, which is rarely the intent—most campaigns are designed for a specific segment.
+The **Offer User Base** defines **who is eligible** to participate in an offer. It allows issuers to identify the target customer segment and determine how eligible customers are enrolled into the campaign.
+
+Configuring the appropriate user base ensures the offer is evaluated only for the intended customers before applying the configured eligibility criteria and reward logic.
+
+<Note>
+
+**Offer User Base** determines **who** is evaluated for an offer. The subsequent eligibility configuration—such as **Transaction Eligibility**, **Milestone Eligibility**, or **Gamification Levels**—determines **whether the customer's activity qualifies** for a reward.
+
+</Note>
 
 <Note>
 **Offer User Base** determines *who* is evaluated for the offer. Downstream steps—**Transaction Eligibility**, **Milestone Eligibility**, or **Gamification Levels**, depending on the Offer Type—determine *which of their activity* actually counts towards the reward. A customer can belong to the eligible user base and still never earn a reward if their transactions never satisfy the later eligibility conditions.
@@ -15,12 +23,16 @@ This step exists so that a reward campaign can be precisely targeted rather than
 Eligibility here is evaluated within the boundary already set in **Offer Scope**. Specifically, the configured **Eligibility Level** (**Account Level** or **Customer Level**) determines whether the criteria below are evaluated per account or across all of a customer's accounts.
 </Note>
 
-<img
-  src="/images/g.png"
-  alt="Step 5 - Select Static Base"
-  style={{ height: "300px", width: "400px" }}
-  className="rounded-lg"
-/>
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/g.png"
+      alt="Select Offer User Base"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
 ---
 
 ## Static Base vs Dynamic Config
@@ -69,12 +81,15 @@ Whichever user base type you select, configure the eligibility criteria used to 
 | **Birthdate** | Targets customers based on their date of birth. | Customers born in July |
 | **Account Creation Date** | Targets customers based on when their account was created. | Accounts created after 01 Jan 2025 |
 
-<img
-  src="/images/g.1.png"
-  alt="Step 5 - Configure Static Base Eligibility"
-  style={{ height: "300px", width: "400px" }}
-  className="rounded-lg"
-/>
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/g.1.png"
+      alt="Configure Offer User Base"
+      className="w-[700px]"
+    />
+  </div>
+</div>
 
 ### Smart Tag
 
