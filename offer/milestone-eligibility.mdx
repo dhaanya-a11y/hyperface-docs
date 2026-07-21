@@ -16,13 +16,15 @@ Three concepts work together here:
 
 </Note>
 
-<img
-  src="/images/Screenshot 2026-07-17 105521.png"
-  alt="Milestone Eligibility Configuration"
-  style={{ height: "300px", width: "400px" }}
-  className="rounded-lg"
-/>
-
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/Screenshot 2026-07-17 105521.png"
+      alt="Milestone Eligibility Configuration"
+      className="w-[700px]"
+    />
+  </div>
+</div>
 ---
 ## Aggregate By
 Determines how milestone progress is calculated across qualifying transactions.
@@ -84,12 +86,16 @@ A customer whose eligible spend exceeds **₹10,000** in a given quarter achieve
 ---
 ## Transaction Eligibility
 **Transaction Eligibility** determines which transactions contribute towards milestone completion. Only transactions matching the configured conditions are considered while calculating milestone progress.
-<img
-  src="/images/Screenshot 2026-07-17 105533.png"
-  alt="Transaction Eligibility Configuration"
-  style={{ height: "300px", width: "400px" }}
-  className="rounded-lg"
-/>
+
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/Screenshot 2026-07-17 105533.png"
+      alt="Transaction Eligibility Configuration"
+      className="w-[700px]"
+    />
+  </div>
+</div>
 
 <Warning>
 Only transactions that satisfy the configured **Transaction Eligibility** conditions contribute towards milestone progress. Transactions that do not meet these conditions are ignored when calculating the milestone.
