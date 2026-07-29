@@ -5,9 +5,9 @@ description: Configure the eligible users who can participate in the offer.
 
 ## Overview
 
-The **Offer User Base** defines **who is eligible** to participate in an offer. It allows issuers to identify the target customer segment and determine how eligible customers are enrolled into the campaign.
+The **Offer User Base** defines the group of customers who are eligible to participate in an offer. It allows issuers to identify the intended customer segment and determine how eligible customers are enrolled into the campaign.
 
-Configuring the appropriate user base ensures the offer is evaluated only for the intended customers before applying the configured eligibility criteria and reward logic.
+Once the user base is configured, the subsequent eligibility rules evaluate whether the customer's transactions or activities qualify for the configured reward.
 
 <Note>
 
@@ -15,12 +15,16 @@ Configuring the appropriate user base ensures the offer is evaluated only for th
 
 </Note>
 
-<Note>
-**Offer User Base** determines *who* is evaluated for the offer. Downstream steps—**Transaction Eligibility**, **Milestone Eligibility**, or **Gamification Levels**, depending on the Offer Type—determine *which of their activity* actually counts towards the reward. A customer can belong to the eligible user base and still never earn a reward if their transactions never satisfy the later eligibility conditions.
-</Note>
+<Warning>
+
+Being part of the **Offer User Base** does **not** guarantee a reward. Customers must also satisfy the configured eligibility criteria before a reward is issued.
+
+</Warning>
 
 <Note>
-Eligibility here is evaluated within the boundary already set in **Offer Scope**. Specifically, the configured **Eligibility Level** (**Account Level** or **Customer Level**) determines whether the criteria below are evaluated per account or across all of a customer's accounts.
+
+Eligibility is evaluated within the **Offer Scope** configured earlier. The selected **Eligibility Level** (**Account Level** or **Customer Level**) determines whether the criteria are evaluated for an individual account or across all of a customer's accounts.
+
 </Note>
 
 <div className="my-8 flex justify-center">
