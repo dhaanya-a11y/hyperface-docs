@@ -1,24 +1,41 @@
-# Offer Scope
+---
+title: Offer Scope
+description: Configure the issuer, program, and applicability boundaries for the offer.
+---
 
-## What is Offer Scope?
+## Overview
 
-**Offer Scope** captures the core identifying details of an offer and defines where the offer applies — which issuer, program type, and programs can use it. It is configured after selecting the **Outcome Type** and before defining the **Offer User Base**.
+Hyperface enables issuers to create offers that can be tailored to different issuers, program types, and programs within the organization. **Offer Scope** defines where an offer is applicable, ensuring it is available only within the intended business context.
+
+During this step, configure the **Issuer**, **Program Type**, and **Programs** for which the offer should be available. The selected scope establishes the offer's applicability before proceeding to configure the **Offer User Base**.
 
 <Note>
-Offer Scope defines the commercial and organizational boundaries of an offer — its identity and where it is applicable. It does not define who is eligible for the offer; that is configured separately in **Offer User Base**.
+
+**Offer Scope** defines **where** an offer is applicable. It does **not** determine **who** is eligible to receive the offer. Customer eligibility is configured separately in **Offer User Base**.
+
 </Note>
+
+---
 
 ## Basic Offer Details
 
-Provide the core details that identify the offer and control how long it runs.
+Provide the core details that identify the offer and define when it runs.
 
 | Field | What It Represents | Example |
 |-------|---------------------|---------|
-| **Offer Name** | A unique, identifiable name for the offer, shown in the Hyperface Dashboard. | Fuel Cashback July 2026 |
-| **Offer Description** | A brief description of the offer's purpose, for internal reference in the dashboard. | 5% cashback on eligible fuel transactions |
-| **Offer Duration** | The start and end date and time during which the offer remains active. Transactions outside this window are not evaluated for the offer. | 01 Jul 2026, 00:00 – 31 Jul 2026, 23:59 |
+| **Offer Name** | A unique, identifiable name for the offer in the Hyperface Dashboard. | Fuel Cashback July 2026 |
+| **Offer Description** | A brief description of the offer for internal reference in the dashboard. | 5% cashback on eligible fuel transactions |
+| **Offer Duration** | The start and end date during which the offer remains active. Transactions outside this window are not evaluated for the offer. | 01 Jul 2026, 00:00 – 31 Jul 2026, 23:59 |
 
-![Step 4 - Configure Basic Offer Details](/images/e.png)
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/0.4.png"
+      alt="Configure Basic Offer Details"
+      className="w-[700px]"
+    />
+  </div>
+</div>
 
 ### Eligibility Level
 
@@ -27,19 +44,34 @@ Provide the core details that identify the offer and control how long it runs.
 | Consideration | Account Level | Customer Level |
 |---|---|---|
 | Eligibility evaluated for | Each account independently | All accounts belonging to the customer |
-| Best for | Offers tied to a specific account or card product | Offers meant to reward the overall customer relationship, regardless of which account is used |
+| Best for | Offers tied to a specific account or card | Offers meant to reward the overall customer relationship, regardless of which account is used |
 
-<Note>
-Changing the Eligibility Level changes what the engine treats as a single eligible unit. Choose **Account Level** when the offer should apply separately to each account a customer holds, and **Customer Level** when activity across all of a customer's accounts should count towards the same offer.
-</Note>
+<Tip>
+Changing the **Eligibility Level** changes what is considered a single eligible unit.
+
+- Choose **Account Level** when the offer should apply separately to each account a customer holds.
+- Choose **Customer Level** when activity across all customer accounts should count towards the same offer.
+</Tip>
 
 **Example: Rewarding a customer's overall relationship**
 
-To run a cashback offer that rewards a customer regardless of which of their accounts is used:
+To run a cashback offer that rewards customers regardless of which of their accounts is used:
+
 1. Set **Eligibility Level** to **Customer Level**.
 2. Continue with the remaining setup.
 
 Transactions made from any account belonging to the customer are considered together for this offer.
+
+<Tip>
+
+**Not sure which to pick?**
+
+- Choose **Account Level** if the offer is tied to a specific product, such as a particular card.
+- Choose **Customer Level** if the offer should reward the customer's overall relationship, regardless of which account or product is used.
+
+</Tip>
+
+---
 
 ## Offer Applicability
 
@@ -48,40 +80,52 @@ Define where the offer is available.
 | Field | What It Represents | Example |
 |-------|---------------------|---------|
 | **Issuer** | The issuer for which the offer will be available. | HDFC Bank |
-| **Program Type** | The type of program the offer applies to. | Credit Card |
-| **Apply to all current and future programs** | When enabled, the offer applies to every existing program of the selected type, and automatically extends to any new program created later. | Enabled |
-| **Program** | The specific program(s) the offer applies to. Only shown when **Apply to all current and future programs** is disabled. | Platinum Credit Card |
+| **Program Type** | The type of program where the offer will be applicable. | Credit Card |
+| **Apply to all current and future programs** | When enabled, the offer applies to every existing program of the selected type and automatically applies to any new program created later. | Enabled |
+| **Program** | The specific program(s) to which the offer applies. This field is displayed only when **Apply to all current and future programs** is disabled. | Platinum Credit Card |
 
-![Step 4 - Configure Offer Applicability](/images/f.png)
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/0.4.1.png"
+      alt="Configure Offer Applicability"
+      className="w-[700px]"
+    />
+  </div>
+</div>
 
 <Note>
-**Program** is only required when **Apply to all current and future programs** is disabled. If it is enabled, the offer is not restricted to specific programs and does not need this field configured.
+The **Program** field is required only when **Apply to all current and future programs** is disabled. If enabled, the offer automatically applies to all existing and future programs of the selected **Program Type**.
 </Note>
+
+<Warning>
+Changing the configured **Issuer**, **Program Type**, or **Program** after completing later configuration steps may require those configurations to be reviewed or updated.
+</Warning>
 
 **Example: Restricting an offer to one program**
 
-To launch a cashback offer only for the Platinum Credit Card program:
+To launch a cashback offer only for the **Platinum Credit Card** program:
+
 1. Select the applicable **Issuer** and **Program Type**.
 2. Leave **Apply to all current and future programs** disabled.
 3. Select **Platinum Credit Card** under **Program**.
 
-Only transactions made under the Platinum Credit Card program are considered for this offer, even if the customer holds other programs under the same issuer.
+Only transactions made under the **Platinum Credit Card** program are considered for this offer, even if the customer holds other programs under the same issuer.
+
+---
 
 ## What Happens After Configuration?
 
-Offer Scope establishes the offer's identity, active duration, eligibility level, and the issuer and programs it applies to. Once configured, these details are used as the boundary within which the **Offer User Base** and **Transaction Eligibility** are evaluated — a transaction is only considered for the offer if it falls within the configured Offer Duration and belongs to an applicable Issuer and Program.
+Offer Scope establishes the offer's identity, eligibility level, and the issuer and programs to which it applies. Once configured, these details define the boundaries within which the **Offer User Base** and **Transaction Eligibility** are evaluated.
+
+A transaction is considered for the offer only if it falls within the configured **Offer Duration** and belongs to an applicable **Issuer** and **Program**.
+
+---
 
 ## Complete the Configuration
 
-After configuring the Offer Scope:
+After configuring the **Offer Scope**:
 
 1. Review the configured **Offer Name**, **Offer Description**, **Offer Duration**, and **Eligibility Level**.
-2. Confirm the configured **Offer Applicability** — Issuer, Program Type, and Program.
+2. Confirm the configured **Offer Applicability**—**Issuer**, **Program Type**, and **Program**.
 3. Click **Continue** to proceed to the **Offer User Base** configuration.
-
-<!--
-Product Clarifications Required:
-- Confirm whether Eligibility Level can be changed after the offer is published, or only before activation.
-- Confirm whether multiple Programs can be selected at once, or only a single Program.
-- Confirm whether Offer Duration uses a specific time zone (e.g., issuer's local time) and how transactions at the boundary of the start/end time are treated.
--->

@@ -1,21 +1,37 @@
-# Display Elements
+---
+title: Display Elements
+description: Configure how the offer is presented to customers across the Progressive Web App (PWA).
+---
 
-## What are Display Elements?
+## Overview
 
-The **Display Elements** section defines how an offer is presented to customers across the Progressive Web App (PWA). These settings control the information displayed on the Home page, Offer page, and Offer Details page, ensuring a consistent customer experience across all Offer Types.
+The **Display Elements** section defines how an offer is presented across the **Progressive Web App (PWA)**. It enables issuers to configure the content displayed on the **Home Page**, **Offer Page**, and **Offer Details Page**, ensuring customers receive a clear, consistent, and engaging offer experience throughout their journey.
 
-This configuration is common to **Transactional, Milestone, Merchant, and Gamified Offers**.
+These configurations are common across **Transactional**, **Milestone**, **Merchant**, and **Gamified Offers**, providing a unified presentation experience regardless of the selected Offer Type.
+
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/m.png"
+      alt="Configure Home Page"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
+
+<Note>
+Display Elements affect only the **customer-facing presentation** of an offer. They do not impact the offer's eligibility, reward calculation, posting, or budget configuration.
+</Note>
 
 ---
 
 ## Home Page Configuration
+Configure how the offer appears on the customer's **Home Page**.
 
-Configure how the offer appears on the customer's Home page.
+The Home Page is typically the first place where customers discover available offers. Configure the display information carefully to make the offer easy to identify and understand.
 
-![Step 11 - Configure Home Page](/images/m.png)
-
-Configure the following fields:
-
+### Home Page Fields
 | Field | Description | Example |
 |-------|-------------|---------|
 | **Enable Display** | Enables or disables the visibility of the offer in the PWA. | Enabled |
@@ -23,31 +39,52 @@ Configure the following fields:
 | **Banner Title** | Title displayed on the offer banner. | Fuel Cashback Week |
 | **Banner Description** | Short description displayed on the banner. | Earn cashback on every fuel transaction. |
 | **Display Title** | Primary title displayed to customers. | 5% Fuel Cashback |
-| **Display Description** | Detailed description of the offer displayed in the PWA. | Earn 5% cashback on eligible fuel transactions throughout the campaign period. |
-| **Display Order** | Defines the order in which the offer appears in the PWA. | 1 |
+| **Display Description** | Detailed description displayed in the PWA. | Earn 5% cashback on eligible fuel transactions throughout the campaign period. |
+| **Display Order** | Determines the order in which the offer appears in the PWA. | 1 |
 | **Display Color** | Primary theme color used for the offer card. | #0099FF |
 | **Offer/Merchant Logo** | Upload the logo displayed with the offer. | fuel-logo.png |
 | **Background Illustration** | Upload the background image displayed on the offer card. | fuel-banner.png |
 
----
+<Tip>
+Use concise titles, meaningful descriptions, and high-quality images to improve offer visibility and customer engagement.
+</Tip>
 
+---
 ## Offer Page Configuration
+Configure how the offer is displayed on the **Offer Page** after a customer selects the offer.
 
-Configure how the offer is presented on the Offer page.
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/m.1.png"
+      alt="Configure Offer Page"
+      className="w-[700px]"
+    />
+  </div>
+</div>
 
-![Step 11 - Configure Offer Page](/images/m.1.png)
+The Offer Page presents a summary of the offer and provides customers with the information required before viewing the complete offer details.
 
-Review the configured display information before proceeding.
+Review all configured display information to ensure it accurately represents the offer.
 
 ---
-
 ## Offer Details Page Configuration
-
 Configure the detailed information displayed when customers open an offer.
 
-![Step 11 - Configure Offer Details Page](/images/n.png)
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/n.png"
+      alt="Configure Offer Details Page"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
+The Offer Details Page provides customers with a complete understanding of the offer, including benefits, eligibility information, promotional content, and additional guidance.
 
 ### Section Details
+Create one or more content sections to organize the information displayed on the Offer Details Page.
 
 | Field | Description | Example |
 |-------|-------------|---------|
@@ -55,33 +92,65 @@ Configure the detailed information displayed when customers open an offer.
 | **Section Content** | Rich text content describing the offer. | Get 5% cashback on eligible fuel transactions. |
 | **Add Condition** | Adds another section to display additional information. | Terms & Conditions |
 
+**Examples of additional sections include:**
+- Offer Benefits
+- Eligibility Criteria
+- How to Redeem
+- Terms & Conditions
+- FAQs
+
 ---
+## Call-to-Action (CTA)
+Configure the button displayed on the **Offer Details Page**.
 
-### Call-to-Action (CTA)
-
-Configure the button displayed on the Offer Details page.
-
+The CTA guides customers to perform an action, such as learning more about the offer or visiting an external website.
 | Field | Description | Example |
 |-------|-------------|---------|
 | **Text on Button** | Text displayed on the CTA button. | Know More |
 | **Redirection Link** | URL opened when customers click the CTA button. | https://example.com/offers/fuel |
 
+<Tip>
+Use action-oriented CTA text such as **Know More**, **Learn More**, or **Visit Website** to clearly communicate the next action to customers.
+</Tip>
+
 ---
-
 ## Advanced Settings
-
 Configure additional display settings, if required.
 
-![Step 11 - Configure Offer Details Settings](/images/n.1.png)
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/n.1.png"
+      alt="Configure Offer Details Settings"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
+Use these settings to configure any additional presentation options supported for the offer.
+
+<Warning>
+Changes made to Display Elements directly affect the customer experience in the Progressive Web App. Review all titles, descriptions, images, colors, and links before publishing the offer.
+</Warning>
+
+---
+
+## What Happens After Configuration?
+Once the **Display Elements** are configured, the offer is presented consistently across the Progressive Web App.
+Customers can view:
+- The offer on the **Home Page**
+- The offer summary on the **Offer Page**
+- Complete offer information on the **Offer Details Page**
+- Configured images, branding, and promotional content
+- Call-to-Action buttons and redirection links
 
 ---
 
 ## Complete the Configuration
-
-After configuring the Display Elements:
-
-1. Review the Home Page configuration.
-2. Review the Offer Page configuration.
-3. Verify the Offer Details page content.
-4. Review the CTA configuration.
-5. Click **Continue** to proceed to the **Communication** configuration.
+After configuring the **Display Elements**:
+1. Verify the **Home Page** configuration.
+2. Review the **Offer Page** information.
+3. Confirm the **Offer Details Page** content.
+4. Verify the **Call-to-Action (CTA)** configuration.
+5. Review any **Advanced Settings**, if configured.
+6. Click **Continue** to proceed to the **Communication** configuration.

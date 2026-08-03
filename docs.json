@@ -10,34 +10,46 @@
   "navigation": {
     "groups": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "introduction"
-        ]
-      },
-      {
         "group": "Offer Management",
         "pages": [
           "offer/introduction",
-          "offer/offer-type",
-          "offer/outcome-type",
-          "offer/offer-scope",
-          "offer/offer-user-base",
-          "offer/milestone-eligibility",
-          "offer/offer-calculation",
-          "offer/budget",
-          "offer/usage-limits",
-          "offer/posting",
-          "offer/display-elements",
+          {
+            "group": "Basic Details",
+            "pages": [
+              "offer/offer-type",
+              "offer/outcome-type",
+              "offer/offer-scope"
+            ]
+          },
+          {
+            "group": "Rules Settings",
+            "pages": [
+              "offer/offer-user-base",
+              "offer/transaction-eligibility",
+              "offer/milestone-eligibility",
+              "offer/offer-calculation",
+              "offer/budget",
+              "offer/usage-limits",
+              "offer/posting"
+            ]
+          },
+          "offer/display-elements"
+        ]
+      },
+      {
+        "group": "Offer Setup Guides",
+        "pages": [
           "transaction-offer/introduction",
-          "merchant-offer/introduction",
           "milestone-offer/introduction",
           "gamified-offer/introduction",
-          "apple-rewards",
-          "rent-cashback",
-          "airport-lounge-rewards",
-          "dining-milestone-cashback",
-          "myntra-merchant-cashback"
+          {
+            "group": "Sample Configurations",
+            "pages": [
+              "rent-cashback",
+              "apple-rewards",
+              "airport-lounge-rewards"
+            ]
+          }
         ]
       }
     ]

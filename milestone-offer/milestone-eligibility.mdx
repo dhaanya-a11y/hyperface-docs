@@ -1,4 +1,27 @@
----
-title: Milestone Eligibility
-description: Configure milestone eligibility criteria for a Milestone Offer.
+# Milestone Eligibility
+
+Milestone Eligibility defines how customer progress is calculated and determines when a customer becomes eligible to receive the configured reward. Configure the aggregation method, milestone threshold, subscription cycle, and transaction eligibility criteria used to evaluate milestone completion.
+
+<Frame>
+  <img src="/images/Screenshot 2026-07-17 105521.png" alt="Milestone Eligibility Configuration" />
+</Frame>
+
+## Configure Milestone Eligibility
+
+Configure the following:
+
+- **Aggregate By** – Select the aggregation method used to evaluate milestone progress.
+- **Aggregate Definition Name** – Select the predefined aggregate definition to be used for milestone calculation.
+- **Grouping Field** – Displays the grouping parameter associated with the selected aggregate definition.
+- **Comparator** – Select the comparison operator used to evaluate milestone completion.
+- **Threshold Value** – Enter the milestone value that customers must achieve.
+- **Lock Milestone Progress on Achievement** – Prevent milestone progress from increasing or decreasing once the configured threshold has been reached.
+- **Subscription Cycle Period** – Select the duration over which milestone progress is accumulated.
+- **Number of Cycles** – Specify the number of subscription cycles during which customers can continue earning the milestone.
+- **Advanced Options** – Configure additional milestone settings, if required.
+
+### Example
+
+Suppose customers should receive a reward after completing **10 eligible transactions** during a monthly billing cycle. Select the required aggregate definition, configure the comparator and threshold value, choose the subscription cycle, and specify the number of cycles for which the milestone should remain active.
+
 ---

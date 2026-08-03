@@ -8,9 +8,125 @@ description: Overview of Merchant Offers in the Hyperface Dashboard.
 ## What is a Merchant Offer?
 
 <Info>
-A **Merchant Offer** rewards customers for making qualifying purchases at participating merchants. Customers become eligible for the configured reward when their transactions satisfy the merchant-specific eligibility criteria defined during offer creation.
+A **Merchant Offer** rewards customers for making qualifying purchases at participating merchants. Each qualifying transaction is evaluated against the configured merchant eligibility criteria, and eligible customers receive the configured reward based on the selected outcome type.
 </Info>
 
-Merchant Offers enable issuers to run merchant-specific reward campaigns by targeting purchases made at selected merchants. Eligibility can be configured using merchant-related criteria and, optionally, restricted to specific customer segments using the **Offer User Base**.
+### Key Characteristics
 
-Once an eligible customer completes a qualifying transaction at a participating merchant, the configured reward is automatically processed according to the offer configuration.
+- Merchant-specific eligibility
+- Single-transaction evaluation
+- Configurable outcome
+- Flexible customer targeting
+- Usage limits still apply
+
+The **Offer Type** is the foundation of the offer configuration journey. It determines the criteria under which customers become eligible to receive rewards.
+
+For this guide, select **Merchant Offer**, which is designed to reward customers for making qualifying purchases at participating merchants that satisfy the configured merchant eligibility criteria. This offer type is commonly used for merchant-specific cashback, reward points, and promotional campaigns.
+
+## Configure Offer Details
+
+![Step 1 - Configure Offer Details](/images/2.png)
+
+The **Offer Details** define the basic information for the Merchant Offer and specify where the offer will be applicable.
+
+Configure the following:
+
+- **Offer Name** – Enter a unique name for the offer.
+- **Offer Description** – Provide a brief description of the offer.
+- **Offer Duration** – Select the offer validity period.
+- **Eligibility Level** – Choose whether the offer should be evaluated at the **Account Level** or **Customer Level**.
+
+![Step 1 - Configure Offer Applicability](/images/2.2.png)
+
+Configure the offer applicability:
+
+- **Issuer** – Select the issuer.
+- **Program Type** – Select the applicable program type.
+- **Apply to all current and future programs** – Apply the offer across all existing and future programs.
+- **Program** – Select specific program(s) if required.
+
+### Example
+
+Create a Merchant Offer by entering the offer details, selecting the eligibility level, and choosing the applicable issuer and program.
+
+---
+➡️ **Continue to:** **[Offer Details](/offer/offer-details)**
+## Configure Offer User Base
+
+![Step 2 - Configure Offer User Base](/images/3.png)
+
+Configure the **Offer User Base** to define which users are eligible for the Merchant Offer.
+
+Configure the following:
+
+- **Static Base** – Uses a fixed list of eligible users.
+- **Dynamic Config** – Continuously evaluates users based on the configured eligibility criteria.
+- **Eligibility** – Select the required eligibility criteria.
+- **Estimate User Base** – Calculate the estimated number of eligible users.
+
+### Example
+
+Select the required user base type, configure the eligibility criteria, and use **Estimate User Base** to verify the expected audience.
+
+---
+
+➡️ **Continue to:** **[Offer User Base](/offer/offer-user-base)**
+## Configure Budget
+
+![Step 3 - Configure Budget](/images/j.png)
+
+Configure the budget for the Merchant Offer.
+
+Configure the following:
+
+- **Set Budget** – Enter the total budget.
+- **Approver** – Select the budget approver.
+- **Advanced Settings** – Configure additional budget settings if required.
+
+### Example
+
+Enter the required budget amount, select the approver, and configure any additional budget settings.
+
+---
+
+➡️ **Continue to:** **[Budget](/offer/budget)**
+### Offer Details Page
+
+![Step 5 - Configure Offer Details Page](/images/5.png)
+
+![Step 5 - Configure Offer Details Settings](/images/5.5.png)
+
+Configure the following:
+
+- **Section Details**
+- **Call-to-Action (CTA)**
+- **Advanced Settings**
+
+### Example
+
+Configure the display content, branding, and offer details to provide a consistent customer experience.
+
+---
+### Offer Details Page
+
+![Step 5 - Configure Offer Details Page](/images/5.png)
+
+![Step 5 - Configure Offer Details Settings](/images/5.5.png)
+
+The **Offer Details Page** allows you to configure the information displayed to customers when they open the Merchant Offer in the PWA. Use this page to add descriptive content, configure the call-to-action, and customize additional display settings.
+
+Configure the following:
+
+- **Section Details** – Add and organize the content displayed on the Offer Details page.
+- **Call-to-Action (CTA)** – Configure the button text and redirection link.
+- **Advanced Settings** – Configure additional display settings, if required.
+
+### Example
+
+Configure the display content, branding, and offer details to provide a consistent customer experience for customers viewing the Merchant Offer in the PWA.
+
+---
+
+---
+
+➡️ **Continue to:** **[Offer Details Page](/offer/display-elements)**

@@ -1,16 +1,31 @@
-# Transaction Eligibility
+---
+title: Transaction Eligibility
+description: Configure the transaction conditions that determine whether a transaction qualifies for an offer.
+---
 
-## What is Transaction Eligibility?
+## Overview
 
-**Transaction Eligibility** defines the conditions a transaction must satisfy for an offer to apply to it. Once a customer or account qualifies under the **Offer User Base**, every transaction they make is checked against the conditions configured here. Only transactions that satisfy these conditions are treated as qualifying transactions and move forward to **Offer Calculation**.
+The **Transaction Eligibility** section defines the conditions that a transaction must satisfy to qualify for an offer. Once a customer is included in the configured **Offer User Base**, each of their transactions is evaluated against the configured transaction criteria. Only qualifying transactions proceed to **Offer Calculation** for reward computation.
 
-Transaction Eligibility is configured using **Transaction Attributes** — properties of a transaction such as the merchant, terminal, amount, or payment channel used.
+Configure these conditions using **Transaction Attributes**, such as the merchant, terminal, transaction amount, payment channel, and other supported transaction properties.
 
 <Note>
-**Offer User Base** determines *who* is evaluated for the offer. **Transaction Eligibility** determines *which of their transactions* qualify. A customer belonging to the eligible user base still needs to make a transaction that satisfies the configured Transaction Eligibility conditions before any reward is calculated.
+
+**Offer User Base** determines **who** is evaluated for an offer, while **Transaction Eligibility** determines **which transactions** qualify for a reward. A customer may belong to the eligible user base but will receive a reward only when a transaction satisfies the configured eligibility conditions.
+
 </Note>
 
-![Step 6 - Configure Transaction Eligibility](/images/h.png)
+
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/h.png"
+      alt="Configure Transaction Eligibility"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
 
 ## Transaction Attributes
 
@@ -30,31 +45,46 @@ Select one or more transaction attributes to define the conditions a qualifying 
 | **Payee VPA** | The Virtual Payment Address (VPA) of the recipient of a UPI payment. | merchant@upi |
 
 <Tip>
-Not every attribute applies to every transaction. **Payer VPA** and **Payee VPA** are only relevant to UPI transactions, while **MCC**, **MID**, and **TID** are only relevant to card transactions. Select attributes that match the transaction and payment channel your offer is intended for.
+
+Not every attribute applies to every transaction.
+
+- **Payer VPA** and **Payee VPA** are applicable only to UPI transactions.
+- **MCC**, **MID**, and **TID** are applicable only to card transactions.
+
+Select the transaction attributes that match the payment channel and transaction type your offer is intended for.
+
 </Tip>
 
 ## Configure Transaction Conditions
 
-For each transaction attribute selected:
+<Warning>
+All configured transaction conditions are evaluated together. Ensure the selected transaction attributes, comparison operators, and values accurately reflect the intended eligibility criteria before proceeding.
+</Warning>
 
+For each transaction attribute selected:
 - Select the appropriate comparison operator.
 - Enter or select the value the attribute should be compared against.
 
-![Step 6 - Configure Transaction Conditions](/images/eligibility-conditions.png)
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/eligibility-conditions.png"
+      alt="Configure Transaction Conditions"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
 
 ### Add Multiple Conditions
 
-Add more than one transaction condition if the offer should evaluate more than one attribute — for example, requiring both a specific **MCC** and a minimum **Transaction Value**. All configured conditions apply to the same transaction eligibility check.
+Add more than one transaction condition if the offer should evaluate more than one attribute—for example, requiring both a specific **MCC** and a minimum **Transaction Value**. All configured conditions apply to the same transaction eligibility check.
 
-### Which Date Counts
+### Transaction Posting Date
 
-Choose which transaction date should be used to evaluate eligibility. One available option is **Posting Date** — *"Offer will run on posting date."*
+Select the **Transaction Posting Date** to specify the date used when checking whether a transaction falls within the offer's evaluation window.
 
-<Note>
-If this is left unconfigured, evaluation **defaults to the issuer-level setting** rather than requiring an explicit choice here.
-</Note>
-
-## Example: Cashback on high-value UPI transactions
+## Example: Cashback on High-Value UPI Transactions
 
 To reward customers for UPI payments above ₹500:
 
@@ -68,7 +98,7 @@ Only UPI transactions above ₹500 made by customers in the configured user base
 
 ## What Happens After Configuration?
 
-Every transaction made by a customer in the eligible user base is checked independently against the configured Transaction Eligibility conditions. A transaction that satisfies all configured conditions becomes a qualifying transaction and proceeds to **Offer Calculation**, where the reward is computed. There is no requirement to accumulate spend or transaction count — each transaction is evaluated on its own.
+Every transaction made by a customer in the eligible user base is checked independently against the configured Transaction Eligibility conditions. A transaction that satisfies all configured conditions becomes a qualifying transaction and proceeds to **Offer Calculation**, where the reward is computed. There is no requirement to accumulate spend or transaction count—each transaction is evaluated on its own.
 
 ## Complete the Configuration
 
@@ -77,12 +107,3 @@ After configuring the required transaction conditions:
 1. Review the selected transaction attributes, operators, and values.
 2. Verify the configured **Transaction Posting Date**.
 3. Click **Continue** to proceed to the **Offer Calculation** configuration.
-
-<!--
-Product Clarifications Required:
-- Confirm the exact button label used to add an additional transaction condition on this screen.
-- Confirm whether multiple transaction conditions are combined using AND logic, OR logic, or a configurable choice.
-- Confirm the full list of comparison operators available, and whether the available operators differ by attribute (e.g., Transaction Value vs. MCC).
-- Confirm whether Transaction Posting Date is a single date field, a date range, or a choice between transaction date and posting date.
-- Confirm whether backdated or already-posted transactions are re-evaluated if Transaction Eligibility is edited after the offer is live.
--->
