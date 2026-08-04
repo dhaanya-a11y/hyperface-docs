@@ -25,32 +25,140 @@ The configured **Offer Calculation Rule** determines only **how the reward amoun
 
 ---
 
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/2.2.png"
+      alt="Offer Calculation Rules"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
 ## Offer Calculation Rules
+
 Select the appropriate **Offer Calculation Rule** based on how the reward should be calculated.
+
+## Offer Calculation Rules
+
+Select the appropriate **Offer Calculation Rule** based on how the reward should be calculated.
+
 | Calculation Rule | Description | Example |
 |------------------|-------------|---------|
 | **Flat** | Awards a fixed reward amount for every qualifying transaction, regardless of the transaction value. | ₹100 Cashback |
 | **Percentage** | Awards a percentage of the qualifying transaction amount. The reward varies based on the transaction value. | 5% Cashback |
 | **Slab** | Awards different reward values based on predefined transaction value ranges or slabs. | ₹50 for ₹500–₹999, ₹100 for ₹1,000–₹1,999 |
+| **Flat Multiplier** | Multiplies a fixed reward amount by a configured multiplier before awarding the final reward. | ₹100 × 2 = ₹200 Cashback |
+| **Percentage with Min** | Calculates the reward as a percentage of the transaction amount while ensuring a minimum reward value is always provided. | 5% Cashback with a minimum of ₹50 |
+| **Percentage with Max** | Calculates the reward as a percentage of the transaction amount but limits the reward to a configured maximum value. | 10% Cashback up to a maximum of ₹500 |
+| **Percentage with Min and Max** | Calculates the reward as a percentage of the transaction amount while applying both minimum and maximum reward limits. | 5% Cashback with a minimum of ₹50 and a maximum of ₹500 |
+| **Probabilistic Distribution** | Awards rewards based on predefined probability distributions, where each reward has a configured likelihood of being granted. | 10% chance of ₹500 Cashback, 90% chance of ₹50 Cashback |
+| **Outcome Multiplier** | Multiplies the configured outcome value using a specified multiplier before issuing the final reward. | 100 Reward Points × 3 = 300 Reward Points |
 
 ### Flat
+
 **When to use it**
+
 Choose **Flat** when every qualifying transaction should receive the same reward, irrespective of the transaction amount.
+
 **Example**
+
 Reward customers with **₹100 cashback** for every qualifying transaction.
 
+---
+
 ### Percentage
+
 **When to use it**
+
 Choose **Percentage** when the reward should be calculated as a percentage of the qualifying transaction amount.
+
 **Example**
+
 Reward customers with **5% cashback** on every qualifying purchase.
 
+---
+
 ### Slab
+
 **When to use it**
-Choose **Slab** when different reward values should be issued based on predefined transaction value ranges.
+
+Choose **Slab** when different reward values should be be issued based on predefined transaction value ranges.
+
 **Example**
+
 - ₹50 cashback for transactions between **₹500–₹999**
 - ₹100 cashback for transactions between **₹1,000–₹1,999**
+
+### Flat Multiplier
+
+**When to use it**
+
+Choose **Flat Multiplier** when a fixed reward amount should be multiplied by a configured multiplier before being awarded.
+
+**Example**
+
+Refer to the configured multiplier and reward value for your offer.
+
+---
+
+### Percentage with Min
+
+**When to use it**
+
+Choose **Percentage with Min** when the reward should be calculated as a percentage of the qualifying transaction amount while ensuring that a minimum reward value is always awarded.
+
+**Example**
+
+Refer to the configured percentage and minimum reward value for your offer.
+
+---
+
+### Percentage with Max
+
+**When to use it**
+
+Choose **Percentage with Max** when the reward should be calculated as a percentage of the qualifying transaction amount while limiting the reward to a configured maximum value.
+
+**Example**
+
+Refer to the configured percentage and maximum reward value for your offer.
+
+---
+
+### Percentage with Min and Max
+
+**When to use it**
+
+Choose **Percentage with Min and Max** when the reward should be calculated as a percentage of the qualifying transaction amount while applying both minimum and maximum reward limits.
+
+**Example**
+
+Refer to the configured percentage, minimum reward value, and maximum reward value for your offer.
+
+---
+
+### Probabilistic Distribution
+
+**When to use it**
+
+Choose **Probabilistic Distribution** when rewards should be distributed based on the configured probability settings.
+
+**Example**
+
+Refer to the configured probability distribution for your offer.
+
+---
+
+### Outcome Multiplier
+
+**When to use it**
+
+Choose **Outcome Multiplier** when the configured outcome should be multiplied before being awarded.
+
+**Example**
+
+Refer to the configured outcome value and multiplier for your offer.
 
 <Tip>
 Select the calculation rule that best matches your campaign objective.
