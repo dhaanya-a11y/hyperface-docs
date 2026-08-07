@@ -101,31 +101,61 @@ Whichever user base type you select, configure the eligibility criteria used to 
 
 **Example:** Reward customers already tagged **Premium Banking Customer** with an exclusive lounge access offer.
 
+Use the **Smart Tag** eligibility type to identify customers using an existing Smart Tag.
+
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/v.1.png"
+      alt="Smart Tag Eligibility"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
+Configure the following:
+
+- **List**
+  - **Create New List** – Create a new Smart Tag list.
+  - **Existing List** – Select an existing Smart Tag list from the available options.
+
+- **Input**
+  - Enter one or more Smart Tag values manually.
+
+Configure the matching criteria:
+
+- **Allowed** – Includes customers associated with the selected or entered Smart Tag values.
+- **Denied** – Excludes customers associated with the selected or entered Smart Tag values.
+
 ### Accounts
 
 **When to use it:** when eligibility depends on the type of account or product held, rather than customer-level attributes.
 
 **Example:** Restrict a cashback offer to customers holding a **Savings Account**, excluding current account holders.
 
-### Accounts
-
-Use the **Accounts** eligibility type to identify customers based on account-related information.
-
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
     <img
-      src="/images/v.1.png"
+      src="/images/v.2.png"
       alt="Accounts Eligibility"
       className="w-[700px]"
     />
   </div>
 </div>
 
-- **List** – Select one or more account values from the available list.
-- **Input** – Manually enter one or more comma-separated account values.
-- **Allowed** – Includes customers matching the selected account values.
-- **Denied** – Excludes customers matching the selected account values.
+Configure the following:
 
+- **List**
+  - **Create New List** – Create a new account list.
+  - **Existing List** – Select an existing account list from the available options.
+
+- **Input**
+  - Enter one or more account values manually.
+
+Configure the matching criteria:
+
+- **Allowed** – Includes customers matching the selected or entered account values.
+- **Denied** – Excludes customers matching the selected or entered account values.
 
 ### Switch Account Number
 
@@ -133,11 +163,54 @@ Use the **Accounts** eligibility type to identify customers based on account-rel
 
 **Example:** Run a pilot version of a new offer on **500** named account numbers before a wider rollout.
 
+Use the **Switch Account Number** eligibility type to identify customers using their Switch Account Number.
+
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/v.3.png"
+      alt="Switch Account Number Eligibility"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
+Configure the following:
+
+- **List**
+  - **Create New List** – Create a new Switch Account Number list.
+  - **Existing List** – Select an existing Switch Account Number list from the available options.
+
+- **Input**
+  - Enter one or more Switch Account Number values manually.
+
+Configure the matching criteria:
+
+- **Allowed** – Includes customers matching the selected or entered Switch Account Number values.
+- **Denied** – Excludes customers matching the selected or entered Switch Account Number values.
+
 ### Birthdate
 
 **When to use it:** for lifecycle or celebratory campaigns tied to a personal date rather than transaction behaviour.
 
 **Example:** Offer **10% dining cashback** to customers during their birthday month.
+Use the **Birthdate** eligibility type to identify customers based on their birthdate.
+
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/v.4.png"
+      alt="Birthdate Eligibility"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+Configure one of the following options:
+
+- **On the Birthday** – Evaluates customer eligibility on the customer's birthday.
+- **In the Birth Day Week** – Evaluates customer eligibility during the customer's birthday week.
+- **In the Birth Day Month** – Evaluates customer eligibility during the customer's birthday month.
+- **Custom** – Allows you to configure a custom birthdate-based eligibility rule.
 
 ### Account Creation Date
 
@@ -145,6 +218,24 @@ Use the **Accounts** eligibility type to identify customers based on account-rel
 
 **Example:** A welcome cashback offer for accounts opened after **01 Jan 2025**, or a loyalty reward restricted to accounts opened before **2020**.
 
+Use the **Account Creation Date** eligibility type to identify customers based on their account creation date.
+
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/v.5.png"
+      alt="Account Creation Date Eligibility"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
+Configure one of the following options:
+
+- **On Account Creation Day** – Evaluates customer eligibility on the account creation date.
+- **On Anniversary Date** – Evaluates customer eligibility on the anniversary of the account creation date.
+- **X Days After for Y Days** – Evaluates customer eligibility starting **X** days after the account creation date for a duration of **Y** days.
+- **X Days From Account Creation Day** – Evaluates customer eligibility **X** days from the account creation date.
 ---
 
 ## Estimate User Base
