@@ -97,11 +97,7 @@ Whichever user base type you select, configure the eligibility criteria used to 
 
 ### Smart Tag
 
-**When to use it:** when eligibility should be based on a customer segment that already exists as a Smart Tag, avoiding re-defining the same segment logic across multiple offers.
-
-**Example:** Reward customers already tagged **Premium Banking Customer** with an exclusive lounge access offer.
-
-Use the **Smart Tag** eligibility type to identify customers using an existing Smart Tag.
+Use the **Smart Tag** eligibility type to identify customers based on an existing Smart Tag.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -113,25 +109,18 @@ Use the **Smart Tag** eligibility type to identify customers using an existing S
   </div>
 </div>
 
-Configure the following:
+Configure the Smart Tag as follows:
 
-- **List**
-  - **Create New List** – Create a new Smart Tag list.
-  - **Existing List** – Select an existing Smart Tag list from the available options.
-
-- **Input**
-  - Enter one or more Smart Tag values manually.
-
-Configure the matching criteria:
-
-- **Allowed** – Includes customers associated with the selected or entered Smart Tag values.
-- **Denied** – Excludes customers associated with the selected or entered Smart Tag values.
+1. Select **List** or **Input** to specify the Smart Tag values.
+2. If **List** is selected, either:
+   - Select **Create New List** to create a new Smart Tag list, or
+   - Select an existing Smart Tag list from the available options.
+3. If **Input** is selected, enter one or more Smart Tag values manually.
+4. Select **Allowed** to include customers associated with the specified Smart Tag values, or **Denied** to exclude them.
 
 ### Accounts
 
-**When to use it:** when eligibility depends on the type of account or product held, rather than customer-level attributes.
-
-**Example:** Restrict a cashback offer to customers holding a **Savings Account**, excluding current account holders.
+Use the **Accounts** eligibility type to identify customers using account-related information.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -143,25 +132,12 @@ Configure the matching criteria:
   </div>
 </div>
 
-Configure the following:
-
-- **List**
-  - **Create New List** – Create a new account list.
-  - **Existing List** – Select an existing account list from the available options.
-
-- **Input**
-  - Enter one or more account values manually.
-
-Configure the matching criteria:
-
-- **Allowed** – Includes customers matching the selected or entered account values.
-- **Denied** – Excludes customers matching the selected or entered account values.
+1. Select **List** or **Input** to define the account values.
+2. If **List** is selected, choose **Create New List** to create a new list or select an existing account list.
+3. If **Input** is selected, enter one or more account values manually.
+4. Select **Allowed** to include customers matching the specified account values, or **Denied** to exclude them.
 
 ### Switch Account Number
-
-**When to use it:** when a specific, already-known list of accounts needs to be targeted directly—useful for controlled pilots rather than criteria-based segments.
-
-**Example:** Run a pilot version of a new offer on **500** named account numbers before a wider rollout.
 
 Use the **Switch Account Number** eligibility type to identify customers using their Switch Account Number.
 
@@ -175,25 +151,17 @@ Use the **Switch Account Number** eligibility type to identify customers using t
   </div>
 </div>
 
-Configure the following:
+Configure the Switch Account Number as follows:
 
-- **List**
-  - **Create New List** – Create a new Switch Account Number list.
-  - **Existing List** – Select an existing Switch Account Number list from the available options.
-
-- **Input**
-  - Enter one or more Switch Account Number values manually.
-
-Configure the matching criteria:
-
-- **Allowed** – Includes customers matching the selected or entered Switch Account Number values.
-- **Denied** – Excludes customers matching the selected or entered Switch Account Number values.
+1. Select **List** or **Input** to specify the Switch Account Number values.
+2. If **List** is selected, either:
+   - Select **Create New List** to create a new Switch Account Number list, or
+   - Select an existing Switch Account Number list from the available options.
+3. If **Input** is selected, enter one or more Switch Account Number values manually.
+4. Select **Allowed** to include customers matching the specified Switch Account Number values, or **Denied** to exclude them.
 
 ### Birthdate
 
-**When to use it:** for lifecycle or celebratory campaigns tied to a personal date rather than transaction behaviour.
-
-**Example:** Offer **10% dining cashback** to customers during their birthday month.
 Use the **Birthdate** eligibility type to identify customers based on their birthdate.
 
 <div className="my-8 flex justify-center">
@@ -205,18 +173,16 @@ Use the **Birthdate** eligibility type to identify customers based on their birt
     />
   </div>
 </div>
-Configure one of the following options:
 
-- **On the Birthday** – Evaluates customer eligibility on the customer's birthday.
-- **In the Birth Day Week** – Evaluates customer eligibility during the customer's birthday week.
-- **In the Birth Day Month** – Evaluates customer eligibility during the customer's birthday month.
-- **Custom** – Allows you to configure a custom birthdate-based eligibility rule.
+Configure the Birthdate eligibility as follows:
+
+1. Select one of the available birthdate options:
+   - **On the Birthday** – Evaluates customer eligibility on the customer's birthday.
+   - **In the Birth Day Week** – Evaluates customer eligibility during the customer's birthday week.
+   - **In the Birth Day Month** – Evaluates customer eligibility during the customer's birthday month.
+   - **Custom** – Allows you to configure a custom birthdate-based eligibility condition.
 
 ### Account Creation Date
-
-**When to use it:** for onboarding or tenure-based campaigns—rewarding new-to-bank customers, or recognising long-tenured account holders.
-
-**Example:** A welcome cashback offer for accounts opened after **01 Jan 2025**, or a loyalty reward restricted to accounts opened before **2020**.
 
 Use the **Account Creation Date** eligibility type to identify customers based on their account creation date.
 
@@ -230,12 +196,13 @@ Use the **Account Creation Date** eligibility type to identify customers based o
   </div>
 </div>
 
-Configure one of the following options:
+Configure the Account Creation Date eligibility as follows:
 
-- **On Account Creation Day** – Evaluates customer eligibility on the account creation date.
-- **On Anniversary Date** – Evaluates customer eligibility on the anniversary of the account creation date.
-- **X Days After for Y Days** – Evaluates customer eligibility starting **X** days after the account creation date for a duration of **Y** days.
-- **X Days From Account Creation Day** – Evaluates customer eligibility **X** days from the account creation date.
+1. Select one of the available account creation date options:
+   - **On Account Creation Day** – Evaluates customer eligibility on the day the account is created.
+   - **On Anniversary Date** – Evaluates customer eligibility on each anniversary of the account creation date.
+   - **X Days After for Y Days** – Evaluates customer eligibility starting **X** days after the account creation date for **Y** days.
+   - **X Days From Account Creation Day** – Evaluates customer eligibility after **X** days from the account creation date.
 ---
 
 ## Estimate User Base
