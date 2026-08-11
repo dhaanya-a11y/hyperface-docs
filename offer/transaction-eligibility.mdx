@@ -96,6 +96,26 @@ To reward customers for UPI payments above ₹500:
 
 Only UPI transactions above ₹500 made by customers in the configured user base are treated as qualifying transactions.
 
+### Date for Offer Processing
+
+The **Date for Offer Processing** determines which transaction date is used to evaluate and process the offer.
+
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/v.10.png"
+      alt="Date for Offer Processing"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
+Select one of the following options:
+
+- **Transaction Date** – The date on which the customer performs the transaction. The offer is evaluated and processed based on this date.
+
+- **Posting Date** – The date on which the transaction is posted or recorded by the bank. The offer is evaluated and processed based on this date.
+
 ## What Happens After Configuration?
 
 Every transaction made by a customer in the eligible user base is checked independently against the configured Transaction Eligibility conditions. A transaction that satisfies all configured conditions becomes a qualifying transaction and proceeds to **Offer Calculation**, where the reward is computed. There is no requirement to accumulate spend or transaction count—each transaction is evaluated on its own.
