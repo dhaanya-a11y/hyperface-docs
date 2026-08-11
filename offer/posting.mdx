@@ -5,9 +5,9 @@ description: Configure when and how the offer benefit is posted to the customer'
 
 ## Overview
 
-The **Posting** section defines **when** the configured offer benefit is credited to the customer's account and **under what conditions** the posting should occur.
+The **Posting** section defines when the configured offer benefit is credited to the customer's account and the conditions that must be satisfied before the benefit is posted.
 
-After configuring **Usage Limits**, use this step to configure the posting schedule, define posting eligibility conditions, and specify the ledger narrations that should be recorded when benefits are posted or reversed.
+After configuring **Usage Limits**, use this step to configure the posting behavior, posting eligibility, and the ledger narrations recorded during reward posting and reversal.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -21,7 +21,7 @@ After configuring **Usage Limits**, use this step to configure the posting sched
 
 <Note>
 
-**Posting** controls only the reward crediting process. A customer must first satisfy all previously configured offer conditions before the configured posting rules are evaluated.
+**Posting** controls only how and when the offer benefit is credited. A customer must first satisfy all previously configured offer conditions before the configured posting rules are evaluated.
 
 </Note>
 
@@ -29,15 +29,15 @@ After configuring **Usage Limits**, use this step to configure the posting sched
 
 ## Enable Posting
 
-Enable **Posting** to allow the configured offer benefit to be credited to the customer's account.
+Enable **Posting** to allow the configured offer benefit to be credited to eligible customers.
 
-If Posting is disabled, the configured offer benefit is not posted even when all configured offer conditions are satisfied.
+If **Posting** is disabled, the configured offer benefit is not credited even when all previously configured offer conditions are satisfied.
 
 ---
 
 ## Configure Posting Eligibility
 
-Posting Eligibility defines the conditions that must be satisfied before the configured offer benefit is posted to the customer's account.
+Posting Eligibility defines the conditions that must be satisfied before the configured offer benefit is credited to a customer's account.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -52,7 +52,7 @@ Posting Eligibility defines the conditions that must be satisfied before the con
 To configure posting eligibility:
 
 1. Select the required **Attribute**.
-2. Configure the corresponding values.
+2. Configure the corresponding value or values.
 3. Select the appropriate **Action**.
 4. Click **Add More** to configure additional posting eligibility conditions, if required.
 
@@ -68,7 +68,7 @@ The following posting eligibility attributes are available:
 
 ### Account Status
 
-Use **Account Status** to configure posting eligibility based on the customer's account status.
+Use **Account Status** to configure posting eligibility based on the current status of an account.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -84,9 +84,8 @@ Configure the following:
 
 - Select the required account status.
 - Select the appropriate **Action**:
-  - **Allowed** – Posts the reward for customers matching the selected account status.
-  - **Denied** – Does not post the reward for customers matching the selected account status.
-
+ - **Allowed** – Credits the configured offer benefit to accounts matching the selected account status.
+- **Denied** – Does not credit the configured offer benefit to accounts matching the selected account status.
 ---
 
 ### Account Smart Tag
@@ -106,19 +105,20 @@ Use **Account Smart Tag** to configure posting eligibility based on the Smart Ta
 Configure the Account Smart Tag as follows:
 
 1. Select **List** or **Input**.
-2. If **List** is selected, either:
-   - Select **Create New List** to create a new Account Smart Tag list, or
-   - Select an existing Account Smart Tag list from the available options.
+2. If **List** is selected
+- Select **Create New List** to create a new Account Smart Tag list, or
+- Select an existing Account Smart Tag list.
 3. If **Input** is selected, enter one or more Account Smart Tag values manually.
 4. Select the required **Action**:
-   - **Allowed** – Posts the reward for accounts associated with the selected or entered Account Smart Tag values.
-   - **Denied** – Does not post the reward for accounts associated with the selected or entered Account Smart Tag values.
-
+   -- **Allowed** – Credits the configured offer benefit to accounts associated with the selected or entered Account Smart Tag values.
+   -- **Denied** – Does not credit the configured offer benefit to accounts associated with the selected or entered Account Smart Tag values.
 ---
 
 ### Account Block Code
 
-An **Account Block Code** is a code assigned to an account to identify a specific account status or restriction. Use this attribute to configure posting eligibility for accounts associated with the specified block code.
+An **Account Block Code** is an identifier assigned to an account to represent a specific account status or restriction.
+
+Use this attribute to configure posting eligibility for accounts associated with the specified block code.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -134,8 +134,8 @@ Configure the following:
 
 - Enter one or more account block code values.
 - Select the appropriate **Action**:
-  - **Allowed** – Posts the reward for customers matching the specified account block code.
-  - **Denied** – Does not post the reward for customers matching the specified account block code.
+  - **Allowed** – Credits the configured offer benefit to accounts matching the specified account block code.
+  - **Denied** – Does not credit the configured offer benefit to accounts matching the specified account block code.
 
 <Tip>
 
@@ -198,31 +198,30 @@ Configure the following fields:
 
 | **Field** | **Description** | **Example** |
 |-----------|-----------------|-------------|
-| **Posting Narration** | Message recorded when the reward is posted. | Cashback credited for Fuel Offer |
-| **Reversal Narration** | Message recorded when a posted reward is reversed. | Cashback reversed due to transaction reversal |
+| **Posting Narration** | Narration recorded when the offer benefit is credited. |
+| **Reversal Narration** | Narration recorded when a previously credited benefit is reversed. |
 
 <Note>
 
-Posting Narration and Reversal Narration are recorded for operational and audit purposes. Use clear and meaningful descriptions so posted and reversed rewards can be easily identified.
+Posting Narration and Reversal Narration are recorded for operational tracking and audit purposes. Use clear and meaningful descriptions so posted and reversed benefits can be easily identified.
 
 </Note>
-
 ---
 
 ## What Happens After Configuration?
 
-Once the configured posting conditions are satisfied, the reward is credited according to the selected **Posting Option**.
+Once the configured posting conditions are satisfied, the offer benefit is credited according to the selected **Posting Option**.
 
-If **Allow Reversal** was enabled during **Offer Calculation**, the configured **Reversal Narration** is used whenever a posted reward is subsequently reversed.
+If **Allow Reversal** is enabled, the configured **Reversal Narration** is used whenever a previously credited benefit is reversed.
 
 ---
 
 ## Complete the Configuration
 
-After completing the Posting configuration:
+After configuring **Posting**:
 
 1. Verify that **Posting** is enabled, if required.
 2. Review the configured **Posting Eligibility** conditions.
 3. Confirm the selected **Posting Option**.
 4. Review the configured **Posting Narration** and **Reversal Narration**.
-5. Click **Continue** to proceed to the **Display Elements** configuration.
+5. Click **Continue** to proceed to **Display Elements**.
