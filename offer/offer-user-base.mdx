@@ -55,45 +55,6 @@ Select **Static Base** when the set of eligible users is fixed before the offer 
 
 A bank wants to run an invite-only campaign for **2,000** pre-selected, relationship-manager-nominated customers. Since the list is decided in advance and shouldn't change once the campaign starts, **Static Base** is the right choice.
 
-### Dynamic Config
-
-Select **Dynamic Config** when the eligible user base should be automatically determined rather than fixed in advance. Customers who satisfy the configured conditions during the evaluation period are included in the eligible user base.
-
-**Example**
-
-A bank wants a welcome cashback offer to apply to every savings account opened during the offer period. New accounts keep opening continuously, so a fixed list decided on day one would miss later joiners—**Dynamic Config** with an **Account Creation Date** criterion keeps the eligible set current.
-
-<Tip>
-
-Choose **Static Base** when the eligible audience is predefined and unlikely to change.
-
-Choose **Dynamic Config** when eligibility should automatically adapt as customer information changes over time.
-
-</Tip>
-
----
-
-## Configure Eligibility
-
-Whichever user base type you select, configure the eligibility criteria used to identify eligible customers.
-
-| Eligibility Option | Description | Example |
-|--------------------|-------------|---------|
-| **Smart Tag** | Identifies users based on a predefined Smart Tag assigned to customers. | Premium Customer |
-| **Accounts** | Defines eligible users using account-related information. | Savings Account |
-| **Switch Account Number** | Identifies users using their Switch Account Number. | 1234567890 |
-| **Birthdate** | Targets customers based on their date of birth. | Customers born in July |
-| **Account Creation Date** | Targets customers based on when their account was created. | Accounts created after 01 Jan 2025 |
-
-<div className="my-8 flex justify-center">
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
-    <img
-      src="/images/g.1.png"
-      alt="Configure Offer User Base"
-      className="w-[700px]"
-    />
-  </div>
-</div>
 
 ### Smart Tag
 
@@ -206,7 +167,72 @@ Configure the Account Creation Date eligibility as follows:
    - **X Days After for Y Days** – Evaluates customer eligibility starting **X** days after the account creation date for **Y** days.
    - **X Days From Account Creation Day** – Evaluates customer eligibility after **X** days from the account creation date.
 ---
+### Dynamic Config
 
+Select **Dynamic Config** when the eligible user base should be automatically determined rather than fixed in advance. Customers who satisfy the configured conditions during the evaluation period are included in the eligible user base.
+
+**Example**
+
+A bank wants a welcome cashback offer to apply to every savings account opened during the offer period. New accounts keep opening continuously, so a fixed list decided on day one would miss later joiners—**Dynamic Config** with an **Account Creation Date** criterion keeps the eligible set current.
+
+<Tip>
+
+Choose **Static Base** when the eligible audience is predefined and unlikely to change.
+
+Choose **Dynamic Config** when eligibility should automatically adapt as customer information changes over time.
+
+</Tip>
+
+---
+### Opt-In
+
+Use the **Opt-In** eligibility type to configure the customer segment for an offer by defining the required eligibility criteria.
+
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/g.1.png"
+      alt="Configure Offer User Base"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
+Configure the Opt-In eligibility as follows:
+
+1. Select **Opt-In** as the eligibility type.
+2. Select one of the available eligibility criteria:
+   - **Accounts in Scope**
+   - **Smart Tag**
+3. Configure the selected eligibility criteria.
+4. Click **Estimate User Base** to calculate the estimated number of eligible customers.
+5. Click **Continue** to proceed to the next configuration step.
+Eligible customers are identified based on the selected criteria, such as **Accounts in Scope** or **Smart Tag**.
+
+### Smart Tag Attachment
+
+Use **Smart Tag Attachment** to configure customer eligibility using a selected Smart Tag. Select the Smart Tag and configure the activation and subscription settings for the dynamic customer segment.
+
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/v.8.png"
+      alt="Smart Tag Attachment"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
+Configure the Smart Tag Attachment as follows:
+
+1. Select **Smart Tag Attachment** as the eligibility type.
+2. Click **Select Smart Tag** and choose the required Smart Tag.
+3. Configure the following fields:
+   - **Offer Activation Date** – Specify the number of days after Smart Tag attachment to activate the offer for the customer.
+   - **Subscription Duration** – Specify the subscription duration for the dynamic customer segment.
+   - **Subscription Cut-Off Date** – Specify the subscription cut-off date for the dynamic customer segment.
+4. Click **Estimate User Base** to calculate the estimated number of eligible customers.
+5. Click **Continue** to proceed to the next configuration step.
 ## Estimate User Base
 
 <Warning>
