@@ -5,19 +5,19 @@ description: Configure the eligible users who can participate in the offer.
 
 ## Overview
 
-The **Offer User Base** defines the group of customers who are eligible to participate in an offer. It allows issuers to identify the intended customer segment and determine how eligible customers are enrolled into the campaign.
+The **Offer User Base** defines the customer segment that is considered for an offer. During this step, configure how eligible customers are identified and enrolled into the campaign.
 
-Once the user base is configured, the subsequent eligibility rules evaluate whether the customer's transactions or activities qualify for the configured reward.
+Once the Offer User Base is configured, the subsequent eligibility configuration evaluates whether the customer's transactions or activities satisfy the conditions required to receive the configured offer benefit.
 
 <Note>
 
-**Offer User Base** determines **who** is evaluated for an offer. The subsequent eligibility configuration—such as **Transaction Eligibility**, **Milestone Eligibility**, or **Gamification Levels**—determines **whether the customer's activity qualifies** for a reward.
+**Offer User Base** determines **who** is considered for an offer. The subsequent eligibility configuration—such as **Transaction Eligibility**, **Milestone Eligibility**, or **Gamification Levels**—determines **whether the customer's activity qualifies** for the configured offer.
 
 </Note>
 
 <Warning>
 
-Being part of the **Offer User Base** does **not** guarantee a reward. Customers must also satisfy the configured eligibility criteria before a reward is issued.
+Being included in the **Offer User Base** does not guarantee that a customer receives an offer benefit. Customers must also satisfy the configured eligibility conditions before rewards are issued.
 
 </Warning>
 
@@ -38,18 +38,17 @@ Eligibility is evaluated within the **Offer Scope** configured earlier. The sele
 </div>
 
 ---
-
-## Static Base vs Dynamic Config
+## User Base Types
 
 | Consideration | Static Base | Dynamic Config |
 |---|---|---|
-| Audience | Fixed once the offer is published | Automatically determined by evaluating customers against the configured criteria during the evaluation period |
-| Best for | A known, closed audience decided in advance | Criteria-based eligibility that should reflect current customer data rather than a fixed list |
+| Customer Segment | Fixed once the offer is published | Automatically determined by evaluating customers against the configured criteria during the evaluation period |
+| Recommended Use | A known, closed audience decided in advance | Criteria-based eligibility that should reflect current customer data rather than a fixed list |
 | Evaluation | Once, before publishing | Ongoing, against live customer data |
 
 ### Static Base
 
-Select **Static Base** when the set of eligible users is fixed before the offer is published. Once the offer is activated, the user base remains unchanged unless the offer is modified.
+A **Static Base** is used when the eligible customer segment is known before the offer is published. Once configured, the selected customer segment remains unchanged unless the offer configuration is updated.
 
 **Example**
 
@@ -58,7 +57,7 @@ A bank wants to run an invite-only campaign for **2,000** pre-selected, relation
 
 ### Smart Tag
 
-Use the **Smart Tag** eligibility type to identify customers based on an existing Smart Tag.
+Use **Smart Tag** to identify customers associated with one or more Smart Tags.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -81,7 +80,7 @@ Configure the Smart Tag as follows:
 
 ### Accounts
 
-Use the **Accounts** eligibility type to identify customers using account-related information.
+Use **Accounts** to identify customers using account-related information.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -125,7 +124,7 @@ Configure the Switch Account Number as follows:
 
 ### Birthdate
 
-Use the **Birthdate** eligibility type to identify customers based on their birthdate.
+Use **Birthdate** to identify customers based on configured birthdate criteria.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -147,7 +146,7 @@ Configure the Birthdate eligibility as follows:
 
 ### Account Creation Date
 
-Use the **Account Creation Date** eligibility type to identify customers based on their account creation date.
+Use **Account Creation Date** to identify customers based on their account creation date or account anniversary.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -169,7 +168,7 @@ Configure the Account Creation Date eligibility as follows:
 ---
 ### Dynamic Config
 
-Select **Dynamic Config** when the eligible user base should be automatically determined rather than fixed in advance. Customers who satisfy the configured conditions during the evaluation period are included in the eligible user base.
+A **Dynamic Config** automatically determines the eligible customer segment by evaluating customers against the configured criteria throughout the offer period.
 
 **Example**
 
@@ -177,16 +176,15 @@ A bank wants a welcome cashback offer to apply to every savings account opened d
 
 <Tip>
 
-Choose **Static Base** when the eligible audience is predefined and unlikely to change.
-
-Choose **Dynamic Config** when eligibility should automatically adapt as customer information changes over time.
+- Choose **Static Base** when the customer segment is predefined before the offer is published.
+- Choose **Dynamic Config** when the eligible customer segment should be determined automatically using configured criteria.
 
 </Tip>
 
 ---
 ### Opt-In
 
-Use the **Opt-In** eligibility type to configure the customer segment for an offer by defining the required eligibility criteria.
+Use **Opt-In** to configure customer participation based on the selected eligibility criteria.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -211,7 +209,7 @@ Eligible customers are identified based on the selected criteria, such as **Acco
 
 ### Smart Tag Attachment
 
-Use **Smart Tag Attachment** to configure customer eligibility using a selected Smart Tag. Select the Smart Tag and configure the activation and subscription settings for the dynamic customer segment.
+Use **Smart Tag Attachment** to configure customer eligibility based on the attachment of a selected Smart Tag.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -241,7 +239,7 @@ Review the estimated user count before proceeding. If the estimate is significan
 
 Once the eligibility criteria have been configured:
 
-1. Click **Estimate User Base** to calculate the estimated number of eligible users.
-2. Review the estimated user count displayed by the system.
-3. Verify that the estimated audience aligns with the campaign requirements.
+1. Click **Estimate User Base**.
+2. Review the estimated customer count.
+3. Verify that the estimated audience matches the intended campaign.
 4. Click **Continue** to proceed to the next configuration step.
