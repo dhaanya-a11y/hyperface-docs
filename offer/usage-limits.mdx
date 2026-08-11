@@ -3,85 +3,96 @@ title: Usage Limits
 description: Configure the limits that control how frequently customers can earn rewards for an offer.
 ---
 
-# Usage Limits
-
 ## Overview
 
-**Usage Limits** define the maximum reward a customer can receive from an offer within a specified duration. They help control reward distribution by limiting how frequently a customer can receive rewards during the lifetime of an offer.
+**Usage Limits** control how often an individual customer can earn rewards through an offer across cycles. All limit types are optional—configure only the limits relevant to your campaign design.
 
-Unlike **Budget**, which controls the total reward allocation for an offer across all customers, **Usage Limits** apply at the customer level and determine how much an individual customer can earn within a configured period.
+## Why Usage Limits Matter
+
+At enterprise scale, an offer is not evaluated against a single customer. Instead, it runs across an entire portfolio, often covering hundreds of thousands of accounts, throughout the campaign duration.
+
+Without a per-customer cap, a small number of high-frequency or high-value customers can consume a disproportionate share of the reward spend, leaving comparatively less benefit for the remaining eligible customers.
+
+Usage Limits help make reward distribution predictable and manageable by:
+
+- **Cost Containment** – Bounds how much a single customer can draw from the offer, ensuring campaign spend remains proportional to the intended reach.
+- **Fair Distribution** – Helps maintain a consistent reward experience across the eligible customer base instead of rewarding transaction frequency alone.
+- **Abuse Resistance** – Reduces the possibility of customers repeatedly generating qualifying transactions solely to maximize rewards.
+- **Predictable Reporting** – Provides campaign owners and finance teams with a per-customer reward ceiling, making expected reward expenditure easier to forecast.
+
+<Note>
+
+**Usage Limits** and **Budget** control reward exposure from different perspectives.
+
+- **Budget** limits the total reward spend across **all customers** participating in the offer.
+- **Usage Limits** limit the rewards an **individual customer** can earn within a specified duration.
+
+Budget answers **"How much can this campaign cost?"**, while Usage Limits answer **"How much can an individual customer earn?"**
+
+</Note>
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
     <img
       src="/images/k.png"
-      alt="Usage Limits"
+      alt="Configure Usage Limits"
       className="w-[700px]"
     />
   </div>
 </div>
 
-<Note>
-
-**Budget** controls the overall reward allocation for an offer, whereas **Usage Limits** control the rewards that an individual customer can receive during a specified duration.
-
-</Note>
-
 ---
 
-# Configure Usage Limits
+## Usage Limit Configuration
 
-A usage limit is configured using the following fields:
+Configure the following fields:
 
-- **Duration**
-- **Limit Type**
-- **Limit Value**
+| Field | Description | Example |
+|-------|-------------|---------|
+| **Duration** | Select the period during which the usage limit is evaluated. | Monthly |
+| **Limit Type** | Select the type of limit to enforce for the offer. | Cashback Amount |
+| **Limit Value** | Specify the maximum reward amount or usage value a customer can receive during the selected duration. | ₹500 |
 
-Each configuration defines the maximum reward that can be issued to a customer during the selected duration.
-
----
-
+—
 ## Duration
 
-The **Duration** specifies the time period for which the configured usage limit remains applicable.
+The **Duration** specifies the period over which the configured usage limit is evaluated.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
     <img
       src="/images/v.11.png"
-      alt="Duration"
+      alt="Usage Limit Duration"
       className="w-[250px]"
     />
   </div>
 </div>
 
-Select one of the following duration options:
+The following duration options are available:
 
-| **Duration** | **Description** |
-|---------------|-----------------|
-| **Day** | Calculates rewards within a daily period. |
-| **Week** | Calculates rewards within a weekly period. |
-| **Month** | Calculates rewards within a monthly period. |
-| **Billing Cycle** | Aligns reward calculation with the customer's billing cycle. |
-| **Quarter** | Calculates rewards within a quarterly period. |
-| **Annual** | Calculates rewards within a yearly period. |
-| **Life Time** | Continues for the full duration of the offer. |
+| Duration | Description |
+|----------|-------------|
+| **Day** | Evaluates the configured limit for a daily period. |
+| **Week** | Evaluates the configured limit for a weekly period. |
+| **Month** | Evaluates the configured limit for a monthly period. |
+| **Billing Cycle** | Evaluates the configured limit for the selected billing cycle. |
+| **Quarter** | Evaluates the configured limit for a quarterly period. |
+| **Annual** | Evaluates the configured limit for a yearly period. |
+| **Life Time** | Evaluates the configured limit throughout the lifetime of the offer. |
 
 **Example**
 
-A bank wants to reward customers for grocery purchases but limit the rewards that can be earned every month. By selecting **Month** as the duration, the configured usage limit is applied over each monthly period.
-
----
+To limit the rewards earned by a customer every month, select **Month** as the duration.
 
 ## Limit Type
 
-The **Limit Type** specifies the type of usage limit that should be applied.
+The **Limit Type** determines the type of usage limit to be applied.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
     <img
       src="/images/v.12.png"
-      alt="Limit Type"
+      alt="Usage Limit Type"
       className="w-[250px]"
     />
   </div>
@@ -91,56 +102,60 @@ The following limit types are available:
 
 | Limit Type | Description |
 |------------|-------------|
-| **Both** | Applies both available usage limit types. |
+| **Both** | Applies both available limit types. |
 | **Count** | Applies the configured count-based limit. |
 | **Reward Points** | Applies the configured reward points limit. |
-
-> **Note:** The UI lists these limit types. Their detailed business behaviour is not defined in the provided source.
 
 ---
 
 ## Limit Value
 
-The **Limit Value** specifies the maximum value allowed for the selected **Limit Type** during the configured **Duration**.
+The **Limit Value** specifies the maximum value permitted for the selected **Limit Type** within the configured **Duration**.
 
 **Example**
 
-If the duration is set to **Month**, the configured limit value defines the maximum reward that can be issued to a customer during that monthly period.
-
----
+If **Duration** is **Month**, **Limit Type** is **Reward Points**, and **Limit Value** is **5,000**, a customer can earn reward points until the configured monthly limit is reached.
 
 ## Multiple Usage Limits
 
-Multiple usage limits can be configured for the same offer.
-
-To add additional usage limits:
+If the campaign requires more than one usage limit:
 
 1. Click **Add More**.
-2. Configure another usage limit.
-3. Repeat the process until all required usage limits have been added.
+2. Configure the additional usage limit.
+3. Repeat the process until all required limits have been added.
 
-This allows different usage limits to be configured for different durations or limit types within the same offer.
+Multiple usage limits can be configured for the same offer. Combining limits across different durations allows campaign owners to control reward distribution over both shorter and longer periods.
+
+<Tip>
+
+When configuring multiple usage limits, consider using a shorter-duration limit to control regular reward distribution and a longer-duration limit to control cumulative reward exposure throughout the campaign.
+
+</Tip>
 
 ---
 
-## Example
+## Examples
 
-A bank launches a rewards campaign to encourage customer spending while ensuring that rewards remain within the campaign limits.
+### Mass-Market Cashback Card
 
-The issuer configures the following usage limit:
+A bank runs a **5% fuel cashback** campaign across its debit card portfolio.
 
-- **Duration:** Month
-- **Limit Type:** Reward Points
-- **Limit Value:** 5,000
+Configuration:
 
-With this configuration, customers can continue earning reward points for eligible transactions until the configured monthly limit is reached. Once the limit is reached, no additional rewards are issued during that monthly period.
+- **Duration:** Monthly
+- **Limit Type:** Cashback Amount
+- **Limit Value:** ₹300
+
+With this configuration, no customer can receive more than **₹300 cashback** during a month, regardless of the number of qualifying fuel transactions.
 
 ---
 
 ## Complete the Configuration
 
-After configuring the usage limits:
+After configuring the Usage Limits:
 
-1. Review the configured **Duration**, **Limit Type**, and **Limit Value**.
-2. Verify that all required usage limits have been added.
-3. Click **Continue** to proceed to the **Posting** configuration.
+1. Review all configured usage limits.
+2. Verify that the duration, limit type, and limit value align with the campaign requirements.
+3. Confirm how the configured usage limits interact with the offer's overall **Budget**.
+4. Click **Continue** to proceed to the **Posting** configuration.
+
