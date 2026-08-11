@@ -5,7 +5,7 @@ description: Select the type of offer to be created.
 
 Defines how customers become eligible to receive a reward, and is the first choice made in the offer creation journey. Each Offer Type supports a specific business objective and determines the eligibility model—a single transaction, accumulated spend, merchant-specific activity, or engagement-based activity—under which rewards are issued.
 
-Hyperface supports four Offer Types: **Transactional**, **Milestone**, **Merchant**, and **Gamified**.
+Hyperface supports four Offer Types: **Transactional**, **Milestone**, **Merchant**,**Gamified** and **Display Only**.
 
 <Warning>
 Offer Type determines which configuration screens and options appear for the rest of the offer creation journey. Confirm the correct Offer Type before proceeding—switching it after later steps have been configured may require reconfiguring those steps.
@@ -13,11 +13,11 @@ Offer Type determines which configuration screens and options appear for the res
 
 ## Comparing Offer Types
 
-| Consideration | Transactional | Milestone | Merchant | Gamified |
-|---|---|---|---|---|
-| Reward triggered by | A single qualifying transaction | Reaching a predefined spend or transaction milestone within a period | An eligible purchase at a participating merchant | Completing an interactive challenge or level |
-| Evaluation | Each transaction evaluated independently | Progress accumulated until the milestone is achieved | Eligibility based on merchant-specific criteria | Progress tracked through configured levels or activities |
-| Best for | Straightforward cashback or reward campaigns | Encouraging sustained spend or engagement over time | Merchant-funded or partner-specific promotions | Engagement-driven, interactive campaigns |
+| **Consideration** | **Transactional** | **Milestone** | **Merchant** | **Gamified** | **Display Only** |
+|-------------------|-------------------|---------------|--------------|--------------|------------------|
+| **Reward Trigger** | A single qualifying transaction | Achieving a predefined spend or transaction milestone | An eligible purchase at a participating merchant | Completing configured challenges or progressing through levels | Not applicable |
+| **Evaluation** | Each qualifying transaction is evaluated independently | Customer progress is tracked until the configured milestone is achieved | Eligibility is evaluated using merchant-specific criteria | Customer progress is tracked across configured levels or activities | No reward evaluation |
+| **Best For** | Cashback or transaction-based reward campaigns | Campaigns that encourage cumulative spending or transaction activity | Merchant-funded or partner-specific reward campaigns | Interactive and engagement-driven reward campaigns | Displaying promotional or informational offers for customer visibility |
 
 <Note>
 The eligibility configuration shown later in the offer creation journey depends on the selected **Offer Type**.
@@ -27,13 +27,13 @@ The eligibility configuration shown later in the offer creation journey depends 
 
 The eligibility step shown later in the journey depends on the Offer Type selected here:
 
-| Offer Type | Eligibility step shown later |
-|---|---|
-| Transactional | **Transaction Eligibility** — Conditions based on individual transaction attributes |
-| Milestone | **Milestone Eligibility** — Progress tracked towards a spend or transaction threshold |
-| Gamified | **Gamification Levels** — Progress tracked through configured levels or challenges |
-| Merchant | No separate eligibility screen — Eligibility is defined through merchant selection as part of **Offer Details** and **Offer User Base** |
-
+| **Offer Type** | **Eligibility Step Shown Later** |
+|----------------|----------------------------------|
+| **Transactional** | **Transaction Eligibility** – Configure conditions based on individual transaction attributes. |
+| **Milestone** | **Milestone Eligibility** – Configure milestone conditions based on cumulative spend or transaction thresholds. |
+| **Merchant** | No separate eligibility screen – Eligibility is determined through the selected merchant and the configured **Offer User Base**. |
+| **Gamified** | **Gamification Levels** – Configure levels, milestones, and challenges that customers must complete to earn rewards. |
+| **Display Only** | No eligibility configuration – This offer is presented for visibility purposes only. |
 ---
 
 ## Transactional Offer
@@ -91,6 +91,33 @@ Rewards customers through interactive and engagement-based campaigns. Customers 
 
 ---
 
+## Display Only Offer
+
+A **Display Only Offer** is used to present an offer to customers for visibility purposes only. This offer type is intended to display promotional or informational content without configuring a reward-based journey.
+
+<div className="flex justify-center my-6">
+  <img
+    src="/images/v.20.png"
+    alt="Display Only Offer"
+    className="w-[700px] rounded-2xl border border-gray-200 shadow-lg"
+  />
+</div>
+
+**Key characteristics**
+
+- Presented to customers for **visibility purposes only**.
+- Categorized under **Display Only**.
+- Can be selected during the **Offer Type** configuration step.
+- Suitable when the objective is to display offer information instead of configuring a reward journey.
+
+<Note>
+
+The product interface identifies this offer as **"Presented for visibility purpose only."** Any additional reward or eligibility behavior depends on subsequent product configuration and is not defined at the Offer Type selection step.
+
+</Note>
+
+---
+
 ## Example: Choosing the Correct Offer Type
 
 A bank wants to reward customers who spend a total of **₹50,000** across transactions in a calendar month, rather than rewarding any single transaction.
@@ -101,12 +128,12 @@ A bank wants to reward customers who spend a total of **₹50,000** across trans
 Selecting **Transactional Offer** here would be incorrect—it would reward every qualifying transaction individually instead of tracking progress towards the **₹50,000** target.
 
 ## Which Offer Type Should You Select?
-
 <Tip>
 
 - Reward every qualifying transaction on its own → Select **Transactional Offer**.
 - Reward customers only after they reach a cumulative spend or transaction target → Select **Milestone Offer**.
 - Reward purchases made specifically at participating merchants → Select **Merchant Offer**.
 - Reward customers for completing interactive challenges or activities → Select **Gamified Offer**.
+- Display an offer to customers for visibility purposes only → Select **Display Only Offer**.
 
 </Tip>
