@@ -62,7 +62,6 @@ Choose **Flat** when every qualifying transaction should receive the same reward
 Reward customers with **₹100 cashback** for every qualifying transaction.
 
 ---
-
 ### Percentage
 
 **When to use it**
@@ -74,7 +73,6 @@ Choose **Percentage** when the reward should be calculated as a percentage of th
 Reward customers with **5% cashback** on every qualifying purchase.
 
 ---
-
 ### Slab
 
 **When to use it**
@@ -97,7 +95,6 @@ Choose **Flat Multiplier** when a fixed reward amount should be multiplied by a 
 Refer to the configured multiplier and reward value for your offer.
 
 ---
-
 ### Percentage with Min
 
 **When to use it**
@@ -109,7 +106,6 @@ Choose **Percentage with Min** when the reward should be calculated as a percent
 Refer to the configured percentage and minimum reward value for your offer.
 
 ---
-
 ### Percentage with Max
 
 **When to use it**
@@ -121,7 +117,6 @@ Choose **Percentage with Max** when the reward should be calculated as a percent
 Refer to the configured percentage and maximum reward value for your offer.
 
 ---
-
 ### Percentage with Min and Max
 
 **When to use it**
@@ -133,7 +128,6 @@ Choose **Percentage with Min and Max** when the reward should be calculated as a
 Refer to the configured percentage, minimum reward value, and maximum reward value for your offer.
 
 ---
-
 ### Probabilistic Distribution
 
 **When to use it**
@@ -145,7 +139,6 @@ Choose **Probabilistic Distribution** when rewards should be distributed based o
 Refer to the configured probability distribution for your offer.
 
 ---
-
 ### Outcome Multiplier
 
 **When to use it**
@@ -169,21 +162,19 @@ After selecting a calculation rule:
 2. Review the calculated reward before proceeding.
 
 ---
-
 ## Skip Cashback Capping (Optional)
 
 Use **Skip Cashback Capping** to exclude cashback limits configured at specific levels. This option allows the configured offer to bypass selected cashback capping rules during reward calculation.
 
-The following capping levels can be excluded:
+The following cashback capping levels can be excluded during reward calculation:
 
-| Cashback Capping Level | Description |
-|-------------------------|-------------|
-| **Program Level** | Ignores cashback limits configured at the program level. |
-| **Transaction Level** | Ignores cashback limits configured for individual transactions. |
-| **MCC** | Ignores cashback limits configured for specific Merchant Category Codes (MCC). |
-| **MID** | Ignores cashback limits configured for specific Merchant Identifiers (MID). |
-| **Currency Level** | Ignores cashback limits configured for specific currencies. |
-
+| **Cashback Capping Level** | **Description** |
+|----------------------------|-----------------|
+| **Program Level** | Prevents the program-level cashback cap from being considered during reward calculation. |
+| **Transaction Level** | Skips the cashback cap configured for individual transactions. |
+| **Merchant Category Code (MCC)** | Ignores cashback restrictions associated with specific merchant categories. |
+| **Merchant Identifier (MID)** | Omits cashback limits defined for specific merchants. |
+| **Currency Level** | Disregards cashback caps configured for transactions in specific currencies. |
 <Warning>
 
 Skipping cashback capping allows rewards to bypass the selected capping rules. Enable this option only when the campaign is intended to override existing cashback limits.
@@ -191,7 +182,6 @@ Skipping cashback capping allows rewards to bypass the selected capping rules. E
 </Warning>
 
 ---
-
 ## Allow Reversal
 
 Enable **Allow Reversal** if rewards should be reversed whenever the corresponding qualifying transaction is reversed or refunded. This ensures that reward credits remain consistent with the final transaction status.
@@ -203,13 +193,11 @@ When **Allow Reversal** is enabled, any reward issued for a qualifying transacti
 </Note>
 
 ---
-
 ## What Happens After Configuration?
 
 Once the **Offer Calculation** is configured, every qualifying transaction is evaluated using the selected calculation rule. The calculated reward is then considered for budget validation, posting, and reward distribution based on the remaining offer configuration.
 
 ---
-
 ## Complete the Configuration
 
 After completing the **Offer Calculation** configuration:
