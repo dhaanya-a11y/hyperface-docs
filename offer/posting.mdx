@@ -3,20 +3,26 @@ title: Posting
 description: Configure when and how the offer benefit is posted to the customer's account.
 ---
 
+## Overview
+
 The **Posting** section defines **when** the configured offer benefit is credited to the customer's account and **under what conditions** the posting should occur.
+
 After configuring **Usage Limits**, use this step to configure the posting schedule, define posting eligibility conditions, and specify the ledger narrations that should be recorded when benefits are posted or reversed.
 
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+<div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
     <img
       src="/images/l.png"
       alt="Configure Posting"
-      className="w-full"
+      className="w-[700px]"
     />
-  </div
+  </div>
+</div>
 
 <Note>
+
 **Posting** controls only the reward crediting process. A customer must first satisfy all previously configured offer conditions before the configured posting rules are evaluated.
+
 </Note>
 
 ---
@@ -25,21 +31,115 @@ After configuring **Usage Limits**, use this step to configure the posting sched
 
 Enable **Posting** to allow the configured offer benefit to be credited to the customer's account.
 
-If Posting is disabled, the offer benefit is not posted even when all eligibility conditions are satisfied.
+If Posting is disabled, the configured offer benefit is not posted even when all configured offer conditions are satisfied.
 
 ---
 
 ## Configure Posting Eligibility
-Configure the conditions that must be satisfied before the reward is posted.
-For each posting eligibility condition:
-- Select the required eligibility attribute.
-- Configure the corresponding value.
-- Specify whether the condition is **Allowed** or **Restricted**, as applicable.
-- Click **Add More** to configure additional posting eligibility conditions.
+
+Posting Eligibility defines the conditions that must be satisfied before the configured offer benefit is posted to the customer's account.
+
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/v.13.png"
+      alt="Posting Eligibility"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
+To configure posting eligibility:
+
+1. Select the required **Attribute**.
+2. Configure the corresponding values.
+3. Select the appropriate **Action**.
+4. Click **Add More** to configure additional posting eligibility conditions, if required.
+
+The following posting eligibility attributes are available:
+
+| **Attribute** | **Description** |
+|---------------|-----------------|
+| **Account Status** | Identifies customers using their account status. |
+| **Account Smart Tag** | Identifies customers using the Smart Tags associated with their account. |
+| **Account Block Code** | Identifies customers using the configured account block code. |
+
+---
+
+### Account Status
+
+Use **Account Status** to configure posting eligibility based on the customer's account status.
+
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/v.15.png"
+      alt="Account Status"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
+Configure the following:
+
+- Select the required account status.
+- Select the appropriate **Action**:
+  - **Allowed** – Posts the reward for customers matching the selected account status.
+  - **Denied** – Does not post the reward for customers matching the selected account status.
+
+---
+
+### Account Smart Tag
+
+Use **Account Smart Tag** to configure posting eligibility based on the Smart Tags associated with an account.
+
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/v.16.png"
+      alt="Account Smart Tag"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
+Configure the Account Smart Tag as follows:
+
+1. Select **List** or **Input**.
+2. If **List** is selected, either:
+   - Select **Create New List** to create a new Account Smart Tag list, or
+   - Select an existing Account Smart Tag list from the available options.
+3. If **Input** is selected, enter one or more Account Smart Tag values manually.
+4. Select the required **Action**:
+   - **Allowed** – Posts the reward for accounts associated with the selected or entered Account Smart Tag values.
+   - **Denied** – Does not post the reward for accounts associated with the selected or entered Account Smart Tag values.
+
+---
+
+### Account Block Code
+
+An **Account Block Code** is a code assigned to an account to identify a specific account status or restriction. Use this attribute to configure posting eligibility for accounts associated with the specified block code.
+
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/v.17.png"
+      alt="Account Block Code"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
+Configure the following:
+
+- Enter one or more account block code values.
+- Select the appropriate **Action**:
+  - **Allowed** – Posts the reward for customers matching the specified account block code.
+  - **Denied** – Does not post the reward for customers matching the specified account block code.
 
 <Tip>
 
-Use multiple posting eligibility conditions when the reward should be posted only for specific customer segments, products, or transaction scenarios.
+Configure multiple posting eligibility conditions when rewards should be posted only after all required conditions have been satisfied.
 
 </Tip>
 
@@ -49,61 +149,78 @@ Use multiple posting eligibility conditions when the reward should be posted onl
 
 Choose when the configured benefit should be credited.
 
-| Posting Option | Description |
-|----------------|-------------|
-| **Post Immediately** | Credits the benefit immediately after all configured posting conditions are satisfied. |
-| **Schedule** | Credits the benefit on the configured date and time. |
+| **Posting Option** | **Description** |
+|--------------------|-----------------|
+| **Post Immediately** | Credits the benefit immediately after the configured posting conditions are satisfied. |
+| **Schedule** | Credits the benefit according to the configured schedule. |
 
 ### Post Immediately
-**When to use it**
-Choose **Post Immediately** when customers should receive their reward as soon as all configured conditions are satisfied.
+
+Choose **Post Immediately** when the reward should be credited as soon as all configured posting conditions are satisfied.
+
 **Example**
-Reward customers with cashback immediately after an eligible purchase is successfully processed.
+
+Credit cashback immediately after an eligible transaction has been processed.
+
+---
 
 ### Schedule
-**When to use it**
-Choose **Schedule** when rewards should be credited at a later date or during a predefined posting window.
+
+Choose **Schedule** when the reward should be credited at a later time or on a configured schedule.
+
 **Example**
-Credit monthly cashback to all eligible customers on the **1st day of the following month**.
+
+Credit monthly rewards on the first day of the following month.
 
 <Warning>
-Changing the posting schedule after an offer is active may affect when future rewards are credited. Review the configured posting option before publishing the offer.
+
+Changing the posting schedule after an offer becomes active may affect when future rewards are credited. Review the selected posting option before publishing the offer.
+
 </Warning>
 
 ---
 
 ## Configure Narration
-Provide the ledger narration that should be recorded during posting and reversal.
 
+Provide the ledger narration recorded during reward posting and reward reversal.
+
+<div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
     <img
       src="/images/l.1.png"
       alt="Configure Narration"
-      className="w-full"
+      className="w-[700px]"
     />
   </div>
 </div>
 
 Configure the following fields:
-| Field | Description | Example |
-|--------|-------------|---------|
-| **Posting Narration** | Message recorded in the ledger when the reward is successfully posted. | Cashback credited for Fuel Offer |
-| **Reversal Narration** | Message recorded in the ledger if the posted reward is reversed. | Cashback reversed due to transaction reversal |
+
+| **Field** | **Description** | **Example** |
+|-----------|-----------------|-------------|
+| **Posting Narration** | Message recorded when the reward is posted. | Cashback credited for Fuel Offer |
+| **Reversal Narration** | Message recorded when a posted reward is reversed. | Cashback reversed due to transaction reversal |
 
 <Note>
-Posting and Reversal Narrations are recorded for operational and audit purposes. Choose clear and meaningful descriptions so posted and reversed rewards can be easily identified.
+
+Posting Narration and Reversal Narration are recorded for operational and audit purposes. Use clear and meaningful descriptions so posted and reversed rewards can be easily identified.
+
 </Note>
 
 ---
 
 ## What Happens After Configuration?
+
 Once the configured posting conditions are satisfied, the reward is credited according to the selected **Posting Option**.
+
 If **Allow Reversal** was enabled during **Offer Calculation**, the configured **Reversal Narration** is used whenever a posted reward is subsequently reversed.
 
 ---
 
 ## Complete the Configuration
-After completing the **Posting** configuration:
+
+After completing the Posting configuration:
+
 1. Verify that **Posting** is enabled, if required.
 2. Review the configured **Posting Eligibility** conditions.
 3. Confirm the selected **Posting Option**.
