@@ -4,9 +4,6 @@ description: Configure the issuer, program, and applicability boundaries for the
 ---
 
 ## Overview
-
-**Offer Scope** defines the business context in which an offer is applicable. During this step, configure the **Issuer**, **Program Type**, and **Program** to determine where the offer is available within the organization.
-
 The configured scope establishes the offer's applicability before proceeding to configure the **Offer User Base**.
 
 During this step, configure the **Issuer**, **Program Type**, and **Programs** for which the offer should be available. The selected scope establishes the offer's applicability before proceeding to configure the **Offer User Base**.
@@ -23,11 +20,11 @@ During this step, configure the **Issuer**, **Program Type**, and **Programs** f
 
 Configure the basic information that identifies the offer and defines its active duration.
 
-| Field |Description | Example |
+| **Field**|**Description**|**Example**|
 |-------|---------------------|---------|
 | **Offer Name** | A unique name used to identify the offer within the Hyperface Dashboard.| Fuel Cashback July 2026 |
 | **Offer Description** |A brief description used to identify the purpose of the offer.| 5% cashback on eligible fuel transactions |
-| **Offer Duration** | The start and end date during which the offer remains active. Defines the period during which the offer remains active. Only transactions that occur within the configured duration are evaluated for the offer. | 01 Jul 2026, 00:00 – 31 Jul 2026, 23:59 |
+| **Offer Duration** |Defines the start and end date during which the offer remains active. Only transactions that occur within the configured duration are evaluated for the offer. | 01 Jul 2026, 00:00 – 31 Jul 2026, 23:59 |
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -86,7 +83,7 @@ Configure the issuer and program for which the offer is applicable.
 | **Issuer** |Select the issuer for which the offer is created.| HDFC Bank |
 | **Program Type** | Select the program type to which the offer applies.| Credit Card |
 | **Apply to all current and future programs** | Makes the offer applicable to all existing programs of the selected Program Type and automatically includes any programs created in the future. | Enabled |
-| **Program** | The specific program(s) to which the offer applies. This field is displayed only when **Apply to all current and future programs** is disabled. | Platinum Credit Card |
+| **Program** | Select the specific program(s) to which the offer applies. This field is displayed only when **Apply to all current and future programs** is disabled. | Platinum Credit Card |
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -123,11 +120,9 @@ The offer is applicable only to transactions associated with the selected progra
 
 ## What Happens After Configuration?
 
-## What Happens After Configuration?
+Once the **Offer Scope** is configured, the offer is associated with the selected **Issuer**, **Program Type**, and **Program**. These settings define where the offer is applicable and provide the context for the remaining offer configuration steps.
 
-Once the Offer Scope is configured, the offer is associated with the selected **Issuer**, **Program Type**, and **Program**. These settings determine where the offer is applicable and form the basis for the remaining offer configuration steps.
-
-Only transactions that belong to the configured **Issuer**, **Program**, and **Offer Duration** are considered during offer evaluation.
+Only transactions associated with the configured **Issuer**, **Program**, and **Offer Duration** are considered during offer evaluation.
 
 ---
 
@@ -135,7 +130,7 @@ Only transactions that belong to the configured **Issuer**, **Program**, and **O
 
 After configuring the **Offer Scope**:
 
-1. Review the configured offer details.
+1. Review the configured **Offer Name**, **Offer Description**, and **Offer Duration**.
 2. Verify the selected **Eligibility Level**.
 3. Confirm the configured **Issuer**, **Program Type**, and **Program**.
 4. Click **Continue** to proceed to **Offer User Base**.
