@@ -1,28 +1,32 @@
 ---
-title:  Setup Milestone Offer
+title: Setup Milestone Offer
+description: Configure a Milestone Offer to reward customers after they achieve a predefined spending or transaction milestone.
 ---
 
+## Introduction
+
 <Info>
-A **Milestone Offer** rewards customers for achieving a **predefined spending or transaction milestone** within a configured subscription cycle. Unlike Transactional Offers, customer progress is accumulated across multiple qualifying transactions until the configured milestone threshold is reached.
+A **Milestone Offer** rewards customers for achieving a **predefined spending or transaction milestone** within a configured subscription cycle. Unlike a Transactional Offer, customer progress is accumulated across multiple qualifying transactions until the configured milestone threshold is reached.
 </Info>
 
-### Key characteristics
+### Key Characteristics
 
 - **Cumulative progress tracking** – Eligible transactions accumulate toward the configured milestone threshold until it is achieved.
 - **Milestone-based qualification** – Customers become eligible for rewards only after completing the configured spending or transaction milestone.
-- **Configurable outcome** – Rewards can be issued as Cashback, Reward Points, Voucher, Smart Tag, Accelerated Reward, or Partner Points.
+- **Configurable outcome** – Rewards can be issued as **Cashback, Reward Points, Voucher, Smart Tag, Accelerated Reward,** or **Partner Points**.
 - **Subscription cycle support** – Milestones are evaluated within the configured subscription cycle and can repeat based on the configured number of cycles.
 
 The **Offer Type** is the foundation of the offer configuration journey. It determines how customers qualify for milestone-based rewards.
 
-For this guide, select **Milestone Offer**, which is designed to reward customers after they successfully complete predefined spending or transaction milestones. This offer type is commonly used for loyalty campaigns, spending challenges, milestone rewards, and recurring engagement programs.
-
+For this guide, select **Milestone Offer** to configure rewards based on predefined spending or transaction milestones.
 ---
 
 ## Configure the Offer Type
 
+The **Offer Type** determines how customers qualify for rewards.
+
 <div className="my-8 flex justify-center">
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
     <img
       src="/images/0.2.png"
       alt="Step 2 - Select the Offer Type"
@@ -31,13 +35,13 @@ For this guide, select **Milestone Offer**, which is designed to reward customer
   </div>
 </div>
 
-The **Offer Type** determines how customers qualify for rewards.
-
 For this walkthrough, select **Milestone Offer**. This offer type rewards customers only after they complete the configured spending or transaction milestone.
 
 ### Example
 
-Suppose you want to reward customers after they spend **₹10,000** within a billing cycle. Select **Milestone Offer** to configure milestone-based rewards.
+Suppose you want to reward customers after they spend **₹10,000** within a billing cycle.
+
+Select **Milestone Offer** to configure milestone-based rewards.
 
 ➡️ **Continue to:** **[Offer Type](/offer/offer-type)**
 
@@ -45,8 +49,10 @@ Suppose you want to reward customers after they spend **₹10,000** within a bil
 
 ## Configure the Outcome Type
 
+The **Outcome Type** defines the reward that customers receive after successfully completing the configured milestone.
+
 <div className="my-8 flex justify-center">
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
     <img
       src="/images/0.3.png"
       alt="Step 3 - Select the Outcome Type"
@@ -55,14 +61,13 @@ Suppose you want to reward customers after they spend **₹10,000** within a bil
   </div>
 </div>
 
-
-The **Outcome Type** defines the reward that customers receive after successfully completing the configured milestone. Select the outcome that aligns with your campaign objective.
-
 For this walkthrough, select **Cashback** as the outcome type. Cashback rewards customers once they successfully complete the configured milestone conditions.
 
 ### Example
 
-Suppose you want to reward customers with **₹500 cashback** after they spend **₹10,000** within a billing cycle. Select **Cashback** as the outcome type and configure the reward value in the subsequent steps.
+Suppose you want to reward customers with **1,000 Reward Points** after they successfully complete the configured milestone.
+
+Select **Reward Points** as the outcome type and configure the reward value in the subsequent steps.
 
 After selecting the required **Outcome Type**, click **Continue** to proceed to the **Offer Scope** configuration.
 
@@ -72,8 +77,10 @@ After selecting the required **Outcome Type**, click **Continue** to proceed to 
 
 ## Configure the Offer Scope
 
+The **Offer Scope** defines where the Milestone Offer will be applicable. In this step, configure the basic offer details and specify the issuer and program(s) for which the offer should be available.
+
 <div className="my-8 flex justify-center">
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
     <img
       src="/images/0.4.png"
       alt="Step 4 - Configure Basic Offer Details"
@@ -82,7 +89,7 @@ After selecting the required **Outcome Type**, click **Continue** to proceed to 
   </div>
 </div>
 
-The **Offer Scope** defines where the Milestone Offer will be applicable. In this step, configure the basic offer details and specify the issuer and program(s) for which the offer should be available.
+### Basic Offer Details
 
 Configure the following:
 
@@ -92,7 +99,7 @@ Configure the following:
 - **Eligibility Level** – Choose whether the offer should be evaluated at the **Account Level** or **Customer Level**.
 
 <div className="my-8 flex justify-center">
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
     <img
       src="/images/0.4.1.png"
       alt="Step 4 - Configure Offer Applicability"
@@ -100,6 +107,8 @@ Configure the following:
     />
   </div>
 </div>
+
+### Offer Applicability
 
 Define the applicability of the offer by configuring:
 
@@ -110,12 +119,14 @@ Define the applicability of the offer by configuring:
 - **Enable Progress Transfer on Variant Upgrade** – Preserve a customer's milestone progress when they upgrade to another supported card or account variant.
 
 <Info>
-Without this enabled, a customer who upgrades mid-cycle starts their milestone progress over on the new variant. Enable it for campaigns where you don't want an upgrade to reset a customer's accumulated progress.
+Without **Enable Progress Transfer on Variant Upgrade**, a customer who upgrades mid-cycle starts their milestone progress over on the new variant. Enable it for campaigns where you don't want an upgrade to reset a customer's accumulated progress.
 </Info>
 
 ### Example
 
-Create a Milestone Offer by entering the offer details, selecting the required eligibility level, and choosing the applicable issuer and program(s). Enable **Apply to all current and future programs** if the offer should automatically apply to every program under the selected program type.
+Create a Milestone Offer by entering the offer details, selecting the required eligibility level, and choosing the applicable issuer and program(s).
+
+Enable **Apply to all current and future programs** if the offer should automatically apply to every program under the selected program type.
 
 ➡️ **Continue to:** **[Offer Scope](/offer/offer-scope)**
 
@@ -123,8 +134,10 @@ Create a Milestone Offer by entering the offer details, selecting the required e
 
 ## Configure Offer User Base
 
+The **Offer User Base** defines which users are eligible for the Milestone Offer.
+
 <div className="my-8 flex justify-center">
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
     <img
       src="/images/0.5.png"
       alt="Step 5 - Select Static Base"
@@ -133,16 +146,16 @@ Create a Milestone Offer by entering the offer details, selecting the required e
   </div>
 </div>
 
-Configure the **Offer User Base** to define which users are eligible for the Milestone Offer.
+### Select the User Base Type
 
-First, select the type of user base:
+Choose one of the following user base types:
 
 - **Static Base** – Uses a fixed list of eligible users that remains unchanged after the offer goes live.
 - **Dynamic Config** – Continuously evaluates users against the configured eligibility criteria, allowing new users to become eligible over time.
 
-Next, define the eligibility criteria for the selected user base.
+### Configure Eligibility Criteria
 
-Configure the following:
+After selecting the user base type, configure the eligibility criteria.
 
 - **Eligibility** – Select the required user group or account scope.
 - **Add Criteria** – Add one or more conditions to further refine the eligible user base.
@@ -150,20 +163,25 @@ Configure the following:
 
 ### Example
 
-Suppose the offer should be available only to customers enrolled through a Smart Tag or a defined user segment. Select the appropriate user base type, configure the eligibility criteria, add additional filters if required, and use **Estimate User Base** to verify the expected audience before proceeding.
+Suppose the offer should be available only to customers enrolled through a Smart Tag or a defined user segment.
+
+Select the appropriate user base type, configure the eligibility criteria, add additional filters if required, and use **Estimate User Base** to verify the expected audience before proceeding.
 
 <Tip>
-Choose **Static Base** when the eligible audience is predefined and unlikely to change. Choose **Dynamic Config** when new customers should keep joining the eligible base as they meet the criteria — useful for always-on milestone campaigns rather than one-time cohorts.
+Choose **Static Base** when the eligible audience is predefined and unlikely to change.
+
+Choose **Dynamic Config** when new customers should keep joining the eligible base as they meet the criteria.
 </Tip>
 
 ➡️ **Continue to:** **[Offer User Base](/offer/offer-user-base)**
 
 ---
-
 ## Configure Milestone Eligibility
 
+Configure the milestone conditions that determine when a customer becomes eligible for the configured reward.
+
 <div className="my-8 flex justify-center">
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
     <img
       src="/images/Screenshot 2026-07-17 105521.png"
       alt="Step 6 - Configure Milestone Eligibility"
@@ -172,15 +190,15 @@ Choose **Static Base** when the eligible audience is predefined and unlikely to 
   </div>
 </div>
 
-Configure the milestone conditions that determine when a customer becomes eligible for the configured reward.
-
 <Info>
-**Offer User Base** determines *who* is evaluated for this offer. **Milestone Eligibility** and **Transaction Eligibility** — configured below — determine *which of their transactions* actually count toward the milestone. A customer can belong to the eligible user base and still never complete the milestone if their transactions don't satisfy these conditions.
+**Offer User Base** determines *who* is evaluated for the offer.
+
+**Milestone Eligibility** and **Transaction Eligibility** determine *which transactions* contribute towards the milestone.
 </Info>
 
-First, define how milestone progress should be tracked by selecting the appropriate aggregation method and configuring the milestone threshold.
+### Configure Milestone Conditions
 
-Configure the following:
+Define how milestone progress should be tracked and configure the milestone threshold.
 
 - **Aggregate By** – Select whether the milestone should be calculated based on the **Sum of Transaction Values** or the **Count of Transactions**.
 - **Threshold** – Configure the comparison operator and the milestone value that customers must achieve.
@@ -196,8 +214,10 @@ Changing **Lock Milestone Progress on Achievement** or the **Subscription Cycle 
 
 ### Transaction Eligibility
 
+Configure the transaction conditions that determine which transactions contribute towards milestone completion.
+
 <div className="my-8 flex justify-center">
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
     <img
       src="/images/Screenshot 2026-07-17 105533.png"
       alt="Step 6 - Configure Transaction Eligibility"
@@ -206,36 +226,44 @@ Changing **Lock Milestone Progress on Achievement** or the **Subscription Cycle 
   </div>
 </div>
 
-Configure the transaction conditions that determine which transactions contribute towards milestone completion.
+Select the required **Transaction Attribute**, choose the appropriate **comparison operator**, and provide the corresponding value.
 
-Select the required **Transaction Attribute**, choose the appropriate **comparison operator**, and provide the corresponding value. Add additional criteria if required and select the **Processing Date** used for milestone evaluation.
+Use **Add Criteria** to configure additional transaction conditions, if required. Select the **Processing Date** used for milestone evaluation.
 
 ### Supported Transaction Attributes
 
-- MCC
-- MID
-- TID
-- POS Entry Mode
-- Transaction Value
-- Transaction Type
-- Merchant Name
-- Payer VPA
-- Payee VPA
+The following transaction attributes can be configured:
+
+- **MCC**
+- **MID**
+- **TID**
+- **POS Entry Mode**
+- **Transaction Value**
+- **Transaction Type**
+- **Merchant Name**
+- **Payer VPA**
+- **Payee VPA**
 
 ### Example
 
-Suppose customers should receive a reward after completing **5 eligible transactions** of **₹500 or more** during a monthly subscription cycle. Configure the aggregation as **Count of Transactions**, set the threshold to **5**, and add transaction eligibility conditions to include only qualifying transactions.
+Suppose customers should receive a reward after completing **5 eligible transactions** of **₹500 or more** during a monthly subscription cycle.
+
+Configure **Aggregate By** as **Count of Transactions**, set the threshold to **5**, and add the required transaction eligibility conditions to include only qualifying transactions.
 
 <Tip>
-Set **Number of Cycles** higher than 1 to turn a one-time milestone into a repeating reward — for example, rewarding customers every month they hit the spend threshold, rather than only once for the life of the offer.
+Set **Number of Cycles** higher than 1 to turn a one-time milestone into a repeating reward.
 </Tip>
+
+➡️ **Continue to:** **[Offer Calculation](/offer/offer-calculation)**
 
 ---
 
 ## Configure Offer Calculation
 
+Configure how the reward should be calculated once a customer successfully completes the configured milestone.
+
 <div className="my-8 flex justify-center">
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
     <img
       src="/images/0.6.png"
       alt="Step 7 - Configure Offer Calculation"
@@ -244,9 +272,9 @@ Set **Number of Cycles** higher than 1 to turn a one-time milestone into a repea
   </div>
 </div>
 
-Configure how the reward should be calculated once a customer successfully completes the configured milestone.
-
 Select the appropriate **Offer Calculation Rule** based on the selected outcome type and configure the reward value that should be awarded after milestone completion.
+
+### Configure Offer Calculation
 
 Configure the following:
 
@@ -261,7 +289,7 @@ Reward capping limits the maximum payout per customer at the configured level, i
 
 ### Example
 
-Select the required calculation rule, configure the reward value, choose the applicable reward capping settings, and enable **Allow Reversal** if rewards should be reversed when qualifying transactions are reversed.
+Select the required **Offer Calculation Rule**, configure the **Outcome Value**, choose the applicable reward capping settings, and enable **Allow Reversal** if rewards should be reversed when qualifying transactions are reversed.
 
 ➡️ **Continue to:** **[Offer Calculation](/offer/offer-calculation)**
 
@@ -269,8 +297,10 @@ Select the required calculation rule, configure the reward value, choose the app
 
 ## Configure Budget
 
+Configure the budget for the Milestone Offer and define the approval settings.
+
 <div className="my-8 flex justify-center">
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
     <img
       src="/images/j.png"
       alt="Step 8 - Configure Budget"
@@ -279,8 +309,7 @@ Select the required calculation rule, configure the reward value, choose the app
   </div>
 </div>
 
-
-Configure the budget for the Milestone Offer and define the approval settings.
+### Configure Budget Settings
 
 Configure the following:
 
@@ -293,13 +322,14 @@ Configure the following:
 Enter the required budget amount, select the appropriate approver, and configure any additional budget settings based on your business requirements.
 
 ➡️ **Continue to:** **[Budget](/offer/budget)**
-
 ---
 
 ## Configure Posting
 
+Configure when and how the reward should be posted to eligible customers after they successfully complete the configured milestone.
+
 <div className="my-8 flex justify-center">
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
     <img
       src="/images/l.png"
       alt="Step 9 - Configure Posting"
@@ -308,8 +338,7 @@ Enter the required budget amount, select the appropriate approver, and configure
   </div>
 </div>
 
-
-Configure when and how the reward should be posted to eligible customers after they successfully complete the configured milestone.
+### Configure Posting Settings
 
 Configure the following:
 
@@ -320,7 +349,7 @@ Configure the following:
 - **Narration** – Enter the ledger narration for both reward posting and reward reversal.
 
 <div className="my-8 flex justify-center">
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
     <img
       src="/images/l.1.png"
       alt="Step 9 - Configure Narration"
@@ -348,7 +377,7 @@ Configure how the Milestone Offer is displayed to customers across the PWA.
 ### Home Page
 
 <div className="my-8 flex justify-center">
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
     <img
       src="/images/m.png"
       alt="Step 10 - Configure Home Page"
@@ -358,7 +387,7 @@ Configure how the Milestone Offer is displayed to customers across the PWA.
 </div>
 
 <div className="my-8 flex justify-center">
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
     <img
       src="/images/m.1.png"
       alt="Step 10 - Configure Home Page Settings"
@@ -381,7 +410,7 @@ Configure the display information for the offer, including:
 ### Offer Details Page
 
 <div className="my-8 flex justify-center">
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
     <img
       src="/images/a.4.png"
       alt="Step 10 - Configure Offer Details Page"
@@ -391,7 +420,7 @@ Configure the display information for the offer, including:
 </div>
 
 <div className="my-8 flex justify-center">
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
     <img
       src="/images/a.5.png"
       alt="Step 10 - Configure Offer Details Settings"
