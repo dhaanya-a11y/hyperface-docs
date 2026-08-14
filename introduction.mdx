@@ -3,41 +3,62 @@ title: Transactional Offer
 ---
 
 <Info>
-A **Transactional Offer** rewards customers for completing a **single qualifying transaction** that satisfies the configured eligibility criteria. Each qualifying transaction is evaluated independently, and eligible customers receive the configured reward based on the selected outcome type.
+A **Transactional Offer** rewards customers when a single transaction satisfies the configured eligibility criteria. Each transaction is evaluated independently, and eligible customers receive the configured reward based on the selected **Outcome Type**.
 </Info>
 
 ### Key characteristics
 
-- **Single-transaction evaluation** – Each transaction is checked independently against the eligibility criteria; there is no requirement to accumulate spend or transaction count.
-- **Immediate qualification** – A customer becomes eligible for the reward the moment a single transaction satisfies the configured conditions.
-- **Configurable outcome** – The reward can be issued as Cashback, Reward Points, a Voucher, a Smart Tag, an Accelerated Reward, or Partner Points.
-- **Usage limits still apply** – While each transaction is evaluated on its own, the total benefit a customer can earn is still bounded by the configured **Usage Limits** (for example, a monthly cashback cap).
+- **Single-transaction evaluation** – Each transaction is evaluated independently against the configured eligibility criteria. Customers do not need to accumulate spend or transaction count to qualify.
+- **Immediate qualification** – A customer qualifies when a single transaction satisfies the configured eligibility conditions.
+- **Configurable outcome** – The offer can be configured with supported outcomes such as **Cashback, Reward Points, Voucher, Smart Tag, Accelerated Reward,** or **Partner Points**.
+- **Usage limits** – Usage Limits can be configured to control the benefit a customer can earn through the offer.
 
 The **Offer Type** is the foundation of the offer configuration journey. It determines the criteria under which customers become eligible to receive rewards.
 
-For this guide, select **Transaction Offers**, which is designed to reward customers based on qualifying transactions that meet the configured eligibility rules. This offer type is commonly used for campaigns such as cashback, discounts, and reward points.
+For this walkthrough, select **Transactional Offer** to configure rewards based on qualifying individual transactions.
 
 <Info>
-The configuration journey follows the wizard shown in the dashboard: **Basic Details** (Offer Type, Outcome Type, Offer Scope) → **Set-Up Offer** (Offer User Base, Transaction Eligibility, Offer Calculation, Budget, Usage Limits, Posting) → **Display Elements** → **Communication** → **Review**.
+The configuration journey follows the wizard shown in the dashboard:
+
+**Basic Details** → **Set-Up Offer** → **Display Elements** → **Communication** → **Review**
+
+Under **Basic Details**, configure **Offer Type, Outcome Type,** and **Offer Scope**.
+
+Under **Set-Up Offer**, configure **Offer User Base, Transaction Eligibility, Offer Calculation, Budget, Usage Limits,** and **Posting**.
 </Info>
-
 ---
-
 ## Configure the Offer Type
 
-The **Offer Type** determines how customers qualify for rewards and is the first choice you make in the offer creation wizard.
+The **Offer Type** determines how customers qualify for the reward and is the first selection made in the offer creation wizard.
 
-For this walkthrough, select **Transactional Offer**. This offer type rewards customers the moment a single transaction satisfies the configured eligibility conditions — there's no need to accumulate spend across multiple transactions.
+For this walkthrough, select **Transactional Offer**. This Offer Type evaluates each transaction independently against the configured eligibility criteria.
 
 ### Example
 
-Suppose you want to reward customers immediately whenever they make a qualifying purchase, rather than waiting for them to hit a cumulative spend threshold. Select **Transactional Offer** to configure single-transaction rewards.
+Suppose you want to reward customers whenever they make a qualifying purchase, without requiring them to accumulate spend across multiple transactions.
+
+Select **Transactional Offer**.
+
+The offer will evaluate each transaction against the configured eligibility criteria and determine whether the transaction qualifies for the configured reward.
+
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/cccccc.png"
+      alt="Select Transactional Offer"
+      className="w-[700px]"
+    />
+  </div>
+</div>
 
 ➡️ **Continue to:** **[Offer Type](/offer/offer-type)**
-
 ---
 
 ## Configure the Outcome Type
+
+The **Outcome Type** defines the reward that customers receive after successfully meeting the configured offer conditions.
+
+For this walkthrough, select **Cashback** as the Outcome Type.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -49,21 +70,24 @@ Suppose you want to reward customers immediately whenever they make a qualifying
   </div>
 </div>
 
-The **Outcome Type** defines the reward that customers receive after successfully meeting the configured offer conditions. Select the outcome that aligns with your campaign objective.
+### Cashback
 
-For this walkthrough, select **Cashback** as the outcome type. Cashback rewards customers by crediting a predefined amount or percentage once an eligible transaction satisfies all configured offer criteria.
+**Cashback** rewards customers by crediting a predefined amount or percentage when an eligible transaction satisfies the configured offer criteria.
 
 ### Example
 
-Suppose you want to reward customers with **₹100 cashback** after they make a qualifying purchase of **₹1,000 or more**. In this case, select **Cashback** as the outcome type and configure the reward value in the subsequent steps.
+Suppose you want to reward customers with **₹100 cashback** after they make a qualifying purchase of **₹1,000 or more**.
 
-After selecting the required **Outcome Type**, click **Continue** to proceed to the **Offer Scope** configuration.
+Select **Cashback** as the Outcome Type. The reward value is configured in the subsequent offer configuration steps.
+
+After selecting the required **Outcome Type**, click **Continue** to proceed to **Offer Scope**.
 
 ➡️ **Continue to:** **[Outcome Type](/offer/outcome-type)**
-
 ---
 
 ## Configure the Offer Scope
+
+The **Offer Scope** defines where the Transactional Offer will be applicable. In this step, configure the basic offer details and specify the issuer and program(s) for which the offer should be available.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -74,8 +98,6 @@ After selecting the required **Outcome Type**, click **Continue** to proceed to 
     />
   </div>
 </div>
-
-The **Offer Scope** defines where the Transactional Offer will be applicable. In this step, configure the basic offer details and specify the issuer and program(s) for which the offer should be available.
 
 Configure the following:
 
@@ -94,6 +116,8 @@ Configure the following:
   </div>
 </div>
 
+### Offer Applicability
+
 Define the applicability of the offer by configuring:
 
 - **Issuer** – Select the issuer.
@@ -103,17 +127,16 @@ Define the applicability of the offer by configuring:
 
 ### Example
 
-Create a Transactional Offer by entering the offer details, selecting the required eligibility level, and choosing the applicable issuer and program(s). Enable **Apply to all current and future programs** if the offer should automatically apply to every program under the selected program type.
+Create a Transactional Offer by entering the offer details, selecting the required eligibility level, and choosing the applicable issuer and program(s).
+
+Enable **Apply to all current and future programs** if the offer should automatically apply to every program under the selected program type.
 
 ➡️ **Continue to:** **[Offer Scope](/offer/offer-scope)**
-
 ---
 
-<Note>
-The steps below fall under **Set-Up Offer** in the wizard — Offer User Base, Transaction Eligibility, Offer Calculation, Budget, Usage Limits, and Posting are configured as a group before moving on to Display Elements.
-</Note>
-
 ## Configure Offer User Base
+
+The **Offer User Base** defines which users are eligible for the Transactional Offer.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -125,16 +148,16 @@ The steps below fall under **Set-Up Offer** in the wizard — Offer User Base, T
   </div>
 </div>
 
-Configure the **Offer User Base** to define which users are eligible for the Transactional Offer.
+### Select the User Base Type
 
-First, select the type of user base:
+Choose one of the following user base types:
 
 - **Static Base** – Uses a fixed list of eligible users that remains unchanged after the offer goes live.
 - **Dynamic Config** – Continuously evaluates users against the configured eligibility criteria, allowing new users to become eligible over time.
 
-Next, define the eligibility criteria for the selected user base.
+### Configure Eligibility Criteria
 
-Configure the following:
+After selecting the user base type, configure the required eligibility criteria.
 
 - **Eligibility** – Select the required user group or account scope.
 - **Add Criteria** – Add one or more conditions to further refine the eligible user base.
@@ -142,17 +165,21 @@ Configure the following:
 
 ### Example
 
-Suppose the offer should be available only to a specific group of eligible users. Select the appropriate user base type, configure the required eligibility criteria, add additional filters if needed, and use **Estimate User Base** to verify the expected audience before proceeding.
+Suppose the offer should be available only to a specific group of eligible users.
+
+Select the appropriate user base type, configure the required eligibility criteria, add additional filters if needed, and use **Estimate User Base** to verify the expected audience before proceeding.
 
 <Tip>
 Use **Static Base** when the offer targets a fixed group of customers. Use **Dynamic Configuration** when customer eligibility should be evaluated continuously based on the configured criteria.
 </Tip>
 
 ➡️ **Continue to:** **[Offer User Base](/offer/offer-user-base)**
-
 ---
-
 ## Configure Transaction Eligibility
+
+The **Transaction Eligibility** step defines the conditions that determine whether a transaction qualifies for the Transactional Offer.
+
+Every transaction made by an eligible customer is evaluated against the configured transaction rules. A reward is issued only when the specified conditions are satisfied.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -164,17 +191,17 @@ Use **Static Base** when the offer targets a fixed group of customers. Use **Dyn
   </div>
 </div>
 
-The **Transaction Eligibility** step defines the conditions that determine whether a transaction qualifies for the Transactional Offer. Every transaction made by an eligible customer is evaluated against the configured transaction rules, and rewards are issued only when all the specified conditions are satisfied.
-
 <Info>
-**Offer User Base** determines *who* is eligible for the offer. **Transaction Eligibility** determines *which of their transactions* actually qualify for the reward. A customer can belong to the eligible user base and still earn nothing if none of their transactions satisfy these conditions.
-</Info>
+**Offer User Base** determines *who* is eligible for the offer.
 
-Configure one or more transaction attributes by selecting the required comparison operators and corresponding values. Multiple eligibility conditions can be combined to precisely identify qualifying transactions.
+**Transaction Eligibility** determines *which of their transactions* qualify for the reward.
+
+A customer can belong to the eligible user base and still earn nothing if none of their transactions satisfy the configured conditions.
+</Info>
 
 ### Configure Transaction Conditions
 
-Build the transaction eligibility rules by configuring the following:
+Configure one or more transaction attributes by selecting the required comparison operators and corresponding values.
 
 - **Transaction Attribute** – Select the transaction attribute that should be evaluated.
 - **Comparison Operator** – Choose the appropriate operator to compare the selected attribute.
@@ -184,7 +211,7 @@ Build the transaction eligibility rules by configuring the following:
 
 ### Supported Transaction Attributes
 
-You can configure eligibility using supported transaction attributes such as:
+The following transaction attributes can be configured for transaction eligibility:
 
 - **Merchant Category Code (MCC)**
 - **Merchant ID (MID)**
@@ -204,10 +231,13 @@ Suppose you're creating a **5% Fuel Cashback Offer** that should only apply to f
 Configure the **Merchant Category Code (MCC)** to identify fuel merchants, set the **Transaction Value** to **Greater than or equal to ₹2,000**, and add any additional conditions required for your campaign.
 
 ➡️ **Continue to:** **[Transaction Eligibility](/offer/transaction-eligibility)**
-
 ---
 
 ## Configure Offer Calculation
+
+The **Offer Calculation** step defines how rewards are calculated for transactions that satisfy the configured eligibility criteria.
+
+Select the appropriate calculation rule, configure the reward value, and define any additional reward processing settings before proceeding.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -219,7 +249,7 @@ Configure the **Merchant Category Code (MCC)** to identify fuel merchants, set t
   </div>
 </div>
 
-The **Offer Calculation** step defines how rewards are calculated for transactions that satisfy the configured eligibility criteria. Select the appropriate calculation rule, configure the reward value, and define any additional reward processing settings before proceeding.
+### Configure Offer Calculation
 
 Configure the following:
 
@@ -241,8 +271,9 @@ Select the appropriate **Offer Calculation Rule**, configure the cashback percen
 ➡️ **Continue to:** **[Offer Calculation](/offer/offer-calculation)**
 
 ---
-
 ## Configure Budget
+
+Configure the budget for the Transactional Offer and define the approval settings.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -254,7 +285,7 @@ Select the appropriate **Offer Calculation Rule**, configure the cashback percen
   </div>
 </div>
 
-Configure the budget for the Transactional Offer and define the approval settings.
+### Configure Budget Settings
 
 Configure the following:
 
@@ -276,6 +307,8 @@ Set the budget with headroom above your expected payout estimate — if the budg
 
 ## Configure Usage Limits
 
+Configure **Usage Limits** to control how frequently eligible customers can receive the offer.
+
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
     <img
@@ -286,23 +319,24 @@ Set the budget with headroom above your expected payout estimate — if the budg
   </div>
 </div>
 
-Configure the usage limits for the Transactional Offer to control how often the offer can be availed.
-
-Configure the usage limits to control how frequently eligible customers can receive the offer.
-
 <Info>
-Usage Limits apply on top of individual transaction qualification. Even if every transaction a customer makes satisfies the eligibility criteria, the total reward they earn is still bounded by the configured limit — for example, a maximum number of redemptions or a monthly cashback cap.
+**Usage Limits** apply in addition to individual transaction qualification. A transaction must first satisfy the configured eligibility criteria, while the configured usage limits control how frequently eligible customers can receive the offer.
 </Info>
+
+### Configure Usage Limits
+
+Define the appropriate usage limits based on how frequently the offer can be availed by eligible customers.
 
 ### Example
 
-Define the appropriate usage limits to control the number of times the offer can be redeemed by eligible customers.
+Configure the required usage limits to control the number of times the offer can be redeemed by eligible customers.
 
 ➡️ **Continue to:** **[Usage Limits](/offer/usage-limits)**
-
 ---
 
 ## Configure Posting
+
+Configure when and how the reward should be posted to eligible customers after a qualifying transaction.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -324,7 +358,7 @@ Define the appropriate usage limits to control the number of times the offer can
   </div>
 </div>
 
-Configure when and how the reward should be posted to eligible customers after a qualifying transaction.
+### Configure Posting
 
 Configure the following:
 
@@ -383,11 +417,45 @@ Configure the display information for the offer, including:
 - **Background Illustration** – Upload the background image for the offer.
 
 ### Offer Details Page
+## Configure Display Elements
 
-The **Offer Details Page** defines the information customers see after selecting an offer from the Home or Offer Listing page. This page provides a comprehensive view of the offer, helping customers understand its benefits, eligibility requirements, redemption process, and any additional information before they choose to participate.
+Configure how the Transactional Offer is displayed to customers across the PWA.
 
-A well-designed Offer Details page improves customer engagement by presenting clear, structured, and informative content while maintaining a consistent brand experience.
+### Home & Offer Page
 
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/m.png"
+      alt="Configure Home Page"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
+<div className="my-8 flex justify-center">
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <img
+      src="/images/m.1.png"
+      alt="Configure Offer Page"
+      className="w-[700px]"
+    />
+  </div>
+</div>
+
+Configure the display information for the offer, including:
+
+- **Enable Display** – Show or hide the offer in the PWA.
+- **Labels** – Categorize the offer using one or more labels.
+- **Banner & Display Content** – Configure the banner title, description, display title, and display description.
+- **Display Order** – Set the priority in which the offer is displayed.
+- **Display Color** – Select the primary color for the offer card.
+- **Offer/Merchant Logo** – Upload the logo displayed with the offer.
+- **Background Illustration** – Upload the background image for the offer.
+
+### Offer Details Page
+
+The **Offer Details Page** defines the information customers see after selecting an offer from the Home or Offer Listing page. This page provides a comprehensive view of the offer, including its benefits, eligibility requirements, redemption process, and additional information.
 
 <div className="my-8 flex justify-center">
   <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -411,7 +479,7 @@ A well-designed Offer Details page improves customer engagement by presenting cl
 
 Configure the following customer-facing elements:
 
-- **Section Details** – Create one or more information sections by adding headings and descriptive content to explain the offer, benefits, eligibility, redemption process, terms, or any other important details.
+- **Section Details** – Create one or more information sections by adding headings and descriptive content to explain the offer, benefits, eligibility, redemption process, terms, or other important details.
 - **Call-to-Action (CTA)** – Configure the CTA button text and the destination URL that customers are redirected to after selecting the action.
 - **Advanced Settings** – Configure any additional display settings available for the Offer Details page.
 
@@ -423,13 +491,14 @@ Configure the following customer-facing elements:
 - Ensure branding and messaging remain consistent with the Home and Offer Listing pages.
 
 <Tip>
-The Offer Details page is designed to provide additional context about the offer. It complements the Home and Offer Listing pages by giving customers all the information they need before availing the offer.
+The Offer Details page provides additional context about the offer and complements the Home and Offer Listing pages by giving customers information before they avail the offer.
 </Tip>
 
 ### Example
 
-For a **5% Fuel Cashback Offer**, you can add sections such as **Offer Benefits**, **Eligibility Criteria**, **How to Earn Cashback**, and **Terms & Conditions**. Configure a CTA such as **Locate Nearby Fuel Stations** or **Know More**, allowing customers to access additional information with a single click.
+For a **5% Fuel Cashback Offer**, you can add sections such as **Offer Benefits**, **Eligibility Criteria**, **How to Earn Cashback**, and **Terms & Conditions**.
+
+Configure a CTA such as **Locate Nearby Fuel Stations** or **Know More**, allowing customers to access additional information with a single click.
 
 ➡️ **Continue to:** **[Display Elements](/offer/display-elements)**
-
 ---
